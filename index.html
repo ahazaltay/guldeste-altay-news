@@ -83,7 +83,7 @@
         <!-- Featured Documentary Card -->
         <div class="featured-video-card" id="featuredVideoCard">
           <div class="video-card-visual" id="videoTeaserBtn">
-            <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg" alt="Bu Lokanta Evsizlere Sıcak Yuva Oluyor">
+            <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg" alt="Doğu Türkistan'da Ne Oluyor?">
             <button class="play-overlay-btn" aria-label="Belgeseli İzle">
               <svg viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
@@ -92,10 +92,10 @@
           </div>
           <div class="video-card-info">
             <span class="video-card-badge">Öne Çıkan Belgesel</span>
-            <h2 class="video-card-title">Bu Lokanta Evsizlere Sıcak Yuva Oluyor</h2>
-            <p class="video-card-desc">Evsizlerin karnını ücretsiz doyuran, onlara kış aylarında sıcak bir aile ortamı sunan hayırsever bir lokantanın ve oraya sığınan insanların dokunaklı hikayesi.</p>
+            <h2 class="video-card-title">Doğu Türkistan'da Ne Oluyor?</h2>
+            <p class="video-card-desc">Çin’in Doğu Türkistan bölgesinde uygulanan asimilasyon politikalarını, toplama kamplarındaki insan hakları ihlallerini ve ailelerin arayışlarını ele alan sarsıcı araştırma belgeseli.</p>
             <a href="#belgesel" class="video-card-action" id="viewDocLink">
-              <span>Belgeseli Ayrıntılı İzle & Oku</span>
+              <span>Videoyu İzle & Oku</span>
               <svg width="16" height="16" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
               </svg>
@@ -197,47 +197,15 @@
         </div>
         
         <div class="doc-page-layout">
-          <!-- Custom HTML5 Video Player -->
-          <div class="video-container" id="videoContainer">
-            <video id="docVideo" preload="metadata">
-              <source src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/8150458503304717644-1.mp4" type="video/mp4">
-              Tarayıcınız HTML5 video etiketini desteklemiyor.
-            </video>
-            
-            <!-- Large Play Overlay Button -->
-            <button class="video-large-play-btn" id="videoLargePlayBtn" aria-label="Oynat">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </button>
-            
-            <!-- Control bar -->
-            <div class="custom-video-controls">
-              <div class="progress-bar-container" id="progressBarContainer">
-                <div class="video-progress" id="videoProgress"></div>
-              </div>
-              <div class="controls-row">
-                <div class="controls-left">
-                  <button class="control-btn" id="videoPlayBtn" aria-label="Oynat">
-                    <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    <svg class="pause-icon" style="display: none;" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                  </button>
-                  <span class="time-display" id="videoTimeDisplay">00:00 / 00:00</span>
-                </div>
-                <div class="controls-right">
-                  <div class="volume-container">
-                    <button class="control-btn" id="videoMuteBtn" aria-label="Sesi Kapat">
-                      <svg class="volume-up-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                      <svg class="volume-mute-icon" style="display: none;" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-                    </button>
-                    <input type="range" class="volume-slider" id="videoVolumeSlider" min="0" max="1" step="0.1" value="1">
-                  </div>
-                  <button class="control-btn" id="videoFullscreenBtn" aria-label="Tam Ekran">
-                    <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+          <!-- YouTube Video Player Embed -->
+          <div class="youtube-video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/OJDvXTQueDo" 
+              title="Doğu Türkistan'da Ne Oluyor?" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
           </div>
           
           <!-- Documentary Info Card -->
@@ -245,7 +213,6 @@
             <!-- Details will be injected by app.js based on article 7 data -->
           </div>
         </div>
-
       </div>
     </section>
 
@@ -254,24 +221,27 @@
       <div class="container">
         <div class="about-layout">
           <div class="about-text">
-            <h2 class="about-greeting">Ben <span>Güldeste Altay</span></h2>
-            <p class="about-lead">Gerçeğin, hikayelerin ve arka planda kalan hayatların peşinde koşan bağımsız bir gazeteciyim.</p>
             <p class="about-bio">Akdeniz Üniversitesi İletişim Fakültesi Gazetecilik Bölümü mezunudur. Mesleki deneyimine Akdeniz Üniversitesi bünyesindeki Akil Haber Ajansı’nda başlamış; ardından Kanal D haber merkezinde staj deneyimi edinmiştir. Yaklaşık bir yıldır NTV haber merkezinde mesleki deneyimini sürdürmekte; televizyon haberciliği, gündem takibi, haber dili ve editoryal süreçler alanında kendini geliştirmektedir.</p>
             <p class="about-bio">Çalışmalarında toplumsal meseleler, hak ihlalleri, dezavantajlı gruplar ve görünürlüğü sınırlı kalan yaşam deneyimlerine odaklanmaktadır. Çölyak hastalarının ekonomik ve sosyal sorunları, sağlık çalışanlarının mobbing ve tükenmişlik deneyimleri, Doğu Türkistan’daki aile hikâyeleri ve evsiz bireylerin yaşam koşulları üzerine haber, röportaj ve araştırma çalışmaları hazırlamıştır.</p>
-            <p class="about-bio">Yazılı haberlerinin yanı sıra görsel haberciliğe ve belgesel video üretimiyle de ilgilenmekte; sahadan beslenen, insan odaklı ve araştırmaya dayalı bir gazetecilik anlayışıyla üretimlerine devam etmektedir.</p>
+            <p class="about-bio">Yazılı haberlerinin yanı sıra görsel habercilik ve belgesel video üretimiyle de ilgilenmekte; sahadan beslenen, insan odaklı ve araştırmaya dayalı bir gazetecilik anlayışıyla üretimlerine devam etmektedir.</p>
             <p class="about-bio">Bu web sitesi, yayımlanmış haber, röportaj, yazı, video ve belgesel çalışmalarını tek bir arşivde toplamak amacıyla hazırlanmıştır.</p>
-            <a href="https://www.linkedin.com/in/guldesteealtay" target="_blank" rel="noopener" class="linkedin-btn">
-              <svg viewBox="0 0 24 24" class="btn-icon">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-              <span>LinkedIn'de Bağlantı Kur</span>
-            </a>
           </div>
           <div class="about-visual">
-            <div class="author-frame">
-              <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg" alt="Güldeste Altay">
+            <div class="author-image-wrapper">
+              <div class="author-frame">
+                <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg" alt="Güldeste Altay">
+              </div>
+              <div class="about-decoration"></div>
             </div>
-            <div class="about-decoration"></div>
+            <div class="author-info-block">
+              <h3 class="author-name">Güldeste Altay</h3>
+              <p class="author-quote">“Gerçeğin, hikayelerin ve arka planda kalan hayatların peşinde koşan bağımsız bir gazeteciyim.”</p>
+              <a href="https://www.linkedin.com/in/guldesteealtay" target="_blank" rel="noopener" class="linkedin-icon-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="btn-icon">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

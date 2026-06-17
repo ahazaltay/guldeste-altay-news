@@ -14,8 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Column Articles (category: "Köşe Yazısı")
   const columnArticles = ARTICLES_DATA.filter(art => art.category === "Köşe Yazısı");
   
-  // Documentary Article (id: 7 - "BU LOKANTA EVSİZLERE SICAK YUVA OLUYOR")
-  const docArticle = ARTICLES_DATA.find(art => art.id === 7) || ARTICLES_DATA[6];
+  // Documentary Article (Custom for Doğu Türkistan)
+  const docArticle = {
+    title: "Doğu Türkistan'da Ne Oluyor?",
+    category: "Araştırma Belgesel",
+    paragraphs: [
+      "Çin’in Doğu Türkistan bölgesinde uzun yıllardır uyguladığı asimilasyon politikaları, toplama kamplarındaki insan hakları ihlallerini ve ailelerin parçalanma hikâyeleri... Bu araştırma belgeseli, yaşanan insanlık dramını tüm çıplaklığıyla gözler önüne seriyor.",
+      "Kayıp kız kardeşinin izini süren Medine Nazimi ve diğer ailelerin tanıklıklarıyla, bölgede uygulanan baskı politikalarının arka planı, tanık ifadeleri ve uluslararası raporlar eşliğinde ele alınıyor.",
+      "Gazeteci Güldeste Altay'ın hazırladığı bu belgesel çalışma, sesi duyulmayanların sesi olmayı ve yaşanan hak ihlalleriyle mücadele etmeyi amaçlıyor."
+    ]
+  };
 
   // ==========================================
   // 2. SPA ROUTING
@@ -262,11 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   videoTeaserBtn.addEventListener('click', () => {
     window.location.hash = 'belgesel';
-    // Auto play when navigating
-    setTimeout(() => {
-      const video = document.getElementById('docVideo');
-      if (video) playVideo(video);
-    }, 400);
   });
 
   viewDocLink.addEventListener('click', (e) => {
@@ -441,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyText = docArticle.paragraphs.map(p => `<p>${p}</p>`).join('');
     
     docInfoBlock.innerHTML = `
-      <div class="doc-meta">Antalya Sokak Röportajı & Saha Belgeseli</div>
+      <div class="doc-meta">Araştırma Belgeseli & İnsan Hakları Çalışması</div>
       <h3 class="doc-title">${docArticle.title}</h3>
       <div class="doc-body">
         ${bodyText}
@@ -551,116 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 10. CUSTOM HTML5 VIDEO PLAYER CONTROLS
-  // ==========================================
-  const videoContainer = document.getElementById('videoContainer');
-  const docVideo = document.getElementById('docVideo');
-  const videoLargePlayBtn = document.getElementById('videoLargePlayBtn');
-  const videoPlayBtn = document.getElementById('videoPlayBtn');
-  const videoMuteBtn = document.getElementById('videoMuteBtn');
-  const videoVolumeSlider = document.getElementById('videoVolumeSlider');
-  const videoFullscreenBtn = document.getElementById('videoFullscreenBtn');
-  const videoProgress = document.getElementById('videoProgress');
-  const progressBarContainer = document.getElementById('progressBarContainer');
-  const videoTimeDisplay = document.getElementById('videoTimeDisplay');
-
-  function togglePlay() {
-    if (docVideo.paused) {
-      playVideo(docVideo);
-    } else {
-      pauseVideo(docVideo);
-    }
-  }
-
-  function playVideo(video) {
-    video.play();
-    videoLargePlayBtn.style.display = 'none';
-    
-    // Switch controls icons
-    videoPlayBtn.querySelector('.play-icon').style.display = 'none';
-    videoPlayBtn.querySelector('.pause-icon').style.display = 'block';
-  }
-
-  function pauseVideo(video) {
-    video.pause();
-    videoLargePlayBtn.style.display = 'flex';
-    
-    // Switch controls icons
-    videoPlayBtn.querySelector('.play-icon').style.display = 'block';
-    videoPlayBtn.querySelector('.pause-icon').style.display = 'none';
-  }
-
-  // Play button listeners
-  videoLargePlayBtn.addEventListener('click', togglePlay);
-  videoPlayBtn.addEventListener('click', togglePlay);
-  docVideo.addEventListener('click', togglePlay);
-
-  // Update Progress & Time display
-  docVideo.addEventListener('timeupdate', () => {
-    if (docVideo.duration) {
-      const pct = (docVideo.currentTime / docVideo.duration) * 100;
-      videoProgress.style.width = `${pct}%`;
-      
-      // Update Time Text
-      videoTimeDisplay.innerText = `${formatTime(docVideo.currentTime)} / ${formatTime(docVideo.duration)}`;
-    }
-  });
-
-  // Progress Bar click navigation
-  progressBarContainer.addEventListener('click', (e) => {
-    const rect = progressBarContainer.getBoundingClientRect();
-    const pos = (e.clientX - rect.left) / rect.width;
-    docVideo.currentTime = pos * docVideo.duration;
-  });
-
-  // Volume control slider
-  videoVolumeSlider.addEventListener('input', (e) => {
-    docVideo.volume = e.target.value;
-    docVideo.muted = e.target.value == 0;
-    updateMuteIcon();
-  });
-
-  // Mute button click
-  videoMuteBtn.addEventListener('click', () => {
-    docVideo.muted = !docVideo.muted;
-    if (docVideo.muted) {
-      videoVolumeSlider.value = 0;
-    } else {
-      videoVolumeSlider.value = docVideo.volume;
-    }
-    updateMuteIcon();
-  });
-
-  function updateMuteIcon() {
-    const upIcon = videoMuteBtn.querySelector('.volume-up-icon');
-    const muteIcon = videoMuteBtn.querySelector('.volume-mute-icon');
-    if (docVideo.muted || docVideo.volume == 0) {
-      upIcon.style.display = 'none';
-      muteIcon.style.display = 'block';
-    } else {
-      upIcon.style.display = 'block';
-      muteIcon.style.display = 'none';
-    }
-  }
-
-  // Fullscreen button
-  videoFullscreenBtn.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      videoContainer.requestFullscreen().catch(err => {
-        console.error(`Fullscreen error: ${err.message}`);
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  });
-
-  // Helper: Format seconds to MM:SS
-  function formatTime(secs) {
-    const m = Math.floor(secs / 60).toString().padStart(2, '0');
-    const s = Math.floor(secs % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
-  }
+  // Custom video controls section removed since video was replaced with a YouTube iframe.
 
   // ==========================================
   // 11. CONTACT FORM HANDLER
