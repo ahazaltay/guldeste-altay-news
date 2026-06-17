@@ -173,11 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
       const dateHtml = formatDate(art.date) ? `<div class="slide-meta">${formatDate(art.date)}</div>` : '';
+      
+      let displayTitle = art.title;
+      if (art.id === 14) {
+        displayTitle = "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
+      }
+
       slide.innerHTML = `
-        <img src="${img}" class="slide-img" alt="${art.title}">
+        <img src="${img}" class="slide-img" alt="${displayTitle}">
         <div class="slide-overlay"></div>
         <div class="slide-content container">
-          <h1 class="slide-title">${art.title}</h1>
+          <h1 class="slide-title">${displayTitle}</h1>
           ${dateHtml}
           <button class="slide-btn" data-id="${art.id}">Haberi Oku</button>
         </div>
