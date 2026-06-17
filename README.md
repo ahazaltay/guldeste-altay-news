@@ -35,7 +35,7 @@ Proje, maksimum hız, sıfır harici kütüphane bağımlılığı ve temiz kod 
 ## 📂 Dosya Yapısı (File Structure)
 
 ```text
-haber-blog/
+guldeste-altay-news/
 ├── index.html     # SPA Ana İskeleti ve Sayfa Bölümleri
 ├── styles.css     # Özelleştirilmiş Tema Değişkenleri, Grid Sistemleri ve Animasyonlar
 ├── app.js         # Navigasyon, Arama, Slider ve Video Oynatıcı Kontrol Mantığı
