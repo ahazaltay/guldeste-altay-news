@@ -1038,6 +1038,38 @@ body:not([data-theme="dark"]) .moon-icon { display: block; }
   line-height: 1.7;
 }
 
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 24px;
+  transition: var(--transition-fast);
+  width: fit-content;
+}
+
+.linkedin-btn:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+}
+
+.linkedin-btn .btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
 .about-visual {
   position: relative;
   display: flex;
