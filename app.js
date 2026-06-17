@@ -164,14 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.className = `slide ${index === 0 ? 'active' : ''}`;
       
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
+      const dateHtml = formatDate(art.date) ? `<div class="slide-meta">${formatDate(art.date)}</div>` : '';
       slide.innerHTML = `
         <img src="${img}" class="slide-img" alt="${art.title}">
         <div class="slide-overlay"></div>
         <div class="slide-content container">
-          <span class="slide-category">Öne Çıkan Röportaj</span>
           <h1 class="slide-title">${art.title}</h1>
-          <div class="slide-meta">${formatDate(art.date)}</div>
-          <button class="slide-btn" data-id="${art.id}">Haberin Tamamı</button>
+          ${dateHtml}
+          <button class="slide-btn" data-id="${art.id}">Haberi Oku</button>
         </div>
       `;
       sliderWrapper.appendChild(slide);
@@ -305,17 +305,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
       const cleanExcerpt = art.paragraphs[0] ? art.paragraphs[0].substring(0, 120) + '...' : '';
       
+      const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
         <div class="card-img-container">
           <img src="${img}" class="card-img" alt="${art.title}" loading="lazy">
           <span class="card-category">${art.category}</span>
         </div>
         <div class="card-content">
-          <div class="card-meta">${formatDate(art.date)}</div>
+          ${dateHtml}
           <h3 class="card-title">${art.title}</h3>
           <p class="card-excerpt">${cleanExcerpt}</p>
           <span class="card-footer-link">
-            <span>Haber Detayı</span>
+            <span>Haberi Oku</span>
             <svg width="12" height="12" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
             </svg>
@@ -365,10 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg?w=1000';
       const cleanExcerpt = art.paragraphs[0] ? art.paragraphs[0].substring(0, 180) + '...' : '';
 
+      const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
         <img src="${img}" class="column-card-img" alt="${art.title}" loading="lazy">
         <div class="column-card-content">
-          <div class="card-meta">${formatDate(art.date)}</div>
+          ${dateHtml}
           <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${art.title}</h3>
           <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
           <span class="card-footer-link">
@@ -406,10 +408,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = latestColumn.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg?w=1000';
     const cleanExcerpt = latestColumn.paragraphs[0] ? latestColumn.paragraphs[0].substring(0, 180) + '...' : '';
 
+    const dateHtml = formatDate(latestColumn.date) ? `<div class="card-meta">${formatDate(latestColumn.date)}</div>` : '';
     card.innerHTML = `
       <img src="${img}" class="column-card-img" alt="${latestColumn.title}" loading="lazy">
       <div class="column-card-content">
-        <div class="card-meta">${formatDate(latestColumn.date)}</div>
+        ${dateHtml}
         <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${latestColumn.title}</h3>
         <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
         <span class="card-footer-link">
@@ -472,12 +475,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const bodyParagraphs = art.paragraphs.map(p => `<p>${p}</p>`).join('');
 
+    const dateHtml = formatDate(art.date) ? `<span>Yayın Tarihi: ${formatDate(art.date)}</span><span>&bull;</span>` : '';
     drawerBody.innerHTML = `
       <div class="drawer-meta">${art.category}</div>
       <h1 class="drawer-title">${art.title}</h1>
       <div class="drawer-pub-meta">
-        <span>Yayın Tarihi: ${formatDate(art.date)}</span>
-        <span>&bull;</span>
+        ${dateHtml}
         <span>Yazar: Güldeste Altay</span>
       </div>
       ${imgElement}
@@ -699,6 +702,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isoString) return '';
     try {
       const d = new Date(isoString);
+      // If it is 15 January 2024, return empty string to hide it
+      if (d.getFullYear() === 2024 && d.getMonth() === 0 && d.getDate() === 15) {
+        return '';
+      }
       return d.toLocaleDateString('tr-TR', {
         year: 'numeric',
         month: 'long',
