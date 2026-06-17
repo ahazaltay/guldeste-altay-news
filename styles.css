@@ -325,6 +325,10 @@ body:not([data-theme="dark"]) .moon-icon { display: block; }
   transition: transform 6s ease;
 }
 
+.slide-art-9 .slide-img {
+  object-position: center 15%;
+}
+
 .slide.active .slide-img {
   transform: scale(1.04);
 }

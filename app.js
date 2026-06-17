@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. DATA INITIALIZATION & SELECTION
   // ==========================================
   
-  // Articles for Slider (IDs: 1, 9, 12, 14)
-  const SLIDER_IDS = [14, 12, 1, 9];
-  const sliderArticles = ARTICLES_DATA.filter(art => SLIDER_IDS.includes(art.id));
+  // Articles for Slider (Ordered: 9, 14, 1, 5)
+  const SLIDER_IDS = [9, 14, 1, 5];
+  const sliderArticles = SLIDER_IDS.map(id => ARTICLES_DATA.find(art => art.id === id)).filter(Boolean);
   
   // Standard News (All articles except columns. We can display them all in the grid)
   const newsArticles = ARTICLES_DATA.filter(art => art.category !== "Köşe Yazısı");
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderArticles.forEach((art, index) => {
       // Create slide
       const slide = document.createElement('div');
-      slide.className = `slide ${index === 0 ? 'active' : ''}`;
+      slide.className = `slide ${index === 0 ? 'active' : ''} slide-art-${art.id}`;
       
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
       const dateHtml = formatDate(art.date) ? `<div class="slide-meta">${formatDate(art.date)}</div>` : '';
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startAutoSlide() {
     stopAutoSlide();
-    slideInterval = setInterval(nextSlide, 7000); // Rotate every 7 seconds
+    slideInterval = setInterval(nextSlide, 10000); // Rotate every 10 seconds (slower transition)
   }
 
   function stopAutoSlide() {
