@@ -1,6 +1,161 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   // ==========================================
+  // TRANSLATIONS DICTIONARY
+  // ==========================================
+  const TRANSLATIONS = {
+    tr: {
+      "logo-sub": "Gazetecilik Çalışmaları",
+      "nav-home": "Anasayfa",
+      "nav-news": "Haberler",
+      "nav-columns": "Köşe Yazıları",
+      "nav-doc": "Belgesel",
+      "nav-about": "Hakkımda",
+      "nav-contact": "İletişim",
+      "feat-doc-badge": "Öne Çıkan Belgesel",
+      "feat-doc-title": "Doğu Türkistan'da Ne Oluyor?",
+      "feat-doc-desc": "Çin’in Doğu Türkistan bölgesinde uygulanan asimilasyon politikalarını, toplama kamplarındaki insan hakları ihlallerini ve ailelerin arayışlarını ele alan sarsıcı araştırma belgeseli.",
+      "feat-doc-action": "Videoyu İzle & Oku",
+      "title-latest-news": "Son Haberler",
+      "title-feat-column": "Öne Çıkan Köşe Yazısı",
+      "title-about-author": "Yazar Hakkında",
+      "title-news-archive": "Haber Arşivi",
+      "title-columns": "Köşe Yazıları",
+      "title-doc-works": "Belgesel Çalışmaları",
+      "title-contact": "İletişime Geçin",
+      "author-title": "Bağımsız Gazeteci",
+      "author-bento-desc": "Akdeniz Üniversitesi İletişim Fakültesi Gazetecilik Bölümü mezunudur. Akil Haber Ajansı, Kanal D ve NTV haber merkezlerindeki deneyimleriyle televizyon haberciliği ve araştırmacı gazetecilik alanlarında çalışmalarını sürdürmektedir.",
+      "author-bento-btn": "Detaylı Biyografi",
+      "author-quote": "“Gerçeğin, hikayelerin ve arka planda kalan hayatların peşinde koşan bağımsız bir gazeteciyim.”",
+      "about-bio-1": "Akdeniz Üniversitesi İletişim Fakültesi Gazetecilik Bölümü mezunudur. Mesleki deneyimine Akdeniz Üniversitesi bünyesindeki Akil Haber Ajansı’nda başlamış; ardından Kanal D haber merkezinde staj deneyimi edinmiştir. Yaklaşık bir yıldır NTV haber merkezinde mesleki deneyimini sürdürmekte; televizyon haberciliği, gündem takibi, haber dili ve editoryal süreçler alanında kendini geliştirmektedir.",
+      "about-bio-2": "Çalışmalarında toplumsal meseleler, hak ihlalleri, dezavantajlı gruplar ve görünürlüğü sınırlı kalan yaşam deneyimlerine odaklanmaktadır. Çölyak hastalarının ekonomik ve sosyal sorunları, sağlık çalışanlarının mobbing ve tükenmişlik deneyimleri, Doğu Türkistan’daki aile hikâyeleri ve evsiz bireylerin yaşam koşulları üzerine haber, röportaj ve araştırma çalışmaları hazırlamıştır.",
+      "about-bio-3": "Yazılı haberlerinin yanı sıra görsel habercilik ve belgesel video üretimiyle de ilgilenmekte; sahadan beslenen, insan odaklı ve araştırmaya dayalı bir gazetecilik anlayışıyla üretimlerine devam etmektedir.",
+      "about-bio-4": "Bu web sitesi, yayımlanmış haber, röportaj, yazı, video ve belgesel çalışmalarını tek bir arşivde toplamak amacıyla hazırlanmıştır.",
+      "doc-list-badge": "Araştırma Belgesel",
+      "doc-list-title": "Doğu Türkistan'da Ne Oluyor?",
+      "doc-list-desc": "Çin’in Doğu Türkistan bölgesinde uygulanan asimilasyon politikalarını, toplama kamplarındaki insan hakları ihlallerini ve ailelerin arayışlarını ele alan sarsıcı araştırma belgeseli.",
+      "doc-list-readmore": "Videoyu İzle & Oku",
+      "doc-soon-badge": "Yeni Çalışma",
+      "doc-soon-title": "Çok Yakında",
+      "doc-soon-desc": "Yeni belgesel ve görüntülü saha araştırması projeleri hazırlık aşamasındadır.",
+      "doc-soon-placeholder": "Yakında",
+      "doc-back-btn": "Belgesellere Geri Dön",
+      "doc-detail-meta": "Araştırma Belgeseli & İnsan Hakları Çalışması",
+      "doc-detail-title": "Doğu Türkistan'da Ne Oluyor?",
+      "doc-body-1": "Çin’in Doğu Türkistan bölgesinde uzun yıllardır uyguladığı asimilasyon politikalarını, toplama kamplarındaki insan hakları ihlallerini ve ailelerin parçalanma hikâyelerini ele alan bu sarsıcı çalışma, Uygur Türklerinin sesi olmayı amaçlıyor. Gazeteci Güldeste Altay tarafından hazırlanan belgesel, özellikle sosyal medya platformlarında yayınlandığı andan itibaren geniş bir kamuoyu desteği ve etkileşimi toplamıştır.",
+      "doc-body-2": "Belgeselin merkezinde, Çin’in toplama kamplarında yedi yılı aşkın süredir tutulan kız kardeşi Mevlüde Hilal’in izini süren Medine Nazimi’nin adalet ve özgürlük arayışı yer alıyor. Medine Nazimi, kardeşinin bir Türkiye Cumhuriyeti vatandaşı olduğunu vurgulayarak, yetkililere ve kamuoyuna \"kardeşime sahip çıkın\" çağrısında bulunuyor.",
+      "doc-body-3": "Baskı rejiminin gölgesinde parçalanan aileler, haber alınamayan akrabalar ve uluslararası toplumun sessizliği... Bu çalışma, sadece bir ailenin değil, Doğu Türkistan’daki milyonlarca insanın sessiz çığlığını bağımsız gazetecilik perspektifiyle dijital dünyaya taşıyor.",
+      "doc-watch-yt": "YouTube'da İzle",
+      "contact-desc": "Haber ihbarları, röportaj teklifleri, ortak projeler veya çalışmalarım hakkındaki görüşleriniz için bana aşağıdaki kanallardan ulaşabilir ya da doğrudan formu doldurabilirsiniz.",
+      "contact-label-email": "E-posta",
+      "contact-label-location": "Lokasyon",
+      "contact-value-location": "İstanbul, Türkiye",
+      "contact-label-linkedin": "LinkedIn",
+      "contact-form-name": "Adınız Soyadınız",
+      "contact-form-email": "E-posta Adresiniz",
+      "contact-form-subject": "Konu",
+      "contact-form-message": "Mesajınız",
+      "contact-form-submit": "Gönder",
+      "contact-form-sending": "Gönderiliyor...",
+      "contact-form-success": "Mesajınız başarıyla iletildi! En kısa zamanda dönüş yapılacaktır.",
+      "contact-form-name-placeholder": "Adınızı girin",
+      "contact-form-email-placeholder": "E-postanızı girin",
+      "contact-form-subject-placeholder": "Mesajınızın konusu",
+      "contact-form-message-placeholder": "Mesajınızı yazın...",
+      "search-news-placeholder": "Haber başlığı ara...",
+      "search-column-placeholder": "Köşe yazısı ara...",
+      "no-news-found": "Aradığınız kriterlere uygun haber bulunamadı.",
+      "no-columns-found": "Aradığınız kriterlere uygun köşe yazısı bulunamadı.",
+      "drawer-copy-link": "Bağlantıyı Kopyala",
+      "drawer-link-copied": "Bağlantı Kopyalandı!",
+      "drawer-author": "Yazar: Güldeste Altay",
+      "drawer-pub-date": "Yayın Tarihi",
+      "theme-aria-label": "Temayı Değiştir",
+      "menu-aria-label": "Menüyü Aç",
+      "doc-watch-aria-label": "Doğu Türkistan'da Ne Oluyor? Belgeselini YouTube'da İzle",
+      "read-article": "Haberi Oku",
+      "read-column": "Köşe Yazısını Oku",
+      "footer-copy": "&copy; 2026 Güldeste Altay. Tüm Hakları Saklıdır."
+    },
+    en: {
+      "logo-sub": "Journalism Works",
+      "nav-home": "Home",
+      "nav-news": "News",
+      "nav-columns": "Columns",
+      "nav-doc": "Documentary",
+      "nav-about": "About",
+      "nav-contact": "Contact",
+      "feat-doc-badge": "Featured Documentary",
+      "feat-doc-title": "What is Happening in East Turkestan?",
+      "feat-doc-desc": "A striking investigative documentary addressing the assimilation policies implemented by China in the East Turkestan region, human rights violations in concentration camps, and families' search for their loved ones.",
+      "feat-doc-action": "Watch Video & Read",
+      "title-latest-news": "Latest News",
+      "title-feat-column": "Featured Column",
+      "title-about-author": "About the Author",
+      "title-news-archive": "News Archive",
+      "title-columns": "Columns",
+      "title-doc-works": "Documentary Works",
+      "title-contact": "Get in Touch",
+      "author-title": "Independent Journalist",
+      "author-bento-desc": "Graduated from Akdeniz University, Faculty of Communication, Department of Journalism. She continues her work in television journalism and investigative journalism with her experiences at Akil News Agency, Kanal D, and NTV newsrooms.",
+      "author-bento-btn": "Detailed Biography",
+      "author-quote": "“I am an independent journalist chasing the truth, stories, and lives that remain in the background.”",
+      "about-bio-1": "She graduated from Akdeniz University, Faculty of Communication, Department of Journalism. She started her professional experience at the Akil News Agency within Akdeniz University; then she completed an internship at the Kanal D news center. She has been continuing her professional experience at the NTV news center for about a year, developing herself in television journalism, agenda monitoring, news language, and editorial processes.",
+      "about-bio-2": "In her works, she focuses on social issues, human rights violations, disadvantaged groups, and life experiences that remain limited in visibility. She has prepared news, interviews, and research studies on the economic and social problems of celiac patients, mobbing and burnout experiences of healthcare workers, family stories in East Turkestan, and the living conditions of homeless individuals.",
+      "about-bio-3": "In addition to written news, she is interested in visual journalism and documentary video production; she continues her productions with an independent, human-oriented, and research-based journalism approach fed by the field.",
+      "about-bio-4": "This website has been prepared to gather her published news, interviews, columns, videos, and documentary works in a single archive.",
+      "doc-list-badge": "Research Documentary",
+      "doc-list-title": "What is Happening in East Turkestan?",
+      "doc-list-desc": "A striking investigative documentary addressing the assimilation policies implemented by China in the East Turkestan region, human rights violations in concentration camps, and families' search for their loved ones.",
+      "doc-list-readmore": "Watch Video & Read",
+      "doc-soon-badge": "New Work",
+      "doc-soon-title": "Coming Soon",
+      "doc-soon-desc": "New documentary and video-based field research projects are in preparation.",
+      "doc-soon-placeholder": "Coming Soon",
+      "doc-back-btn": "Back to Documentaries",
+      "doc-detail-meta": "Research Documentary & Human Rights Work",
+      "doc-detail-title": "What is Happening in East Turkestan?",
+      "doc-body-1": "Aiming to be the voice of Uyghur Turks, this shocking work addresses the assimilation policies implemented by China in the East Turkestan region for many years, human rights violations in concentration camps, and stories of divided families. Prepared by journalist Güldeste Altay, the documentary has gathered wide public support and engagement, especially since its publication on social media platforms.",
+      "doc-body-2": "At the center of the documentary is the quest for justice and freedom of Medine Nazimi, who traces her sister Mevlüde Hilal, held in China's concentration camps for over seven years. Medine Nazimi emphasizes that her sister is a citizen of the Republic of Turkey and calls upon the authorities and the public to 'claim my sister'.",
+      "doc-body-3": "Families torn apart under the shadow of the oppressive regime, relatives from whom no news can be received, and the silence of the international community... This work carries the silent cry of not just one family, but millions of people in East Turkestan to the digital world through an independent journalism perspective.",
+      "doc-watch-yt": "Watch on YouTube",
+      "contact-desc": "You can reach me through the channels below or fill out the form directly for news tips, interview proposals, joint projects, or your feedback about my work.",
+      "contact-label-email": "Email",
+      "contact-label-location": "Location",
+      "contact-value-location": "Istanbul, Turkey",
+      "contact-label-linkedin": "LinkedIn",
+      "contact-form-name": "Your Name",
+      "contact-form-email": "Your Email",
+      "contact-form-subject": "Subject",
+      "contact-form-message": "Your Message",
+      "contact-form-submit": "Send",
+      "contact-form-sending": "Sending...",
+      "contact-form-success": "Your message has been successfully sent! We will get back to you as soon as possible.",
+      "contact-form-name-placeholder": "Enter your name",
+      "contact-form-email-placeholder": "Enter your email",
+      "contact-form-subject-placeholder": "Subject of your message",
+      "contact-form-message-placeholder": "Write your message...",
+      "search-news-placeholder": "Search news title...",
+      "search-column-placeholder": "Search columns...",
+      "no-news-found": "No news found matching your search criteria.",
+      "no-columns-found": "No columns found matching your search criteria.",
+      "drawer-copy-link": "Copy Link",
+      "drawer-link-copied": "Link Copied!",
+      "drawer-author": "Author: Güldeste Altay",
+      "drawer-pub-date": "Publish Date",
+      "theme-aria-label": "Toggle Theme",
+      "menu-aria-label": "Open Menu",
+      "doc-watch-aria-label": "Watch What is Happening in East Turkestan? Documentary on YouTube",
+      "read-article": "Read Article",
+      "read-column": "Read Column",
+      "footer-copy": "&copy; 2026 Güldeste Altay. All Rights Reserved."
+    }
+  };
+
+  // State
+  let activeLang = localStorage.getItem('lang') || 'tr';
+
+  // ==========================================
   // 1. DATA INITIALIZATION & SELECTION
   // ==========================================
   
@@ -8,11 +163,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const SLIDER_IDS = [9, 14, 1, 5];
   const sliderArticles = SLIDER_IDS.map(id => ARTICLES_DATA.find(art => art.id === id)).filter(Boolean);
   
-  // Standard News (All articles except columns. We can display them all in the grid)
+  // Standard News (All articles except columns)
   const newsArticles = ARTICLES_DATA.filter(art => art.category !== "Köşe Yazısı");
   
   // Column Articles (category: "Köşe Yazısı")
   const columnArticles = ARTICLES_DATA.filter(art => art.category === "Köşe Yazısı");
+
+  // Reordering for Haberler (News Archive) page: Slider articles first, then the rest
+  const sliderIdsSet = new Set(SLIDER_IDS);
+  const orderedNewsArticles = [
+    ...sliderArticles,
+    ...newsArticles.filter(art => !sliderIdsSet.has(art.id))
+  ];
+
+  // Reordering for Homepage Latest News Grid: First two are ID 7 ("Bu Lokanta Evsizlere...") and ID 8 ("Üniversite Öğrencileri...")
+  const FIRST_TWO_HOME_IDS = [7, 8];
+  const firstTwoHomeArticles = FIRST_TWO_HOME_IDS.map(id => ARTICLES_DATA.find(art => art.id === id)).filter(Boolean);
+  const remainingHomeNews = newsArticles.filter(art => !FIRST_TWO_HOME_IDS.includes(art.id));
+  const homeNewsArticles = [
+    ...firstTwoHomeArticles,
+    ...remainingHomeNews
+  ];
+
   
   // Yönlendirme ve Sayfa Yönetimi Bileşenleri
 
@@ -140,6 +312,89 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
+  // LANGUAGE SWITCHING & DOM LOCALIZATION
+  // ==========================================
+  function updateLanguageUI() {
+    // 1. Text elements with data-i18n
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (TRANSLATIONS[activeLang] && TRANSLATIONS[activeLang][key]) {
+        el.innerHTML = TRANSLATIONS[activeLang][key];
+      }
+    });
+
+    // 2. Input placeholders with data-i18n-placeholder
+    const inputs = document.querySelectorAll('[data-i18n-placeholder]');
+    inputs.forEach(input => {
+      const key = input.getAttribute('data-i18n-placeholder');
+      if (TRANSLATIONS[activeLang] && TRANSLATIONS[activeLang][key]) {
+        input.placeholder = TRANSLATIONS[activeLang][key];
+      }
+    });
+
+    // 3. Accessibility labels with data-i18n-aria-label
+    const ariaElements = document.querySelectorAll('[data-i18n-aria-label]');
+    ariaElements.forEach(el => {
+      const key = el.getAttribute('data-i18n-aria-label');
+      if (TRANSLATIONS[activeLang] && TRANSLATIONS[activeLang][key]) {
+        el.setAttribute('aria-label', TRANSLATIONS[activeLang][key]);
+      }
+    });
+
+    // 4. Document Lang Attribute
+    document.documentElement.lang = activeLang;
+  }
+
+  // Update switcher buttons class active
+  function updateLangButtonsActive() {
+    const langBtns = document.querySelectorAll('.lang-btn');
+    langBtns.forEach(btn => {
+      if (btn.getAttribute('data-lang') === activeLang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Event Listeners for language switches (header & footer)
+  const langSwitchButtons = document.querySelectorAll('.lang-btn');
+  langSwitchButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedLang = btn.getAttribute('data-lang');
+      if (selectedLang !== activeLang) {
+        activeLang = selectedLang;
+        localStorage.setItem('lang', activeLang);
+        
+        updateLangButtonsActive();
+        updateLanguageUI();
+        
+        // Re-render dynamic elements
+        renderSlider();
+        renderGrid(latestNewsGrid, homeNewsArticles.slice(0, 6));
+        renderGrid(allNewsGrid, orderedNewsArticles);
+        renderColumns();
+        renderBentoColumnist();
+        
+        // Refresh article drawer if open
+        if (activeArticleId) {
+          openArticle(activeArticleId);
+        }
+        
+        // Clear search inputs
+        if (searchInput) searchInput.value = '';
+        if (columnSearchInput) columnSearchInput.value = '';
+      }
+    });
+  });
+
+  // Initialize Language on load
+  updateLangButtonsActive();
+  updateLanguageUI();
+
+  // ==========================================
   // 4. HERO SPLIT SLIDER (CAROUSEL)
   // ==========================================
   let currentSlideIndex = 0;
@@ -153,10 +408,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     sliderArticles.forEach((art, index) => {
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-      let displayTitle = art.title;
+      let displayTitle = activeLang === 'en' ? art.title_en : art.title;
       if (art.id === 14) {
-        displayTitle = "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
+        displayTitle = activeLang === 'en' 
+          ? "A Woman Born Right in the Middle of the Afghan Government's Misrule Disregarding Women's Rights, With Her Dreams Shattered: Nergis Ahmadi"
+          : "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
       }
+      const displayCategory = activeLang === 'en' ? art.category_en : art.category;
       
       const queueItem = document.createElement('div');
       queueItem.className = `queue-item ${index === 0 ? 'active' : ''}`;
@@ -165,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${img}" alt="${displayTitle}">
         </div>
         <div class="queue-item-meta">
-          <span class="queue-item-category">${art.category}</span>
+          <span class="queue-item-category">${displayCategory}</span>
           <h4 class="queue-item-title">${displayTitle}</h4>
         </div>
         <div class="queue-progress-bar"></div>
@@ -193,10 +451,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update main display
     const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-    let displayTitle = art.title;
+    let displayTitle = activeLang === 'en' ? art.title_en : art.title;
     if (art.id === 14) {
-      displayTitle = "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
+      displayTitle = activeLang === 'en' 
+        ? "A Woman Born Right in the Middle of the Afghan Government's Misrule Disregarding Women's Rights, With Her Dreams Shattered: Nergis Ahmadi"
+        : "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
     }
+    const displayCategory = activeLang === 'en' ? art.category_en : art.category;
     
     const sliderMainDisplay = document.getElementById('sliderMainDisplay');
     if (sliderMainDisplay) {
@@ -205,9 +466,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${img}" class="slide-main-img" alt="${displayTitle}">
           <div class="slide-main-overlay"></div>
           <div class="slide-main-content">
-            <span class="slide-main-category">${art.category}</span>
+            <span class="slide-main-category">${displayCategory}</span>
             <h1 class="slide-main-title">${displayTitle}</h1>
-            <button class="slide-main-btn" data-id="${art.id}">Haberi Oku</button>
+            <button class="slide-main-btn" data-id="${art.id}">${TRANSLATIONS[activeLang]["read-article"]}</button>
           </div>
         </div>
       `;
@@ -288,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg viewBox="0 0 24 24">
             <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           </svg>
-          <p>Aradığınız kriterlere uygun haber bulunamadı.</p>
+          <p>${TRANSLATIONS[activeLang]["no-news-found"]}</p>
         </div>
       `;
       return;
@@ -300,20 +561,24 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('data-id', art.id);
       
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-      const cleanExcerpt = art.paragraphs[0] ? art.paragraphs[0].substring(0, 120) + '...' : '';
+      const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
+      const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 120) + '...' : '';
+      
+      const displayTitle = activeLang === 'en' ? art.title_en : art.title;
+      const displayCategory = activeLang === 'en' ? art.category_en : art.category;
       
       const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
         <div class="card-img-container">
-          <img src="${img}" class="card-img" alt="${art.title}" loading="lazy">
-          <span class="card-category">${art.category}</span>
+          <img src="${img}" class="card-img" alt="${displayTitle}" loading="lazy">
+          <span class="card-category">${displayCategory}</span>
         </div>
         <div class="card-content">
           ${dateHtml}
-          <h3 class="card-title">${art.title}</h3>
+          <h3 class="card-title">${displayTitle}</h3>
           <p class="card-excerpt">${cleanExcerpt}</p>
           <span class="card-footer-link">
-            <span>Haberi Oku</span>
+            <span>${TRANSLATIONS[activeLang]["read-article"]}</span>
             <svg width="12" height="12" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
             </svg>
@@ -330,13 +595,15 @@ document.addEventListener('DOMContentLoaded', () => {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
     if (!query) {
-      renderGrid(allNewsGrid, newsArticles);
+      renderGrid(allNewsGrid, orderedNewsArticles);
       return;
     }
 
-    const filtered = newsArticles.filter(art => {
-      const inTitle = art.title.toLowerCase().includes(query);
-      const inBody = art.paragraphs.some(p => p.toLowerCase().includes(query));
+    const filtered = orderedNewsArticles.filter(art => {
+      const title = activeLang === 'en' ? art.title_en : art.title;
+      const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
+      const inTitle = title.toLowerCase().includes(query);
+      const inBody = paragraphs.some(p => p.toLowerCase().includes(query));
       return inTitle || inBody;
     });
 
@@ -344,8 +611,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Render initial news lists
-  renderGrid(latestNewsGrid, newsArticles.slice(0, 6)); // Only 6 latest news articles on Anasayfa
-  renderGrid(allNewsGrid, newsArticles); // All news articles on Haberler archive page
+  renderGrid(latestNewsGrid, homeNewsArticles.slice(0, 6)); // First 2 are ID 7, 8 on Anasayfa
+  renderGrid(allNewsGrid, orderedNewsArticles); // Slider articles first, then the rest on Haberler archive page
 
   // ==========================================
   // 7. KÖŞE YAZILARI PAGE RENDER & SEARCH
@@ -363,7 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; margin: 0 auto 16px; display: block; color: var(--text-tertiary);">
             <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           </svg>
-          <p style="text-align: center; color: var(--text-secondary);">Aradığınız kriterlere uygun köşe yazısı bulunamadı.</p>
+          <p style="text-align: center; color: var(--text-secondary);">${TRANSLATIONS[activeLang]["no-columns-found"]}</p>
         </div>
       `;
       return;
@@ -375,17 +642,20 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('data-id', art.id);
 
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg?w=1000';
-      const cleanExcerpt = art.paragraphs[0] ? art.paragraphs[0].substring(0, 180) + '...' : '';
+      const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
+      const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 180) + '...' : '';
+      
+      const displayTitle = activeLang === 'en' ? art.title_en : art.title;
 
       const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
-        <img src="${img}" class="column-card-img" alt="${art.title}" loading="lazy">
+        <img src="${img}" class="column-card-img" alt="${displayTitle}" loading="lazy">
         <div class="column-card-content">
           ${dateHtml}
-          <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${art.title}</h3>
+          <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${displayTitle}</h3>
           <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
           <span class="card-footer-link">
-            <span>Köşe Yazısını Oku</span>
+            <span>${TRANSLATIONS[activeLang]["read-column"]}</span>
             <svg width="12" height="12" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
             </svg>
@@ -407,8 +677,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const filtered = columnArticles.filter(art => {
-        const inTitle = art.title.toLowerCase().includes(query);
-        const inBody = art.paragraphs.some(p => p.toLowerCase().includes(query));
+        const title = activeLang === 'en' ? art.title_en : art.title;
+        const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
+        const inTitle = title.toLowerCase().includes(query);
+        const inBody = paragraphs.some(p => p.toLowerCase().includes(query));
         return inTitle || inBody;
       });
 
@@ -435,17 +707,20 @@ document.addEventListener('DOMContentLoaded', () => {
     card.setAttribute('data-id', latestColumn.id);
 
     const img = latestColumn.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg?w=1000';
-    const cleanExcerpt = latestColumn.paragraphs[0] ? latestColumn.paragraphs[0].substring(0, 180) + '...' : '';
+    const paragraphs = activeLang === 'en' ? latestColumn.paragraphs_en : latestColumn.paragraphs;
+    const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 180) + '...' : '';
+    
+    const displayTitle = activeLang === 'en' ? latestColumn.title_en : latestColumn.title;
 
     const dateHtml = formatDate(latestColumn.date) ? `<div class="card-meta">${formatDate(latestColumn.date)}</div>` : '';
     card.innerHTML = `
-      <img src="${img}" class="column-card-img" alt="${latestColumn.title}" loading="lazy">
+      <img src="${img}" class="column-card-img" alt="${displayTitle}" loading="lazy">
       <div class="column-card-content">
         ${dateHtml}
-        <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${latestColumn.title}</h3>
+        <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${displayTitle}</h3>
         <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
         <span class="card-footer-link">
-          <span>Köşe Yazısını Oku</span>
+          <span>${TRANSLATIONS[activeLang]["read-column"]}</span>
           <svg width="12" height="12" viewBox="0 0 24 24">
             <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
           </svg>
@@ -479,21 +754,25 @@ document.addEventListener('DOMContentLoaded', () => {
     activeArticleId = id;
     window.location.hash = `article/${id}`;
     
+    const displayTitle = activeLang === 'en' ? art.title_en : art.title;
     const imgElement = art.featured_image ? `
       <div class="drawer-img-container">
-        <img src="${art.featured_image}" alt="${art.title}">
+        <img src="${art.featured_image}" alt="${displayTitle}">
       </div>
     ` : '';
     
-    const bodyParagraphs = art.paragraphs.map(p => `<p>${p}</p>`).join('');
+    const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
+    const bodyParagraphs = paragraphs.map(p => `<p>${p}</p>`).join('');
 
-    const dateHtml = formatDate(art.date) ? `<span>Yayın Tarihi: ${formatDate(art.date)}</span><span>&bull;</span>` : '';
+    const dateHtml = formatDate(art.date) ? `<span>${TRANSLATIONS[activeLang]["drawer-pub-date"]}: ${formatDate(art.date)}</span><span>&bull;</span>` : '';
+    const displayCategory = activeLang === 'en' ? art.category_en : art.category;
+    
     drawerBody.innerHTML = `
-      <div class="drawer-meta">${art.category}</div>
-      <h1 class="drawer-title">${art.title}</h1>
+      <div class="drawer-meta">${displayCategory}</div>
+      <h1 class="drawer-title">${displayTitle}</h1>
       <div class="drawer-pub-meta">
         ${dateHtml}
-        <span>Yazar: Güldeste Altay</span>
+        <span>${TRANSLATIONS[activeLang]["drawer-author"]}</span>
       </div>
       ${imgElement}
       <div class="drawer-text">
@@ -551,7 +830,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Feedback to user
       const btnSpan = drawerCopyLinkBtn.querySelector('span');
       const originalText = btnSpan.innerText;
-      btnSpan.innerText = 'Bağlantı Kopyalandı!';
+      btnSpan.innerText = TRANSLATIONS[activeLang]["drawer-link-copied"];
       drawerCopyLinkBtn.style.borderColor = '#28a745';
       drawerCopyLinkBtn.style.color = '#28a745';
       
@@ -577,16 +856,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Disable submit to prevent double sends
     formSubmitBtn.disabled = true;
-    formSubmitBtn.querySelector('span').innerText = 'Gönderiliyor...';
+    formSubmitBtn.querySelector('span').innerText = TRANSLATIONS[activeLang]["contact-form-sending"];
 
     // Simulate network delay
     setTimeout(() => {
       // Show success msg
+      formSuccessMsg.innerText = TRANSLATIONS[activeLang]["contact-form-success"];
       formSuccessMsg.style.display = 'block';
       
       // Reset button
       formSubmitBtn.disabled = false;
-      formSubmitBtn.querySelector('span').innerText = 'Gönder';
+      formSubmitBtn.querySelector('span').innerText = TRANSLATIONS[activeLang]["contact-form-submit"];
       
       // Reset form fields
       contactForm.reset();
@@ -609,7 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (d.getFullYear() === 2024 && d.getMonth() === 0 && d.getDate() === 15) {
         return '';
       }
-      return d.toLocaleDateString('tr-TR', {
+      return d.toLocaleDateString(activeLang === 'en' ? 'en-US' : 'tr-TR', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'

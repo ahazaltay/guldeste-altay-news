@@ -2200,3 +2200,71 @@ footer {
     padding: 24px;
   }
 }
+
+/* ==========================================
+   LANGUAGE SWITCHER STYLES
+   ========================================== */
+.lang-switch-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: var(--bg-card);
+  transition: var(--transition-fast);
+  height: 32px;
+}
+
+.lang-switch-group:hover {
+  border-color: var(--accent);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 2px 8px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  border-radius: 12px;
+  transition: var(--transition-fast);
+  line-height: 1.4;
+  outline: none;
+}
+
+.lang-btn:hover {
+  color: var(--accent);
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  background-color: var(--bg-secondary);
+}
+
+.lang-divider {
+  color: var(--border-color);
+  font-size: 0.75rem;
+  font-weight: 400;
+  user-select: none;
+  padding: 0 2px;
+}
+
+/* Footer specific switcher margin */
+footer .lang-switch-group {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* ==========================================
+   ABOUT SECTION ALIGNMENT POLISH
+   ========================================== */
+@media (min-width: 769px) {
+  .about-text {
+    padding-top: 48px; /* Starts lower to match the right column's photo alignment */
+  }
+}
+

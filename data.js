@@ -1,492 +1,737 @@
 const ARTICLES_DATA = [
     {
-        "id":  1,
-        "title":  "Evsiz adlı eseriyle tanınan yazar: Uğur Koparan",
-        "slug":  "evsiz-adli-eseriyle-taninan-yazar-ugur-koparan",
-        "date":  "2024-01-15T12:24:08+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/evsiz-adli-eseriyle-taninan-yazar-ugur-koparan",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Uğur Koparan yazdığı roman ve şiir türündeki eserlerle tanınan bir yazar. Henüz çocukken şiir ve kısa hikayeler yazmaya başlayan yazar, Evsiz isimli gerçek hayata dokunan romanıyla ün kazandı. Koparan ile bir söyleşi gerçekleştirdim.",
-                           "Yazarlığa nasıl başladınız, yazar olmak hayaliniz miydi?",
-                           "Yazar olma fikrinden önce, yazma eylemi beni etkisi altına almıştı. Okuma yazmayı öğrenir öğrenmez, kafamın içindeki dünyayı yazılar aracılığıyla aktarmanın tuhaf hazzını keşfetmiştim. Haliyle o çağlardaki hayal gücü gerçeküstü bir manzara sergiliyordu. Yetişkinlerin gri tonlarla betimlediği dünyayı bir nevi renklere bulama girişimiydi. Okul yıllarında çeşitli iniş çıkışlarla devam etti bu serüven. Okuma tutkusu lise dönemleriyle yeşermişti. Kitapların baştan çıkartıcı kokusu, içimde bitip tükenmeyen merak tutkusuyla birleşiyordu. Kompozisyon derslerindeki başarım bir noktada belirgin bir işaret ortaya koysa da, asıl keskin dönüşüm, lise sonrası üniversite dönemlerine denk geliyordu. İçimde bir yerlerde barınan bu gizli istek, çevresel koşulların etkisiyle dışavurumcu bir hal aldı. Şiirler yazmaya başladım. Spesifik konularla makaleler yazıyordum. Bu birikimi yayımlama gibi bir düşüncem olmamasına rağmen, zaman içerisinde kitaplaşma sürecine doğru evrildi.",
-                           "Üniversitede Ziraat Mühendisliği okudunuz. Neden bu alan yerine yazarlığı seçtiniz?",
-                           "Doğayı her zaman sevmişimdir. İnsan türünün köklerine dair derin ipuçlarını toprağın dinamiklerini incelerken farkına varabilirsiniz. 19 yaşında, dünyayı değiştirme idealini ve inancını taşıyan bir genç olarak, tarımın uygarlık gelişimindeki önemini temel alarak Ziraat okumaya karar verdim. Zaten oldum olası sınav sistemiyle barışamayan uyumsuz biriydim. Seçimlerin maaş bordroları üzerine kurulu olması işimi kolaylaştırdı. Yarım saatlik bir performansla istediğim bölümü kazandım. Fakat örgün eğitimin mekanik döngüsü beklentilerimi karşılayamadı. Kafamdaki ütopya bu şekilde sulara gömüldü. Akademi dünyasının soğuk koridorlarında yitirdim bu idealist düşünceyi. Kurumsal yapılarda barınamayacağımı anladığım andan itibaren edebiyat dünyasına kafamı soktum. Gerçi oradaki feodal düzen nedeniyle başka bir uyumsuzluk sorunsalına maruz kalsam da, en azından yazınsal açıdan alternatif bir yaşam alanı yaratabileceğimi düşündüm. 2011’de ilk şiir kitabım basıldı. Sonra çeşitli mahlaslarla araştırma ve biyografi kitapları kaleme aldım. 2016’da peş peşe kitaplarım yayımlandı. Sistem karşıtı felsefi romanlar yazdım. Edebiyatla felsefenin kesiştiği bir yerlerdeyim artık.",
-                           " Yazdığınız kitaplar hakkında biraz bilgi verebilir misiniz?",
-                           "Dediğim gibi edebiyatla tanışmam şiirler vasıtasıyla oldu. Düzyazıyla olan ilişkim daha çok entelektüel boyuttaydı. Hayatımda yazma kadar ve hatta ondan daha öne çıkan okuma eyleminin yarattığı bilgi kuramı birikimi, şiirlerin dışına taşmamı sağladı. Bir varoluşsal zorunluluk gibiydi adeta. 2011’de İlk şiir kitabım “Varoluş / Öz”, 2016’da ise ikinci ve üçüncü şiir kitaplarım, “Oysa” ve “Tel örgü / Yasak bölge” okurlarla buluştu. 2015’te ilk romanım “Evsiz” ile belirli bir okur kitlesine ulaştım. Sıradan bir adamın sokaklara uzanan, medeniyetin açmazlarını ve çelişkilerini kağıda döktüm. İkinci romanım “Felis Catus” ise bir ev kedisinin kendi varoluşunu sorgulamasıyla başlayan, bu kez uygarlığı başka bir türün gözünden anlatmaya çalıştığım bir kitaptı. En son geçen yıl yayımlanan “Postalında Kuş Sesleri” ile savaşın acımasız yönlerini okurlara aktardım. Birbirlerine düşman olarak yetiştirilen iki farklı bireyin kesişen yolları. Kitabın kapağındaki tek bir cümle özetliyordu durumu: “Herhangi bir ülkede geçiyordu bütün benzer sancılar”.",
-                           "Kitaplarınızı ve şiirlerinizi yazarken nelerden ilham alıyorsunuz?",
-                           "Yaşama dair duyumsadığım her şey beni besler. İlhamı başka yerlerde değil kafanızın içinde tekrar tekrar üretmelisiniz. Yaşamak ve yazmak arasında ayrım yapmadım. Bu yüzden hepsi aynı güzergaha yöneliyor. Bir an gelir ve kağıda düşer var olanlar…",
-                           "Agamben, Baumann, Deleuze, Lacan, Adorno, Foucault, Negri, Eliade gibi sosyal bilimci isimlerin yapıtlarını okumaktayım.",
-                           "Bir söyleşinizde “Beni rahatsız eden şeyleri yazıyorum.” Demişsiniz. Sizi rahatsız eden şey nedir?",
-                           "Beni rahatsız eden faktörlerin başında içinde yaşadığımız çağ geliyor. Uygarlığın insan merkezli algısı ve beraberinde sürekli değişime uğrayan sömürü düzeni… Kapitalist mantık sadece insan-nesne ilişkisini belirlemiyor. İnsan ilişkilerine uzanan, mevcut olan her varlığı metalaştıran, fiyat biçen yıkıcı bir algı. Dijitalleşmenin bir açıdan küresel bir bakış açısı yarattığı doğrudur fakat derinleşmeyi engelliyor. Cihazların giderek zekileştiği süreçte bireysel hafızaların durumu pek iç açıcı değil. Sokrates’in tabiriyle bir at sineği gibi vızıldamak en azından kitlelerin hastalıklı yapılar içinde uyuşarak sindirilmelerini engelliyor. Bir sorgulama kanalı açılıyor.",
-                           "Beğenerek okuduğunuz yazarlar kimler?",
-                           "Son dönemlerde ağırlıklı olarak teorik kitaplar okuyorum. Kurgu yazan biri olarak ironik bir olay. Akademik düzeydeki bilimsel tartışmalar ilgimi çekiyor. Felsefi metinleri yapı söküme uğratan çalışmaları öncelik alıyorum. Edebiyat yazarlarına saygım sonsuz ama zaman geçtikçe örnek vermek gerekirse Dostoyevski’den Derrida’ya kaymalar oldu. Elbette Marquez, Pessoa, Camus ve Kafka gibi isimlerin geçmişte etkileri tartışılmaz. Son dönemlerde Galeano,",
-                           "Korkusuz, sert eleştirilerde bulunan bir yazar olarak biliniyorsunuz. Sizce böyle bir yazar olmanın bedeli nedir?",
-                           "Özellikle bu coğrafyanın tarihinde var olmuş bir yaşam tarzıdır direnmek. İktidar olgusu üzerinden yapılan her eleştiri hainlikle suçlanmıştır. Çünkü mevcut haksızlıkları dile getirmek otoritenin işleyişine çomak sokmaktır aynı zamanda. En fazla ne olabilir? Ölüm kavramı sıradan bir fenomendir benim için. Dört duvar ise beşeriyetin bedeni dizginleme girişiminden fazlası değildir. Düşler ve düşünceler hiçbir zaman kontrol altında tutulamaz. Kaybedecek şeyleri olanlar korkarlar. Adaletten, barıştan, eşitlikten, dayanışmadan ve paylaşımdan yana olmak korkuları ortadan kaldırıyor. Haklı olmanın huzuru bütün yasaklamaların üzerinden yükselerek umut tohumları ekmeye devam ediyor.",
-                           "Yaşadığınız çağ hakkında neler düşünüyorsunuz?",
-                           "Nereden baksak çok ilginç bir dönemdeyiz. Yerelden genele doğru yola çıktığımızda bazı benzer durumlarla karşılaşıyoruz. Bir yandan uzaya araçlar yollayan bilimsel tartışmalar diğer yandan Ortaçağın skolastik düşüncesine saplanmış bağnaz ideolojiler. İnsanlık önümüzdeki 300 yıllık aşamada büyük bir eşiğin arifesinde. Eğer bu düğümü çözebilirse uzaya yayılacak yeni bir genişlemeden bahsedebiliriz. Lakin Homo Sapiens evrimi tipik özelliklerini korumaya devam ederse, bu ilerleme olumlu bir etki yaratmayacaktır. Yeni dünyanın keşfi sırasında yerlilere yapılan muameleler hala hafızalarda. Şiddeti ideolojik bir aygıt olarak organize bir şekilde kullanan bu tür, kendi sonunu da hazırlayabilir. İnsanlık her geçen gün bilişsel etkinliğini daha az kullanan ve bu yetiyi makinalara aktaran nesille tanışıyor. Yasalara koşulsuzca bağlanmak, distopik bir gelecek kaygısını öne çıkarıyor. Yine de bir yerlerde her şeyi sorgulayan ve üretim hatası olarak görülen uyumsuzlar çıkacaktır. İşte onların varlığı her daim olası tekdüzelik karşısında renkleri savunacaktır. Bize gerekli olan salt iktisadi eşitlik arzusu değil, aynı zamanda sınırsız bir ifade özgürlüğüyle donatılmış, başka yaşam tarzlarına güvence sağlayacak kolektif kararlardır.",
-                           "Yeni bir kitap çalışmanız var mı?",
-                           "Üzerinde bir süredir çalışmakta olduğum felsefi denemelere yoğunlaştım. Onun düzenlemeleriyle uğraşıyorum. Bir aksilik olmazsa önümüzdeki yıl basıma hazır olacak. El yazmalarımdan oluşan bir derleme. Hayata dair hemen hemen her konuda yazdığım kısa pasajlardan meydana geliyor.",
-                           "Diğer yandan 13.yy anadolusunda geçen bir roman fikri oluşmaya başladı. Hayali bir derviş ekseninde tarihsel olayları da kapsayacak geniş içerikli bir kitap olacak. Kurgusal örgüyle düşünsel tarihini yazmayı düşünüyorum. Dördüncü şiir kitabım ise yolda.",
-                           "Son olarak yazarlığa adım atanlara önerileriniz neler?",
-                           "Önerilerde bulunmayı sevmem ama mümkün olduğunca okumaya devam etsinler. Her şeyden önce bir okur olarak satır aralarındaki birikimi görmek beni tatmin eder. Yazdıklarının onlarca katını okuyarak, araştırarak sindirmeleri önemli. Ayrıca yazmak aynı zamanda pratik bir süreçtir. Kafalarında beliren öyküleri sansürlemeden somutlaştırmalılar ve kitlenin beğenilerine göre değil vicdanlarının sesine göre kalemlerini savursunlar. Yazdıkları ve yaşam biçimleriyle tutarlılık sergileyenlere büyük saygı duyuyorum."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/wdf.png"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/wdf.png"
+        "id": 1,
+        "title": "Evsiz adlı eseriyle tanınan yazar: Uğur Koparan",
+        "title_en": "Author Known for His Novel 'Homeless': Uğur Koparan",
+        "slug": "evsiz-adli-eseriyle-taninan-yazar-ugur-koparan",
+        "date": "2024-01-15T12:24:08+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/evsiz-adli-eseriyle-taninan-yazar-ugur-koparan",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Uğur Koparan yazdığı roman ve şiir türündeki eserlerle tanınan bir yazar. Henüz çocukken şiir ve kısa hikayeler yazmaya başlayan yazar, Evsiz isimli gerçek hayata dokunan romanıyla ün kazandı. Koparan ile bir söyleşi gerçekleştirdim.",
+            "Yazarlığa nasıl başladınız, yazar olmak hayaliniz miydi?",
+            "Yazar olma fikrinden önce, yazma eylemi beni etkisi altına almıştı. Okuma yazmayı öğrenir öğrenmez, kafamın içindeki dünyayı yazılar aracılığıyla aktarmanın tuhaf hazzını keşfetmiştim. Haliyle o çağlardaki hayal gücü gerçeküstü bir manzara sergiliyordu. Yetişkinlerin gri tonlarla betimlediği dünyayı bir nevi renklere bulama girişimiydi. Okul yıllarında çeşitli iniş çıkışlarla devam etti bu serüven. Okuma tutkusu lise dönemleriyle yeşermişti. Kitapların baştan çıkartıcı kokusu, içimde bitip tükenmeyen merak tutkusuyla birleşiyordu. Kompozisyon derslerindeki başarım bir noktada belirgin bir işaret ortaya koysa da, asıl keskin dönüşüm, lise sonrası üniversite dönemlerine denk geliyordu. İçimde bir yerlerde barınan bu gizli istek, çevresel koşulların etkisiyle dışavurumcu bir hal aldı. Şiirler yazmaya başladım. Spesifik konularla makaleler yazıyordum. Bu birikimi yayımlama gibi bir düşüncem olmamasına rağmen, zaman içerisinde kitaplaşma sürecine doğru evrildi.",
+            "Üniversitede Ziraat Mühendisliği okudunuz. Neden bu alan yerine yazarlığı seçtiniz?",
+            "Doğayı her zaman sevmişimdir. İnsan türünün köklerine dair derin ipuçlarını toprağın dinamiklerini incelerken farkına varabilirsiniz. 19 yaşında, dünyayı değiştirme idealini ve inancını taşıyan bir genç olarak, tarımın uygarlık gelişimindeki önemini temel alarak Ziraat okumaya karar verdim. Zaten oldum olası sınav sistemiyle barışamayan uyumsuz biriydim. Seçimlerin maaş bordroları üzerine kurulu olması işimi kolaylaştırdı. Yarım saatlik bir performansla istediğim bölümü kazandım. Fakat örgün eğitimin mekanik döngüsü beklentilerimi karşılayamadı. Kafamdaki ütopya bu şekilde sulara gömüldü. Akademi dünyasının soğuk koridorlarında yitirdim bu idealist düşünceyi. Kurumsal yapılarda barınamayacağımı anladığım andan itibaren edebiyat dünyasına kafamı soktum. Gerçi oradaki feodal düzen nedeniyle başka bir uyumsuzluk sorunsalına maruz kalsam da, en azından yazınsal açıdan alternatif bir yaşam alanı yaratabileceğimi düşündüm. 2011’de ilk şiir kitabım basıldı. Sonra çeşitli mahlaslarla araştırma ve biyografi kitapları kaleme aldım. 2016’da peş peşe kitaplarım yayımlandı. Sistem karşıtı felsefi romanlar yazdım. Edebiyatla felsefenin kesiştiği bir yerlerdeyim artık.",
+            " Yazdığınız kitaplar hakkında biraz bilgi verebilir misiniz?",
+            "Dediğim gibi edebiyatla tanışmam şiirler vasıtasıyla oldu. Düzyazıyla olan ilişkim daha çok entelektüel boyuttaydı. Hayatımda yazma kadar ve hatta ondan daha öne çıkan okuma eyleminin yarattığı bilgi kuramı birikimi, şiirlerin dışına taşmamı sağladı. Bir varoluşsal zorunluluk gibiydi adeta. 2011’de İlk şiir kitabım “Varoluş / Öz”, 2016’de ise ikinci ve üçüncü şiir kitaplarım, “Oysa” ve “Tel örgü / Yasak bölge” okurlarla buluştu. 2015’te ilk romanım “Evsiz” ile belirli bir okur kitlesine ulaştım. Sıradan bir adamın sokaklara uzanan, medeniyetin açmazlarını ve çelişkilerini kağıda döktüm. İkinci romanım “Felis Catus” ise bir ev kedisinin kendi varoluşunu sorgulamasıyla başlayan, bu kez uygarlığı başka bir türün gözünden anlatmaya çalıştığım bir kitaptı. En son geçen yıl yayımlanan “Postalında Kuş Sesleri” ile savaşın acımasız yönlerini okurlara aktardım. Birbirlerine düşman olarak yetiştirilen iki farklı bireyin kesişen yolları. Kitabın kapağındaki tek bir cümle özetliyordu durumu: “Herhangi bir ülkede geçiyordu bütün benzer sancılar”.",
+            "Kitaplarınızı ve şiirlerinizi yazarken nelerden ilham alıyorsunuz?",
+            "Yaşama dair duyumsadığım her şey beni besler. İlhamı başka yerlerde değil kafanızın içinde tekrar tekrar üretmelisiniz. Yaşamak ve yazmak arasında ayrım yapmadım. Bu yüzden hepsi aynı güzergaha yöneliyor. Bir an gelir ve kağıda düşer var olanlar…",
+            "Agamben, Baumann, Deleuze, Lacan, Adorno, Foucault, Negri, Eliade gibi sosyal bilimci isimlerin yapıtlarını okumaktayım.",
+            "Bir söyleşinizde “Beni rahatsız eden şeyleri yazıyorum.” Demişsiniz. Sizi rahatsız eden şey nedir?",
+            "Beni rahatsız eden faktörlerin başında içinde yaşadığımız çağ geliyor. Uygarlığın insan merkezli algısı ve beraberinde sürekli değişime uğrayan sömürü düzeni… Kapitalist mantık sadece insan-nesne ilişkisini belirlemiyor. İnsan ilişkilerine uzanan, mevcut olan her varlığı metalaştıran, fiyat biçen yıkıcı bir algı. Dijitalleşmenin bir açıdan küresel bir bakış açısı yarattığı doğrudur fakat derinleşmeyi engelliyor. Cihazların giderek zekileştiği süreçte bireysel hafızaların durumu pek iç açıcı değil. Sokrates’in tabiriyle bir at sineği gibi vızıldamak en azından kitlelerin hastalıklı yapılar içinde uyuşarak sindirilmelerini engelliyor. Bir sorgulama kanalı açılıyor.",
+            "Beğenerek okuduğunuz yazarlar kimler?",
+            "Son dönemlerde ağırlıklı olarak teorik kitaplar okuyorum. Kurgu yazan biri olarak ironik bir olay. Akademik düzeydeki bilimsel tartışmalar ilgimi çekiyor. Felsefi metinleri yapı söküme uğratan çalışmaları öncelik alıyorum. Edebiyat yazarlarına saygım sonsuz ama zaman geçtikçe örnek vermek gerekirse Dostoyevski’den Derrida’ya kaymalar oldu. Elbette Marquez, Pessoa, Camus ve Kafka gibi isimlerin geçmişte etkileri tartışılmaz. Son dönemlerde Galeano,",
+            "Korkusuz, sert eleştirilerde bulunan bir yazar olarak biliniyorsunuz. Sizce böyle bir yazar olmanın bedeli nedir?",
+            "Özellikle bu coğrafyanın tarihinde var olmuş bir yaşam tarzıdır direnmek. İiktidar olgusu üzerinden yapılan her eleştiri hainlikle suçlanmıştır. Çünkü mevcut haksızlıkları dile getirmek otoritenin işleyişine çomak sokmaktır aynı zamanda. En fazla ne olabilir? Ölüm kavramı sıradan bir fenomendir benim için. Dört duvar ise beşeriyetin bedeni dizginleme girişiminden fazlası değildir. Düşler ve düşünceler hiçbir zaman kontrol altında tutulamaz. Kaybedecek şeyleri olanlar korkarlar. Adaletten, barıştan, eşitlikten, dayanışmadan ve paylaşımdan yana olmak korkuları ortadan kaldırıyor. Haklı olmanın huzuru bütün yasaklamaların üzerinden yükselerek umut tohumları ekmeye devam ediyor.",
+            "Yaşadığınız çağ hakkında neler düşünüyorsunuz?",
+            "Nereden baksak çok ilginç bir dönemdeyiz. Yerelden genele doğru yola çıktığımızda bazı benzer durumlarla karşılaşıyoruz. Bir yandan uzaya araçlar yollayan bilimsel tartışmalar diğer yandan Ortaçağın skolastik düşüncesine saplanmış bağnaz ideolojiler. İnsanlık önümüzdeki 300 yıllık aşamada büyük bir eşiğin arifesinde. Eğer bu düğümü çözebilirirse uzaya yayılacak yeni bir genişlemeden bahsedebiliriz. Lakin Homo Sapiens evrimi tipik özelliklerini korumaya devam ederse, bu ilerleme olumlu bir etki yaratmayacaktır. Yeni dünyanın keşfi sırasında yerlilere yapılan muameleler hala hafızalarda. Şiddeti ideolojik bir aygıt olarak organize bir şekilde kullanan bu tür, kendi sonunu da hazırlayabilir. İnsanlık her geçen gün bilişsel etkinliğini daha az kullanan ve bu yetiyi makinalara aktaran nesille tanışıyor. Yasalara koşulsuzca bağlanmak, distopik bir gelecek kaygısını öne çıkarıyor. Yine de bir yerlerde her şeyi sorgulayan ve üretim hatası olarak görülen uyumsuzlar çıkacaktır. İşte onların varlığı her daim olası tekdüzelik karşısında renkleri savunacaktır. Bize gerekli olan salt iktisadi eşitlik arzusu değil, aynı zamanda sınırsız bir ifade özgürlüğüyle donatılmış, başka yaşam tarzlarına güvence sağlayacak kolektif kararlardır.",
+            "Yeni bir kitap çalışmanız var mı?",
+            "Üzerinde bir süredir çalışmakta olduğum felsefi denemelere yoğunlaştım. Onun düzenlemeleriyle uğraşıyorum. Bir aksilik olmazsa önümüzdeki yıl basıma hazır olacak. El yazmalarımdan oluşan bir derleme. Hayata dair hemen hemen her konuda yazdığım kısa pasajlardan meydana geliyor.",
+            "Diğer yandan 13.yy anadolusunda geçen bir roman fikri oluşmaya başladı. Hayali bir derviş ekseninde tarihsel olayları da kapsayacak geniş içerikli bir kitap olacak. Kurgusal örgüyle düşünsel tarihini yazmayı düşünüyorum. Dördüncü şiir kitabım ise yolda.",
+            "Son olarak yazarlığa adım atanlara önerileriniz neler?",
+            "Önerilerde bulunmayı sevmem ama mümkün olduğunca okumaya devam etsinler. Her şeyden önce bir okur olarak satır aralarındaki birikimi görmek beni tatmin eder. Yazdıklarının onlarca katını okuyarak, araştırarak sindirmeleri önemli. Ayrıca yazmak aynı zamanda pratik bir süreçtir. Kafalarında beliren öyküleri sansürlemeden somutlaştırmalılar ve kitlenin beğenilerine göre değil vicdanlarının sesine göre kalemlerini savursunlar. Yazdıkları ve yaşam biçimleriyle tutarlılık sergileyenlere büyük saygı duyuyorum."
+        ],
+        "paragraphs_en": [
+            "Uğur Koparan is an author known for his novels and poetry. Having started writing poetry and short stories during his childhood, the author gained fame with his realistic novel Homeless. I conducted an interview with Koparan.",
+            "How did you start writing? Was being an author your dream?",
+            "Before the idea of being an author, the act of writing itself had taken hold of me. As soon as I learned to read and write, I discovered the strange pleasure of transferring the world in my head through text. Thus, the imagination at that age presented a surreal landscape. It was a kind of attempt to color the world that adults described in shades of gray. This adventure continued with various ups and downs during school years. The passion for reading blossomed during high school. The seductive smell of books merged with an endless sense of curiosity. Although my success in composition classes showed a clear sign, the real sharp transformation took place during the university years after high school. This hidden desire lying somewhere inside me took an expressionist turn with the influence of environmental conditions. I started writing poems and articles on specific topics. Although I had no intention of publishing them, it evolved into a book process over time.",
+            "You studied Agricultural Engineering at university. Why did you choose writing instead of this field?",
+            "I have always loved nature. You can find deep clues about the roots of the human species while studying the dynamics of the soil. At the age of 19, as a young person with the ideal and belief of changing the world, I decided to study agriculture based on its importance in civilizational development. I was already an incompatible person who could not reconcile with the exam system. The fact that career choices were based on pay slips made it easy for me. I got into the department I wanted with a half-hour exam performance. But the mechanical cycle of formal education did not meet my expectations. The utopia in my head was shattered. I lost this idealistic thought in the cold corridors of academia. From the moment I realized I could not fit into corporate structures, I entered the literary world. Although I faced another problem of incompatibility due to the feudal structure there, I thought I could at least create an alternative living space in literary terms. In 2011, my first poetry book was published. Then I wrote research and biography books under various pen names. In 2016, my books were published one after another. I wrote anti-systemic philosophical novels. I am now somewhere where literature and philosophy intersect.",
+            "Can you give us some information about your books?",
+            "As I said, my introduction to literature was through poetry. My relationship with prose was more on an intellectual level. The accumulation of epistemology created by reading, which is as prominent as writing in my life and even precedes it, enabled me to move beyond poetry. It was almost like an existential necessity. My first poetry book 'Existence / Essence' was published in 2011, and my second and third poetry books, 'Yet' and 'Barbed Wire / Forbidden Zone', met with readers in 2016. In 2015, I reached a certain readership with my first novel 'Homeless'. I wrote about the streets, dilemmas, and contradictions of civilization of an ordinary man. My second novel, 'Felis Catus', was a book that started with a house cat questioning its own existence, trying to explain civilization through the eyes of another species. Most recently, with 'Bird Sounds in Your Boots' published last year, I conveyed the brutal aspects of war. The crossing paths of two different individuals raised as enemies. A single sentence on the cover summarized the situation: 'All similar pains were taking place in any country.'",
+            "What inspires you when writing your books and poems?",
+            "Everything I sense about life feeds me. You shouldn't look for inspiration elsewhere, you must recreate it in your head again and again. I didn't separate living and writing. That's why they all lead to the same route. A moment comes and what exists falls onto paper...",
+            "I read works of social scientists such as Agamben, Bauman, Deleuze, Lacan, Adorno, Foucault, Negri, and Eliade.",
+            "In an interview, you said: 'I write about things that bother me.' What is it that bothers you?",
+            "At the top of the factors that bother me is the era we live in. The human-centered perception of civilization and the system of exploitation that is constantly changing with it... Capitalist logic does not only determine the human-object relation. It is a destructive perception that extends to human relations, commodifying every existing entity and putting a price tag on it. It is true that digitalization has created a global perspective in one aspect, but it prevents depth. In the process where devices are getting smarter, the state of individual memories is not very bright. In Socrates' words, buzzing like a gadfly at least prevents the masses from being digested by numbing in diseased structures. A channel of questioning opens up.",
+            "Who are the authors you enjoy reading?",
+            "Lately, I have been reading mainly theoretical books. It is an ironic event for someone who writes fiction. Scientific discussions at the academic level interest me. I prioritize works that deconstruct philosophical texts. My respect for literary writers is infinite, but as time passed, there were shifts from Dostoyevsky to Derrida, to give an example. Of course, the influence of names like Marquez, Pessoa, Camus, and Kafka in the past is indisputable. Lately, Galeano...",
+            "You are known as an author who makes fearless, harsh criticisms. In your opinion, what is the price of being such an author?",
+            "Resisting is a lifestyle that has existed in the history of this geography specifically. Every criticism made through the concept of power has been accused of treason. Because expressing current injustices is also putting a spoke in the wheel of authority's operation. What can happen at most? The concept of death is an ordinary phenomenon for me. Four walls are nothing more than humanity's attempt to rein in the body. Dreams and thoughts can never be kept under control. Those who have things to lose are afraid. Being in favor of justice, peace, equality, solidarity, and sharing eliminates fears. The peace of being right rises above all prohibitions and continues to sow seeds of hope.",
+            "What do you think about the era you live in?",
+            "Whichever way we look at it, we are in a very interesting period. When we set off from the local to the general, we encounter some similar situations. On the one hand, scientific debates sending vehicles to space, on the other hand, bigoted ideologies stuck in the scholastic thought of the Middle Ages. Humanity is on the eve of a great threshold in the next 300-year phase. If it can solve this knot, we can talk about a new expansion spreading to space. But if Homo Sapiens evolution continues to maintain its typical characteristics, this progress will not create a positive impact. The treatment of the indigenous people during the discovery of the New World is still in memories. This species, which uses violence as an ideological apparatus in an organized way, may also prepare its own end. Every passing day, humanity meets a generation that uses its cognitive activity less and transfers this ability to machines. Unconditionally connecting to laws highlights a dystopian future concern. Still, nonconformists seen as production errors who question everything will emerge somewhere. Their existence will always defend colors against possible monotony. What we need is not just a desire for economic equality, but also collective decisions equipped with unlimited freedom of expression that will guarantee other lifestyles.",
+            "Do you have a new book project?",
+            "I have focused on philosophical essays that I have been working on for a while. I am dealing with their edits. If nothing goes wrong, it will be ready for printing next year. A compilation of my manuscripts. It consists of short passages I wrote on almost every subject about life.",
+            "On the other hand, the idea of a novel set in 13th-century Anatolia has begun to form. It will be a comprehensive book covering historical events centered around a fictional dervish. I plan to write its intellectual history with a fictional weave. My fourth poetry book is also on the way.",
+            "Finally, what are your suggestions for those stepping into authorship?",
+            "I don't like giving suggestions, but let them continue to read as much as possible. Every thing as a reader seeing the accumulation between the lines satisfies me. It is important for them to digest by reading and researching dozens of times what they write. Also, writing is a practical process at the same time. They should concretize the stories that appear in their minds without censoring them, and they should swing their pens according to the voice of their conscience, not the likes of the crowd. I have great respect for those who exhibit consistency between what they write and their lifestyle."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/wdf.png"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/wdf.png"
     },
     {
-        "id":  2,
-        "title":  "Türkiye’de 2024 Asgari Ücret Belirlendi: Brüt Asgari Ücret 20.002,50 TL oldu",
-        "slug":  "turkiyede-2024-asgari-ucret-belirlendi-brut-asgari-ucret-20-00250-tl-oldu",
-        "date":  "2024-01-15T12:07:59+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/turkiyede-2024-asgari-ucret-belirlendi-brut-asgari-ucret-20-00250-tl-oldu",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Türkiye’de her yıl düzenlenen Asgari Ücret Tespit Komisyonu toplantısı sonucunda, 2024 yılı için asgari ücret belirlendi. Komisyon, 2023 yılında uygulanan 11.402,32 TL’lik asgari ücrete %49 oranında zam yaparak, yeni asgari ücreti net 17.002,12 TL olarak belirledi. Ayrıca, brüt asgari ücret 20.002,50 TL olarak tespit edildi.",
-                           "Geçtiğimiz yılın Aralık ayında toplanan Asgari Ücret Tespit Komisyonu’nda alınan bu karar, milyonlarca çalışanın maaşlarını etkileyecek. Yapılan zam oranının yüksek olması, birçok kesim tarafından olumlu karşılanırken, bazı sektör temsilcileri ise maliyet artışlarından endişe duyduklarını belirtiyor.",
-                           "Asgari ücretin belirlenmesi süreci her yıl olduğu gibi bu yıl da sendikalar, işverenler ve hükümet temsilcileri arasında yapılan görüşmelerle sonuçlandı. Komisyonun aldığı karar, hem işçi hem de işveren kesiminde merakla bekleniyordu.",
-                           "Asgari ücret artışıyla ilgili yapılan açıklamada, işçi temsilcileri temel ihtiyaçların karşılanabilmesi adına yapılan zamın olumlu bir adım olduğunu ifade ederken, işveren temsilcileri ise maliyetlerin artmasının sektörleri olumsuz etkileyebileceği konusunda uyarılarda bulundu.",
-                           "Yapılan bu asgari ücret düzenlemesi, ülkedeki ekonomik koşullar ve enflasyonun yanı sıra işçi hakları ve sosyal denge gibi faktörleri de göz önüne alarak gerçekleştirildi. 2024 yılı itibarıyla yürürlüğe girecek olan yeni asgari ücret, çalışanların ve işverenlerin üzerindeki etkileriyle birlikte yakından takip edilecek.",
-                           "Editörün notu: Bu haber yapay zeka uygulaması CHAT GPT tarafından yazılmıştır."
-                       ],
-        "images":  [
-                       "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/coins-1726618_1280.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/coins-1726618_1280.jpg"
+        "id": 2,
+        "title": "Türkiye’de 2024 Asgari Ücret Belirlendi: Brüt Asgari Ücret 20.002,50 TL oldu",
+        "title_en": "2024 Minimum Wage Determined in Turkey: Gross Minimum Wage is 20,002.50 TL",
+        "slug": "turkiyede-2024-asgari-ucret-belirlendi-brut-asgari-ucret-20-00250-tl-oldu",
+        "date": "2024-01-15T12:07:59+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/turkiyede-2024-asgari-ucret-belirlendi-brut-asgari-ucret-20-00250-tl-oldu",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Türkiye’de her yıl düzenlenen Asgari Ücret Tespit Komisyonu toplantısı sonucunda, 2024 yılı için asgari ücret belirlendi. Komisyon, 2023 yılında uygulanan 11.402,32 TL’lik asgari ücrete %49 oranında zam yaparak, yeni asgari ücreti net 17.002,12 TL olarak belirledi. Ayrıca, brüt asgari ücret 20.002,50 TL olarak tespit edildi.",
+            "Geçtiğimiz yılın Aralık ayında toplanan Asgari Ücret Tespit Komisyonu’nda alınan bu karar, milyonlarca çalışanın maaşlarını etkileyecek. Yapılan zam oranının yüksek olması, birçok kesim tarafından olumlu karşılanırken, some sektör temsilcileri ise maliyet artışlarından endişe duyduklarını belirtiyor.",
+            "Asgari ücretin belirlenmesi süreci her yıl olduğu gibi bu yıl da sendikalar, işverenler ve hükümet temsilcileri arasında yapılan görüşmelerle sonuçlandı. Komisyonun aldığı karar, hem işçi hem de işveren kesiminde merakla bekleniyordu.",
+            "Asgari ücret artışıyla ilgili yapılan açıklamada, işçi temsilcileri temel ihtiyaçların karşılanabilmesi adına yapılan zamın olumlu bir adım olduğunu ifade ederken, işveren temsilcileri ise maliyetlerin artmasının sektörleri olumsuz etkileyebileceği konusunda uyarılarda bulundu.",
+            "Yapılan bu asgari ücret düzenlemesi, ülkedeki ekonomik koşullar ve enflasyonun yanı sıra işçi hakları ve sosyal denge gibi faktörleri de göz önüne alarak gerçekleştirildi. 2024 yılı itibarıyla yürürlüğe girecek olan yeni asgari ücret, çalışanların ve işverenlerin üzerindeki etkileriyle birlikte yakından takip edilecek.",
+            "Editörün notu: Bu haber yapay zeka uygulaması CHAT GPT tarafından yazılmıştır."
+        ],
+        "paragraphs_en": [
+            "As a result of the annual Minimum Wage Determination Commission meeting in Turkey, the minimum wage for 2024 has been determined. The commission increased the minimum wage of 11,402.32 TL applied in 2023 by 49%, setting the new net minimum wage at 17,002.12 TL. In addition, the gross minimum wage was determined as 20,002.50 TL.",
+            "This decision, taken at the Minimum Wage Determination Commission which met in December last year, will affect the wages of millions of employees. While the high rate of increase was welcomed by many, some sector representatives stated that they are concerned about cost increases.",
+            "The process of determining the minimum wage resulted from negotiations between unions, employers, and government representatives, as it does every year. The commission's decision was eagerly awaited by both workers and employers.",
+            "In the statement made regarding the minimum wage increase, workers' representatives expressed that the wage hike was a positive step in order to meet basic needs, while employers' representatives warned that rising costs could negatively affect sectors.",
+            "This minimum wage adjustment was carried out considering factors such as inflation and economic conditions in the country, as well as worker rights and social balance. The new minimum wage, which will come into effect in 2024, will be closely monitored along with its effects on employees and employers.",
+            "Editor's note: This news was written by the artificial intelligence application ChatGPT."
+        ],
+        "images": [
+            "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/coins-1726618_1280.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/coins-1726618_1280.jpg"
     },
     {
-        "id":  3,
-        "title":  "Uygurların Yaşadığı Zorluklara Dikkat Çekmek İçin Medine Nazimi, Kayıp Kız Kardeşinin Peşinde",
-        "slug":  "kiz-kardesi-7-yildir-cindeki-kampta-tutuluyor",
-        "date":  "2024-01-15T06:07:39+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/kiz-kardesi-7-yildir-cindeki-kampta-tutuluyor",
-        "category":  "İnsan Hakları",
-        "paragraphs":  [
-                           "Çin’in Doğu Türkistan bölgesinde uygulanan asimilasyon politikalarının gölgesinde kaybolan ailelerden biri daha ortaya çıkıyor. Medine Nazimi, yedi yıldır haber alamadığı kız kardeşiyle Çin’deki toplama kampında tutulduğunu düşünüyor.",
-                           "Nazimi, daha önce aile bireylerini aynı kamp içinde kaybettiğini belirtiyor ve Çin’in bu bölgedeki Uygur Müslümanlarına yönelik uyguladığı baskıcı politikaların insan hakları ihlallerine yol açtığına dikkat çekiyor.",
-                           "Çin hükümeti, bu iddiaları reddederek kampların eğitim amaçlı olduğunu savunuyor. Ancak uluslararası insan hakları kuruluşları ve bazı ülkeler, Uygur Müslümanlarına yönelik ayrımcılık ve zorla çalıştırma gibi suçlamalarda bulunuyor.",
-                           "Medine Nazimi’nin yaşadığı dram, Çin’in Doğu Türkistan politikalarının insan hayatlarına nasıl zarar verdiğini bir kez daha gözler önüne seriyor. Uluslararası toplum, bu tür durumlara dikkat çekerek Çin’e insan haklarına saygı gösterme çağrısında bulunuyor."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg"
+        "id": 3,
+        "title": "Uygurların Yaşadığı Zorluklara Dikkat Çekmek İçin Medine Nazimi, Kayıp Kız Kardeşinin Peşinde",
+        "title_en": "Medine Nazimi Pursues Her Missing Sister to Draw Attention to Uyghur Struggles",
+        "slug": "kiz-kardesi-7-yildir-cindeki-kampta-tutuluyor",
+        "date": "2024-01-15T06:07:39+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/kiz-kardesi-7-yildir-cindeki-kampta-tutuluyor",
+        "category": "İnsan Hakları",
+        "category_en": "Human Rights",
+        "paragraphs": [
+            "Çin’in Doğu Türkistan bölgesinde uygulanan asimilasyon politikalarının gölgesinde kaybolan ailelerden biri daha ortaya çıkıyor. Medine Nazimi, yedi yıldır haber alamadığı kız kardeşiyle Çin’deki toplama kampında tutulduğunu düşünüyor.",
+            "Nazimi, daha önce aile bireylerini aynı kamp içinde kaybettiğini belirtiyor ve Çin’in bu bölgedeki Uygur Müslümanlarına yönelik uyguladığı baskıcı politikaların insan hakları ihlallerine yol açtığına dikkat çekiyor.",
+            "Çin hükümeti, bu iddiaları reddederek kampların eğitim amaçlı olduğunu savunuyor. Ancak uluslararası insan hakları kuruluşları ve bazı ülkeler, Uygur Müslümanlarına yönelik ayrımcılık ve zorla çalıştırma gibi suçlamalarda bulunuyor.",
+            "Medine Nazimi’nin yaşadığı dram, Çin’in Doğu Türkistan politikalarının insan hayatlarına nasıl zarar verdiğini bir kez daha gözler önüne seriyor. Uluslararası toplum, bu tür durumlara dikkat çekerek Çin’e insan haklarına saygı gösterme çağrısında bulunuyor."
+        ],
+        "paragraphs_en": [
+            "Another family lost in the shadow of assimilation policies in China's East Turkestan region comes to light. Medine Nazimi believes her sister, whom she hasn't heard from in seven years, is being held in a concentration camp in China.",
+            "Nazimi states that she previously lost family members in the same camp and points out that China's oppressive policies toward Uyghur Muslims in this region lead to human rights violations.",
+            "The Chinese government denies these allegations, arguing that the camps are for educational purposes. However, international human rights organizations and some countries accuse China of discrimination and forced labor against Uyghur Muslims.",
+            "The drama experienced by Medine Nazimi once again reveals how China's East Turkestan policies harm human lives. The international community calls on China to respect human rights by drawing attention to such situations."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg"
     },
     {
-        "id":  4,
-        "title":  "“ÇÖLYAK HASTALIĞININ ZORLUKLARI SAYMAKLA BİTMİYOR”",
-        "slug":  "colyak-hastaliginin-zorluklari-saymakla-bitmiyor-2",
-        "date":  "2024-01-15T06:01:07+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/colyak-hastaliginin-zorluklari-saymakla-bitmiyor-2",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Çölyak hastalığı günümüzde yaygın olarak görülüyor. Uzmanlar bu hastalığın tedavisinin mümkün olmadığını belirtiyor. Ömür boyu gluten diyetiyle yaşamak zorunda olan Çölyak hastaları ekonomik krizin ortasındaki Türkiye’de beslenme ihtiyaçlarını karşılayamıyor. Sosyal hayatta, eğitim hayatlarında da birçok zorlukla karşılaşıyor. Çocuk yaşta Çölyak tanısı alan Akdeniz Üniversitesi Gazetecilik bölümü öğrencisi Serkan Bayçöl ile bu konular üzerine bir söyleşi gerçekleştirdik.",
-                           "Bir Çölyak hastası olarak günlük hayatında ne gibi zorluklar yaşıyorsun?",
-                           "En basitinden bir karar aldığımda bile bu hastalık hep yanımdaydı. Üniversite tercihi yaparken bile hastalığım sebebiyle istediğim bölümü seçemedim. Bu hastalık sebebiyle aileme yakın olmak zorundaydım. Ailem olmasa bile bu hastalığı çok iyi bilen ve beslenmem konusunda bana yardımcı olacak birisi yanımda olmalıydı. Antalya’yı seçtim. Çünkü abim bu şehirde yaşıyordu.",
-                           "Bu hastalık hayatınızın her alanında karşınıza çıkıyor. Örneğin hayalim yurt dışına yerleşmek. Başka bir ülkeye taşındığımda beslenmemi nasıl sağlayacağım bu konuda kaygılanıyorum. Glutensiz ürün bulabilecek miyim, yabancı dilim bunu anlamam için yeterli olacak mı? Gibi sorular kafamı meşgul ediyor.",
-                           "Her yemekhaneye gittiğimde yemeğin içinde kullanılan un glutensiz mi diye sormam gerekiyor. On beş yıl önce tanı aldığım bu hastalıkla yaşamaya alışmış olsam da hayatımı birçok yönden olumsuz etkilemeye devam ediyor. Katıldığınız etkinliklerden tutun da çalışacağınız işe kadar olumsuz etkilere sebebiyet veriyor. Annem ve babam beni her aradığında ilk sorduğu soru hastalığımla ilgili “Bugün sana göre bir yemek çıkmış mıydı, aç mısın?” gibi sorular oluyor. Yaşadığım zorlukları kısaca anlatmam çok zor. Açıkçası yaşadığım zorlukları yazsam bir roman olur.",
-                           "Yetişkinler bu hastalığı idrak ederek yaşamlarını ve beslenme alışkanlıklarını buna göre şekillendiriyor. Fakat bir çocuk olarak bu hastalıkla hayatınızı idame ettirmeniz daha zor. Çocukluk döneminde bu hastalığa alışma sürecin nasıldı, sana psikolojik açıdan nasıl etkileri oldu?",
-                           "Çocukken arkadaşlarım okulda bir şeyler yiyelim mi diyordu. Çocukken dışarıda her şeyi yiyemeyeceğimi arkadaşlarıma açıklamaya çalışıyordum fakat beni anlamıyorlardı. Sosyal ortamda yaşadığım bu gibi durumlar beni psikolojik olarak yıpratıyordu. Ben de her şeyi yemek istiyordum. Fakat yapamazdım. Annem beni nasıl beslenmem gerektiği konusunda eğitmişti.",
-                           "Her öğrenci okula kendi beslenmesini getiriyordu. Benim beslenmem hep eksik kalırdı çünkü maddi imkansızlıklar sebebiyle çok yüksek fiyatlara satılan glutensiz ürünleri satın almakta çok zorlanıyorduk. Arkadaşlarımın arasında mahcup duruma düşüyordum. Arkadaşlarım yemek yerken ağlayarak eve gittiğimi hatırlıyorum.",
-                           "Türkiye’de Çölyak hastalarının yeterli beslenmesinde maddi koşulların nasıl etkili olduğunu düşünüyorsun?",
-                           "Çölyak hastalığı ömür boyu sürecek bir hastalık. Bazı insanlar bana çok büyütüyorsun diyor fakat ben her gün okulun yemekhanesinde bana uygun yemek çıkacak mı diye düşünüyorum. Fasulye olsa bile içinde hangi unu kullanıyorlar sorgulamak zorunda kalıyorum. Glutensiz ürünler çok yüksek fiyatlara satılıyor. Öğrenci olarak tüm paramı beslenmeye veriyorum ve besinleri alırken bile param yeterli olmuyor.",
-                           "Devlet Çölyak hastalarına ne kadar destek oluyor, sence bu destek yeterli mi?",
-                           "Dışarıdan bu hastalıkla ilgili problemimiz yokmuş gibi görünebilir fakat bunu içimizde yaşıyoruz. Bireylerin bilinçlendirilmesi için en fazla yük devlete düşüyor. Sınıfıma Çölyak hastalığı nedir diye sorsam çok az kişi cevap verebileceğine eminim. Enformasyon çok hızlı tüketiliyor. Çölyak gibi ciddi bir hastalık konusunda hala insanlar bilinçlenmiş ve bilgilendirilmiş değil.",
-                           "Günümüzde glutensiz ürün sayısı marketlerde az olmakla birlikte çok pahalı. Glutensiz ekmek 60 tl civarlarında. Devlet bize metabolizma adı altında aylık 340 TL destek veriyor. Bu para ekonomik kriz durumunda asla yetmiyor. Ekmek 60 TL, makarna 100 TL’ye yakın. Psikolojik olarak zorlanıyoruz",
-                           "Yüksek fiyatlar bir yana, marketlerde satılan ürünler hakkında ne düşünüyorsun, iyi beslenmeniz için yeterli mi?",
-                           "Günümüzde dünya eskisi gibi değil besin bolluğu, seçenek çok var. Buna rağmen yüksek fiyatlar sebebiyle hala beslenme zorluğu çekiyoruz. Büyük şehirlerde daha fazla glutensiz besin bulunuyor. Ben Erzurum’da büyüdüm ne yazık ki büyük şehirdeki Çölyak hastaları kadar şanslı değildim. Annemin bana fırında patates yapıp ekmek niyetine yedirdiğini hatırlıyorum.",
-                           "Sence Çölyak hastalarının daha iyi beslenmeleri ve hayatlarını sağlıklı bir şekilde sürdürmeleri için ne gibi uygulamalar hayata geçirilmeli?",
-                           "Toplumumuzda Çölyak konusunda farkındalık oluşmamış durumda bu hastalığın bilinirliği çok az. Bu toplumsal olarak bizim ayıbımız. Bu konuda ve yüksek besin fiyatları konusunda devlet bir şeyler yapmalı. Bugüne kadar hiçbir çalışma yapmamış görünüyor."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1197819066-612x612-2.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1197819066-612x612-2.jpg"
+        "id": 4,
+        "title": "“ÇÖLYAK HASTALIĞININ ZORLUKLARI SAYMAKLA BİTMİYOR”",
+        "title_en": "“THE CHALLENGES OF CELIAC DISEASE ARE ENDLESS”",
+        "slug": "colyak-hastaliginin-zorluklari-saymakla-bitmiyor-2",
+        "date": "2024-01-15T06:01:07+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/colyak-hastaliginin-zorluklari-saymakla-bitmiyor-2",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Çölyak hastalığı günümüzde yaygın olarak görülüyor. Uzmanlar bu hastalığın tedavisinin mümkün olmadığını belirtiyor. Ömür boyu gluten diyetiyle yaşamak zorunda olan Çölyak hastaları ekonomik krizin ortasındaki Türkiye’de beslenme ihtiyaçlarını karşılayamıyor. Sosyal hayatta, eğitim hayatlarında da birçok zorlukla karşılaşıyor. Çocuk yaşta Çölyak tanısı alan Akdeniz Üniversitesi Gazetecilik bölümü öğrencisi Serkan Bayçöl ile bu konular üzerine bir söyleşi gerçekleştirdik.",
+            "Bir Çölyak hastası olarak günlük hayatında ne gibi zorluklar yaşıyorsun?",
+            "En basitinden bir karar aldığımda bile bu hastalık hep yanımdaydı. Üniversite tercihi yaparken bile hastalığım sebebiyle istediğim bölümü seçemedim. Bu hastalık sebebiyle aileme yakın olmak zorundaydım. Ailem olmasa bile bu hastalığı çok iyi bilen ve beslenmem konusunda bana yardımcı olacak birisi yanımda olmalıydı. Antalya’yı seçtim. Çünkü abim bu şehirde yaşıyordu.",
+            "Bu hastalık hayatınızın her alanında karşınıza çıkıyor. Örneğin hayalim yurt dışına yerleşmek. Başka bir ülkeye taşındığımda beslenmemi nasıl sağlayacağım bu konuda kaygılanıyorum. Glutensiz ürün bulabilecek miyim, yabancı dilim bunu anlamam için yeterli olacak mı? Gibi sorular kafamı meşgul ediyor.",
+            "Her yemekhaneye gittiğimde yemeğin içinde kullanılan un glutensiz mi diye sormam gerekiyor. On beş yıl önce tanı aldığım bu hastalıkla yaşamaya alışmış olsam da hayatımı birçok yönden olumsuz etkilemeye devam ediyor. Katıldığınız etkinliklerden tutun da çalışacağınız işe kadar olumsuz etkilere sebebiyet veriyor. Annem ve babam beni her aradığında ilk sorduğu soru hastalığımla ilgili “Bugün sana göre bir yemek çıkmış mıydı, aç mısın?” gibi sorular oluyor. Yaşadığım zorlukları kısaca anlatmam çok zor. Açıkçası yaşadığım zorlukları yazsam bir roman olur.",
+            "Yetişkinler bu hastalığı idrak ederek yaşamlarını ve beslenme alışkanlıklarını buna göre şekillendiriyor. Fakat bir çocuk olarak bu hastalıkla hayatınızı idame ettirmeniz daha zor. Çocukluk döneminde bu hastalığa alışma sürecin nasıldı, sana psikolojik açıdan nasıl etkileri oldu?",
+            "Çocukken arkadaşlarım okulda bir şeyler yiyelim mi diyordu. Çocukken dışarıda her şeyi yiyemeyeceğimi arkadaşlarıma açıklamaya çalışıyordum fakat beni anlamıyorlardı. Sosyal ortamda yaşadığım bu gibi durumlar beni psikolojik olarak yıpratıyordu. Ben de her şeyi yemek istiyordum. Fakat yapamazdım. Annem beni nasıl beslenmem gerektiği konusunda eğitmişti.",
+            "Her öğrenci okula kendi beslenmesini getiriyordu. Benim beslenmem hep eksik kalırdı çünkü maddi imkansızlıklar sebebiyle çok yüksek fiyatlara satılan glutensiz ürünleri satın almakta çok zorlanıyorduk. Arkadaşlarımın arasında mahcup duruma düşüyordum. Arkadaşlarım yemek yerken ağlayarak eve gittiğimi hatırlıyorum.",
+            "Türkiye’de Çölyak hastalarının yeterli beslenmesinde maddi koşulların nasıl etkili olduğunu düşünüyorsun?",
+            "Çölyak hastalığı ömür boyu sürecek bir hastalık. Bazı insanlar bana çok büyütüyorsun diyor fakat ben her gün okulun yemekhanesinde bana uygun yemek çıkacak mı diye düşünüyorum. Fasulye olsa bile içinde hangi unu kullanıyorlar sorgulamak zorunda kalıyorum. Glutensiz ürünler çok yüksek fiyatlara satılıyor. Öğrenci olarak tüm paramı beslenmeye veriyorum ve besinleri alırken bile param yeterli olmuyor.",
+            "Devlet Çölyak hastalarına ne kadar destek oluyor, sence bu destek yeterli mi?",
+            "Dışarıdan bu hastalıkla ilgili problemimiz yokmuş gibi görünebilir fakat bunu içimizde yaşıyoruz. Bireylerin bilinçlendirilmesi için en fazla yük devlete düşüyor. Sınıfıma Çölyak hastalığı nedir diye sorsam çok az kişi cevap verebileceğine eminim. Enformasyon çok hızlı tüketiliyor. Çölyak gibi ciddi bir hastalık konusunda hala insanlar bilinçlenmiş ve bilgilendirilmiş değil.",
+            "Günümüzde glutensiz ürün sayısı marketlerde az olmakla birlikte çok pahalı. Glutensiz ekmek 60 tl civarlarında. Devlet bize metabolizma adı altında aylık 340 TL destek veriyor. Bu para ekonomik kriz durumunda asla yetmiyor. Ekmek 60 TL, makarna 100 TL’ye yakın. Psikolojik olarak zorlanıyoruz",
+            "Yüksek fiyatlar bir yana, marketlerde satılan ürünler hakkında ne düşünüyorsun, iyi beslenmeniz için yeterli mi?",
+            "Günümüzde dünya eskisi gibi değil besin bolluğu, seçenek çok var. Buna rağmen yüksek fiyatlar sebebiyle hala beslenme zorluğu çekiyoruz. Büyük şehirlerde daha fazla glutensiz besin bulunuyor. Ben Erzurum’da büyüdüm ne yazık ki büyük şehirdeki Çölyak hastaları kadar şanslı değildim. Annemin bana fırında patates yapıp ekmek niyetine yedirdiğini hatırlıyorum.",
+            "Sence Çölyak hastalarının daha iyi beslenmeleri ve hayatlarını sağlıklı bir şekilde sürdürmeleri için ne gibi uygulamalar hayata geçirilmeli?",
+            "Toplumumuzda Çölyak konusunda farkındalık oluşmamış durumda bu hastalığın bilinirliği çok az. Bu toplumsal olarak bizim ayıbımız. Bu konuda ve yüksek besin fiyatları konusunda devlet bir şeyler yapmalı. Bugüne kadar hiçbir çalışma yapmamış görünüyor."
+        ],
+        "paragraphs_en": [
+            "Celiac disease is common today. Experts state that it is not possible to cure this disease. Celiac patients, who have to live with a gluten-free diet for life, cannot meet their nutritional needs in Turkey, which is in the midst of an economic crisis. They also face many difficulties in social and educational life. We held an interview on these issues with Serkan Bayçöl, a student of Akdeniz University Journalism Department, who was diagnosed with Celiac disease at a young age.",
+            "As a Celiac patient, what kind of difficulties do you experience in your daily life?",
+            "Even when making a simple decision, this disease was always with me. Even when choosing a university, I couldn't choose the department I wanted because of my illness. I had to be close to my family because of this disease. If not my family, someone who knew this disease very well and would help me with my nutrition had to be with me. I chose Antalya because my older brother lived in this city.",
+            "This disease appears in every area of your life. For example, my dream is to settle abroad. When I move to another country, I worry about how I will feed myself. Will I be able to find gluten-free products, will my foreign language be enough to understand this? Such questions occupy my mind.",
+            "Every time I go to a cafeteria, I have to ask if the flour used in the food is gluten-free. Although I have been used to living with this disease, which was diagnosed fifteen years ago, it continues to affect my life negatively in many ways. It causes negative effects from the activities you attend to the job you will work. Every time my mother and father call me, the first question they ask is about my illness: 'Was there any food suitable for you today, are you hungry?' It is very difficult to briefly explain the difficulties I experience. To be honest, if I wrote about the difficulties I experienced, it would be a novel.",
+            "Adults realize this disease and shape their lives and eating habits accordingly. But as a child, it is harder to maintain your life with this disease. How was your adaptation process to this disease in childhood, and what were its psychological effects on you?",
+            "When I was a child, my friends would say, 'Let's eat something at school.' As a child, I tried to explain to my friends that I couldn't eat everything outside, but they didn't understand me. Such situations in social environments worn me out psychologically. I also wanted to eat everything. But I couldn't. My mother had trained me on how to eat.",
+            "Every student brought their own food to school. My lunchbox was always incomplete because, due to financial impossibilities, we had a very hard time buying gluten-free products sold at very high prices. I felt embarrassed among my friends. I remember going home crying while my friends were eating.",
+            "How do you think financial conditions affect the adequate nutrition of Celiac patients in Turkey?",
+            "Celiac disease is a lifelong disease. Some people say I exaggerate, but every day I think about whether suitable food will be served in the school cafeteria. Even if it's beans, I have to question what flour they use in it. Gluten-free products are sold at very high prices. As a student, I spend all my money on food, and even when buying food, my money is not enough.",
+            "How much does the state support Celiac patients, and do you think this support is sufficient?",
+            "From the outside, it may seem like we don't have a problem with this disease, but we experience it inside. The greatest burden falls on the state to raise awareness among individuals. If I asked my class what Celiac disease is, I am sure very few people would be able to answer. Information is consumed very quickly. People are still not aware and informed about a serious disease like Celiac.",
+            "Today, although the number of gluten-free products in markets is small, they are very expensive. Gluten-free bread is around 60 TL. The state gives us monthly support of 340 TL under the name of metabolism. This money is never enough in the economic crisis. Bread is 60 TL, pasta is close to 100 TL. We are struggling psychologically.",
+            "High prices aside, what do you think about the products sold in markets, are they sufficient for you to eat well?",
+            "Today, the world is not like it used to be; there is an abundance of food, many options. Despite this, we still have difficulty feeding due to high prices. There are more gluten-free foods in big cities. I grew up in Erzurum, unfortunately I wasn't as lucky as Celiac patients in big cities. I remember my mother making baked potatoes for me and feeding them to me instead of bread.",
+            "What kind of practices do you think should be implemented for Celiac patients to eat better and maintain their lives in a healthy way?",
+            "Awareness about Celiac has not been formed in our society; the visibility of this disease is very low. This is our shame as a society. The state should do something about this and the high food prices. It seems that no studies have been done so far."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1197819066-612x612-2.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1197819066-612x612-2.jpg"
     },
     {
-        "id":  5,
-        "title":  "SAĞLIK ÇALIŞANLARININ RUH SAĞLIĞI TEHLİKEDE",
-        "slug":  "saglik-calisanlarinin-ruh-sagligi-tehlikede",
-        "date":  "2024-01-15T05:58:35+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/saglik-calisanlarinin-ruh-sagligi-tehlikede",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Sağlık çalışanları ağır çalışma koşulları altında psikolojik sorunlar yaşıyor. Düşük maaşlarla uzun çalışma saatleri, hasta ve hasta yakınlarının uyguladığı şiddet gibi pek çok sorun sağlık çalışanlarının ruh sağlığını olumsuz etkiliyor.",
-                           "Sağlık çalışanlarının yaşadığı zorluklar üniversiteden mezun olmalarının ardından başlıyor. Milyonlarca sağlık çalışanı atanamıyor. Atananlarsa ağır çalışma şartları sebebiyle psikolojik sorunlar yaşıyor. Sağlık sektöründe çalışanlar, bir çıkmazın içinde sürüklenip giderken onları ne şiddetten ne de uzun çalışma saatlerinden koruyacak bir yasa bulunuyor.",
-                           "Türkiye’de sağlık çalışanları, çalışma koşullarından hiçbir açıdan memnun değil. Sağlık çalışanları düşük maaşlarla uzun saatler çalıştırılıyor. Hastaları ve çalıştıkları kurum tarafından görevleri olmayan işlemleri yapmaları bekleniyor. Bu da yetmezmiş gibi her geçen gün sağlık çalışanlarına uygulanan şiddetle ilgili haberler artıyor.",
-                           "“Sağlık çalışanlarının intihar etmesi artık normalleşti.”",
-                           "Acil Servis Hemşiresi Sevda Çelebi, hastanede yakınlarının sağlık durumunun kötüye gitmesinden kaygılanan hasta yakınlarının, sağlık çalışanları üzerinde büyük bir baskı yarattığını belirtiyor. Bu baskı sebebiyle de ruh hallerinin olumsuz etkilendiğini vurguluyor.",
-                           "Acil servis çalışanı, sağlık çalışanlarının intihar etmesinin yakın çevresinde artık şaşırılan bir haber olmadığını bu durumun sektörde çalışanlar arasında sürekli olarak konuşulduğunu ve normalleştiğinin de altını çiziyor.",
-                           "“Psikolojisi Bozuk Hekimlerden Psikolojik Destek Bekleniyor”",
-                           "Hekim Elif Ulutaş, hastaların sürekli sağlık çalışanlarının görevleri dışında ekstra işlem talep ettiğini belirterek hastanedeki zor çalışma şartlarının, sağlık çalışanlarının psikolojisini olumsuz yönde etkilediğini söylüyor. Ulutaş, yaşadıklarını şöyle dile getirdi:",
-                           "“Örneğin bir operasyon gerçekleştiriyorum ardından hastalar özel ilgi, şefkat psikolojik destek de talep ediyor. Sağlık çalışanları olarak zor çalışma şartları sebebiyle zaten psikolojimiz iyi durumda değil. Bir de hastalara destek olmak zorunda kalıyoruz.”",
-                           "Molasız ve Para Almadan Ekstra Mesailer Bitmek Bilmiyor",
-                           "Ortalama 14-15 saat çalıştırılan sağlık çalışanları, yemek molalarının sadece 15 dakika olduğunu ve dinlenme molalarının asla olmadığını belirtiyor. Pratisyen Hekim Ulutaş, İki haftalık tatilin yetersiz olduğunu, eğer sektöre yeni giren bir çalışansanız yıllık sadece bir hafta izin verildiğini söylüyor. Haftalık izinlerinin bile olmadığını, sürekli yazılan ekstra mesailerin bitmek bilmediğini ve bu mesailer içinse ücret almadıklarını vurguluyor.",
-                           "Sağlık Çalışanlarına Tuvalet Temizletiliyor",
-                           "Pratisyen hekim Elif Ulutaş, hasta ve hasta yakınlarının yanı sıra çalıştığı kurumunda beklentilerinin son derece yıpratıcı olduğunu belirterek şöyle konuştu:",
-                           "“Benim görevim olmayan işler, bana yaptırılmaya çalışılıyor. Bu özel sektör ve devlette de aynı şekilde. Sağlık çalışanı her işi yapabilirmiş gibi bir algı var. Sanki tuvaleti ve hastanın altını temizleyebilirmiş gibi. Bana bu işleri zorla yaptırdılar. Yapmazsam işimden olacaktım. Bunlar bizim görevimiz değil. Ben Pratisyen Hekimi olarak üniversiteden mezun oldum fakat benden beklenenler çok farklı şeyler.”"
-                       ],
-        "images":  [
-                       "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/operation-1807543_1280.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/edacb910-a286-427c-b46d-cc196f9eaf00.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/operation-1807543_1280.jpg"
+        "id": 5,
+        "title": "SAĞLIK ÇALIŞANLARININ RUH SAĞLIĞI TEHLİKEDE",
+        "title_en": "MENTAL HEALTH OF HEALTHCARE WORKERS IS AT RISK",
+        "slug": "saglik-calisanlarinin-ruh-sagligi-tehlikede",
+        "date": "2024-01-15T05:58:35+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/saglik-calisanlarinin-ruh-sagligi-tehlikede",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Sağlık çalışanları ağır çalışma koşulları altında psikolojik sorunlar yaşıyor. Düşük maaşlarla uzun çalışma saatleri, hasta ve hasta yakınlarının uyguladığı şiddet gibi pek altı sorun sağlık çalışanlarının ruh sağlığını olumsuz etkiliyor.",
+            "Sağlık çalışanlarının yaşadığı zorluklar üniversiteden mezun olmalarının ardından başlıyor. Milyonlarca sağlık çalışanı atanamıyor. Atananlarsa ağır çalışma şartları sebebiyle psikolojik sorunlar yaşıyor. Sağlık sektöründe çalışanlar, bir çıkmazın içinde sürüklenip giderken onları ne şiddetten ne de uzun çalışma saatlerinden koruyacak bir yasa bulunuyor.",
+            "Türkiye’de sağlık çalışanları, çalışma koşullarından hiçbir açıdan memnun değil. Sağlık çalışanları düşük maaşlarla uzun saatler çalıştırılıyor. Hastaları ve çalıştıkları kurum tarafından görevleri olmayan işlemleri yapmaları bekleniyor. Bu da yetmezmiş gibi her geçen gün sağlık çalışanlarına uygulanan şiddetle ilgili haberler artıyor.",
+            "“Sağlık çalışanlarının intihar etmesi artık normalleşti.”",
+            "Acil Servis Hemşiresi Sevda Çelebi, hastanede yakınlarının sağlık durumunun kötüye gitmesinden kaygılanan hasta yakınlarının, sağlık çalışanları üzerinde büyük bir baskı yarattığını belirtiyor. Bu baskı sebebiyle de ruh hallerinin olumsuz etkilendiğini vurguluyor.",
+            "Acil servis çalışanı, sağlık çalışanlarının intihar etmesinin yakın çevresinde artık şaşırılan bir haber olmadığını bu durumun sektörde çalışanlar arasında sürekli olarak konuşulduğunu ve normalleştiğinin de altını çiziyor.",
+            "“Psikolojisi Bozuk Hekimlerden Psikolojik Destek Bekleniyor”",
+            "Hekim Elif Ulutaş, hastaların sürekli sağlık çalışanlarının görevleri dışında ekstra işlem talep ettiğini belirterek hastanedeki zor çalışma şartlarının, sağlık çalışanlarının psikolojisini olumsuz yönde etkilediğini söylüyor. Ulutaş, yaşadıklarını şöyle dile getirdi:",
+            "“Örneğin bir operasyon gerçekleştiriyorum ardından hastalar özel ilgi, şefkat psikolojik destek de talep ediyor. Sağlık çalışanları olarak zor çalışma şartları sebebiyle zaten psikolojimiz iyi durumda değil. Bir de hastalara destek olmak zorunda kalıyoruz.”",
+            "Molasız ve Para Almadan Ekstra Mesailer Bitmek Bilmiyor",
+            "Ortalama 14-15 saat çalıştırılan sağlık çalışanları, yemek molalarının sadece 15 dakika olduğunu ve dinlenme molalarının asla olmadığını belirtiyor. Pratisyen Hekim Ulutaş, İki haftalık tatilin yetersiz olduğunu, eğer sektöre yeni giren bir çalışansanız yıllık sadece bir hafta izin verildiğini söylüyor. Haftalık izinlerinin bile olmadığını, sürekli yazılan ekstra mesailerin bitmek bilmediğini ve bu mesailer içinse ücret almadıklarını vurguluyor.",
+            "Sağlık Çalışanlarına Tuvalet Temizletiliyor",
+            "Pratisyen hekim Elif Ulutaş, hasta ve hasta yakınlarının yanı sıra çalıştığı kurumunda beklentilerinin son derece yıpratıcı olduğunu belirterek şöyle konuştu:",
+            "“Benim görevim olmayan işler, bana yaptırılmaya çalışılıyor. Bu özel sektör ve devlette de aynı şekilde. Sağlık çalışanı her işi yapabilirmiş gibi bir algı var. Sanki tuvaleti ve hastanın altını temizleyebilirmiş gibi. Bana bu işleri zorla yaptırdılar. Yapmazsam işimden olacaktım. Bunlar bizim görevimiz değil. Ben Pratisyen Hekimi olarak üniversiteden mezun oldum fakat benden beklenenler çok farklı şeyler.”"
+        ],
+        "paragraphs_en": [
+            "Healthcare workers are experiencing psychological problems under heavy working conditions. Many problems such as long working hours with low salaries, and violence inflicted by patients and their relatives negatively affect the mental health of healthcare workers.",
+            "The difficulties experienced by healthcare workers start after their graduation from university. Millions of healthcare workers cannot get appointed. Those who are appointed experience psychological problems due to heavy working conditions. While workers in the healthcare sector are dragged into a dilemma, there is no law to protect them from violence or long working hours.",
+            "In Turkey, healthcare workers are not satisfied with their working conditions in any way. Healthcare workers are forced to work long hours with low salaries. They are expected by their patients and the institutions they work for to perform tasks that are not their duties. As if this were not enough, news about violence against healthcare workers increases day by day.",
+            "“Suicide among healthcare workers has now normalized.”",
+            "Emergency Room Nurse Sevda Çelebi states that patient relatives, who worry about the worsening health conditions of their loved ones in the hospital, create great pressure on healthcare workers. She emphasizes that their mood is negatively affected due to this pressure.",
+            "The emergency room worker also underlines that the suicide of healthcare workers is no longer surprising news in her immediate environment, and this situation is constantly talked about and normalized among those working in the sector.",
+            "“Psychological Support is Expected from Doctors with Broken Psychology”",
+            "Physician Elif Ulutaş states that patients constantly demand extra procedures outside the duties of healthcare workers, and that the difficult working conditions in the hospital negatively affect the psychology of healthcare workers. Ulutaş expressed her experience as follows:",
+            "“For example, I perform an operation, and then patients also demand special attention, affection, and psychological support. As healthcare workers, our psychology is already not in good condition due to difficult working conditions. And we have to support patients.”",
+            "Extra Shifts Without Breaks and Without Pay Never End",
+            "Healthcare workers, who work an average of 14-15 hours, state that their meal breaks are only 15 minutes and they never have rest breaks. General Practitioner Ulutaş says that a two-week vacation is insufficient, and if you are a newcomer to the sector, you are given only one week of annual leave. She emphasizes that they do not even have weekly leave, the extra shifts written constantly never end, and they do not receive pay for these shifts.",
+            "Healthcare Workers Forced to Clean Toilets",
+            "General Practitioner Elif Ulutaş, stating that the expectations of the institution she works for, as well as the patients and their relatives, are extremely wearing, spoke as follows:",
+            "“Jobs that are not my duty are tried to be forced on me. This is the same in the private sector and the state. There is a perception that a healthcare worker can do any job. As if they can clean the toilet and the patient's bottom. They forced me to do these jobs. If I didn't do them, I would lose my job. These are not our duties. I graduated from university as a General Practitioner, but what was expected of me was very different.”"
+        ],
+        "images": [
+            "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/operation-1807543_1280.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/edacb910-a286-427c-b46d-cc196f9eaf00.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/operation-1807543_1280.jpg"
     },
     {
-        "id":  6,
-        "title":  "SOKAK MÜZİSYENİ YARE KAZAR",
-        "slug":  "sokak-muzisyeni-yare-kazar",
-        "date":  "2024-01-15T05:37:59+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/sokak-muzisyeni-yare-kazar",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Sokak müzisyenleri, insan ruhunu sanatla besleyen ve günlük rutinler içinde kaybolmuş belki de artık çoğu duygudan yoksun kalan insanları neşelendiriyor. Özellikle Türkiye gibi refah seviyesi düşük bir ülkede karnını zor doyuran insanların, sanata ihtiyaçları yok gibi düşünülse de insan ruhu da doyurulması gereken bir yapıya sahip. Bu sebeple sanata ve sanatçılara büyük görev düşüyor. Alanında yetenekli, sanatçılar sokakları şenlendirince çok güzel kareler ortaya çıkıyor. İnsanlar biraz olsun günlük sıkıntılarından uzaklaşıp terapi niteliğinde keyifli bir aktivite gerçekleştirmiş oluyor.",
-                           "Ne yazık ki birçok sanatçı gibi sokak müzisyenleri de mesleklerini icra ederken birçok sorunla karşılaşıyor. Bu sorunlar şarkı söyleyecek yer bulamama, zabıtalar tarafından şarkı söyledikleri yerden hukuksuzca men edilme gibi problemlerden tutun da taciz, cinayete kadar uzanıyor. Beş yıldır sokak müzisyenliği yapan konservatuvar öğrencisi Yare Kazar ile hem bu bahsettiğimiz problemleri hem de sokak müzisyenliğini daha yakından tanımamıza yardımcı olacak bir röportaj gerçekleştirdik.",
-                           "Yare Kazar, Nişantaşı Üniversitesi’nde konservatuvar bölümünde eğitimine devam ederken bir yandan da 2017 yılından bu yana sokak müzisyenliği yapıyor. Yeteneğini daha geniş kitlelere duyurmak isteyen Kazar’ın çok sayıda takipçiye sahip olan bir de Instagram hesabı bulunuyor. Sokak müziği yaparken kendini son derece özgür hissettiğini söyleyen Kazar aynı zamanda sokakta müzik söylerken evindeymiş gibi ait olduğu yerde olduğunu hissettiğini belirtiyor. İdolüyse sokak müzisyenliğiyle kariyerine başlamış olan ve Yare’nin hocasının eski öğrencisi Melek Mosso.",
-                           "“ÇOCUKKEN BABAM PİYANO ÇALAR BEN ŞARKI SÖYLERDİM”",
-                           "Son derece içten bir gülümsemesi olan sanatçıya ilk sorumu yönelttim. Müziğe olan tutkusunun ne zaman başladığını sordum. Bir iç çekip duygulanarak sorumu şöyle cevapladı:",
-                           "“Babam bir müzisyendi. Bebekliğimden beri babamın piyano çalmasını dinleyerek büyüdüm. O piyano çalarken ben şarkı söyleyerek eşlik ederdim. Annemse durup bizi dinlemeye bayılırdı. Müziği çok seviyordum. Bu sebeple Youtube’da şarkı söylemek için bir kanal açtım. Zamanla izlenmelerim çok yükseldi. Ben de yeteneğimin farkına vararak bu alanda eğitim almam gerektiğine karar verdim.”",
-                           "SON MAAŞIMLA GİTARINI ALDI VE SOKAĞA ÇIKTI",
-                           "Peki nasıl başladı bu sokak müzisyenliği diye sorduğumda bir arkadaşını ismini anarak konuşmaya başladı. Amir isimli arkadaşı sayesinde sokak müziğine son maaşıyla aldığı gitarla başladığını söyledi ve sözlerine şöyle devam etti:",
-                           "“İzmir’e yeni taşınmıştım. Müzik yapmaya devam etmek istiyordum ve para kazanmaya da ihtiyacım vardı. Sokaktan geçerken her gün piyano çalan Amir isimli arkadaşımı dinlemekten büyük keyif alıyordum. Bana sokak müziği yapabileceğimi, çok yetenekli olduğumu bu sebeple hem başarılı hem de iyi para kazanan bir sokak müzisyeni olacağımı söyledi. Eski işimden aldığım ilk maaşla kendime gitar ve amfimi aldım. Ertesi gün sokak müziğine başladım. Instagram hesabımı açtım. İzlenme ve takipçi sayım her geçen gün artış gösterdi.”",
-                           "SOKAK MÜZİSYENLERİNİN CAN GÜVENLİĞİ YOK",
-                           "Artık ne yazık ki ülkemizde sokak müzisyenlerinin bile can güvenliği sağlanamıyor. En son Kadıköy’de herkesin hafızalarına kazınan yürek burkan bir olay gerçekleşti. İstek şarkı talebini, şarkıyı bilmediğini belirterek yerine getirmeyen sokak müzisyeni katledildi. Yare, beş yıldır İzmir, Ankara ve en çok da İstanbul’da sokak müzisyenliği yapmış bir sanatçı. Ona sokak müziği yaparken tacize uğradın mı, ne tür zorluk yaşadın diye sorduğum da yine bir iç çekerek “tabi yaşadım, yaşamamak mümkün değil” diyerek yaşadıklarını şöyle anlattı:",
-                           "“Sokak müzisyenliği yaparken eve döndüğüm sırada defalarca takip edildim. Şarkı söylerken beni susturmaya çalışanlar oldu. Bu işi yapma sana başka iş teklifinde bulunalım daha çok para kazanırsın diye ahlaksızca iş tekliflerinde bulunanlar oluyordu. Özellikle İstiklal caddesine çalışmak çok zordu. En çok kalbimi kıran anımsa bir gün şarkı söylerken bir adamın kolumdan çekmesi ve kalabalıkta kimsenin bana yardımcı olmamasıydı. Zabıta bazen elle tutulur olmayan bahaneler sunarak sokak müzisyenlerine şarkı söyleyemeyeceklerini belirtiyor fakat güvenliğimiz söz konusu olduğunda hiçbiri ortada görünmüyor”",
-                           "MÜZİSYENLERE ÖZEL KİMLİK KARTI VERİLMELİ",
-                           "“Müzisyenler arasında yer kavgaları da yaşanıyor. İstiklal caddesinde Galatasaray Lisesi’nin önünde çok kavgaya şahit oldum. Sokak müzisyenleri seçilmeli ve onlara müzisyen olduklarını belirten bir kimlik verilmeli. Kimin nerede çalıştığı belirlenmeli. Kimliklerimiz olmadığı için sokak müzisyenleri yer bulmakta zorlanıyor. Ben İstanbul’a ilk geldiğimde sokak müzisyenliği yapabilmek için bir sınavdan geçmiştik. Bu sınavın ardından sokak müzisyenlerine bir kart veriliyordu. Şimdi bu uygulama kaldırıldı. Geri gelmesini istiyoruz.”",
-                           "BAZI SOKAK MÜZİSYENLERİ ÇOK İYİ PARA KAZANIYOR",
-                           "“Sokak müzisyenliği yaparak geçimini sağlayıp sağlayamamak veya bu işten çok iyi paralar kazanmak tamamen sanatçıya bağlı bir durum. Bazı sokak müzisyenleri bir günde bir doktorun kazandığı parayı kazanıyor. Bu sizin yeteneğinizle, çevrenize saçtığınız enerjiyle ilgili. Başka önemli bir nokta da işini severek yapmak. Bazı sokak müzisyenleri hoparlörden son ses karaoke açarak insanları rahatsız eden bir gürültü kirliliğiyle şarkı söylüyor.”",
-                           "“YILLARCA ÇALIŞSAM BU ORTAMI BULAMAZDIM”",
-                           "Bizimle beş yıllık sokak müzisyenliği sürecinde hafızana kazınan sevdiğin bir anını paylaşır mısın diye sorumu yöneltiyorum. Gülümseyerek ve duygulanarak “Yıllarca çalışsam sokakta bulduğum ortamı asla bulamazdım. Sokakta şarkı söylemek için doğmuşum.” Diyerek sözlerine şöyle devam etti:",
-                           "“En güzel anılarımdan beri sokak müziğine ilk başladığım yılda İzmir’de bir koronun rastgele yanıma gelerek benim müziğime eşlik etmesi oldu. Bana eşlik eden koronun müzik alanında adı Akapella olarak adlandırılıyor. Yani enstrümansız bir koro bu ve enstrüman seslerini kendi ağızlarıyla yapıyorlar. Yani korodaki müzisyenlerin enstrümanları şan. Korodaki her sanatçının ses tonuysa farklı çıkıyor. O gün onları dinlerken büyülenerek eşlik etmiştim.”"
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/3fc0b67d-05e8-4be9-8ec9-2975c9a22e8c.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/0a72015f-aaf2-46d4-b106-57920552cfe3.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/3fc0b67d-05e8-4be9-8ec9-2975c9a22e8c.jpg"
+        "id": 6,
+        "title": "SOKAK MÜZİSYENİ YARE KAZAR",
+        "title_en": "STREET MUSICIAN YARE KAZAR",
+        "slug": "sokak-muzisyeni-yare-kazar",
+        "date": "2024-01-15T05:37:59+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/sokak-muzisyeni-yare-kazar",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Sokak müzisyenleri, insan ruhunu sanatla besleyen ve günlük rutinler içinde kaybolmuş belki de artık çoğu duygudan yoksun kalan insanları neşelendiriyor. Özellikle Türkiye gibi refah seviyesi düşük bir ülkede karnını zor doyuran insanların, sanata ihtiyaçları yok gibi düşünülse de insan ruhu da doyurulması gereken bir yapıya sahip. Bu sebeple sanata ve sanatçılara büyük görev düşüyor. Alanında yetenekli, sanatçılar sokakları şenlendirince çok güzel kareler ortaya çıkıyor. İnsanlar biraz olsun günlük sıkıntılarından uzaklaşıp terapi niteliğinde keyifli bir aktivite gerçekleştirmiş oluyor.",
+            "Ne yazık ki birçok sanatçı gibi sokak müzisyenleri de mesleklerini icra ederken birçok sorunla karşılaşıyor. Bu sorunlar şarkı söyleyecek yer bulamama, zabıtalar tarafından şarkı söyledikleri yerden hukuksuzca men edilme gibi problemlerden tutun da taciz, cinayete kadar uzanıyor. Beş yıldır sokak müzisyenliği yapan konservatuvar öğrencisi Yare Kazar ile hem bu bahsettiğimiz problemleri hem de sokak müzisyenliğini daha yakından tanımamıza yardımcı olacak bir röportaj gerçekleştirdik.",
+            "Yare Kazar, Nişantaşı Üniversitesi’nde konservatuvar bölümünde eğitimine devam ederken bir yandan da 2017 yılından bu yana sokak müzisyenliği yapıyor. Yeteneğini daha geniş kitlelere duyurmak isteyen Kazar’ın çok sayıda takipçiye sahip olan bir de Instagram hesabı bulunuyor. Sokak müziği yaparken kendini son derece özgür hissettiğini söyleyen Kazar aynı zamanda sokakta müzik söylerken evindeymiş gibi ait olduğu yerde olduğunu hissettiğini belirtiyor. İdolüyse sokak müzisyenliğiyle kariyerine başlamış olan ve Yare’nin hocasının eski öğrencisi Melek Mosso.",
+            "“ÇOCUKKEN BABAM PİYANO ÇALAR BEN ŞARKI SÖYLERDİM”",
+            "Son derece içten bir gülümsemesi olan sanatçıya ilk sorumu yönelttim. Müziğe olan tutkusunun ne zaman başladığını sordum. Bir iç çekip duygulanarak sorumu şöyle cevapladı:",
+            "“Babam bir müzisyendi. Bebekliğimden beri babamın piyano çalmasını dinleyerek büyüdüm. O piyano çalarken ben şarkı söyleyerek eşlik ederdim. Annemse durup bizi dinlemeye bayılırdı. Müziği çok seviyordum. Bu sebeple Youtube’da şarkı söylemek için bir kanal açtım. Zamanla izlenmelerim çok yükseldi. Ben de yeteneğimin farkına vararak bu alanda eğitim almam gerektiğine karar verdim.”",
+            "SON MAAŞIMLA GİTARINI ALDI VE SOKAĞA ÇIKTI",
+            "Peki nasıl başladı bu sokak müzisyenliği diye sorduğumda bir arkadaşını ismini anarak konuşmaya başladı. Amir isimli arkadaşı sayesinde sokak müziğine son maaşıyla aldığı gitarla başladığını söyledi ve sözlerine şöyle devam etti:",
+            "“İzmir’e yeni taşınmıştım. Müzik yapmaya devam etmek istiyordum ve para kazanmaya da ihtiyacım vardı. Sokaktan geçerken her gün piyano çalan Amir isimli arkadaşımı dinlemekten büyük keyif alıyordum. Bana sokak müziği yapayabileceğimi, çok yetenekli olduğumu bu sebeple hem başarılı hem de iyi para kazanan bir sokak müzisyeni olacağımı söyledi. Eski işimden aldığım ilk maaşla kendime gitar ve amfimi aldım. Ertesi gün sokak müziğine başladım. Instagram hesabımı açtım. İzlenme ve takipçi sayım her geçen gün artış gösterdi.”",
+            "SOKAK MÜZİSYENLERİNİN CAN GÜVENLİĞİ YOK",
+            "Artık ne yazık ki ülkemizde sokak müzisyenlerinin bile can güvenliği sağlanamıyor. En son Kadıköy’de herkesin hafızalarına kazınan yürek burkan bir olay gerçekleşti. İstek şarkı talebini, şarkıyı bilmediğini belirterek yerine getirmeyen sokak müzisyeni katledildi. Yare, beş yıldır İzmir, Ankara ve en çok da İstanbul’da sokak müzisyenliği yapmış bir sanatçı. Ona sokak müziği yaparken tacize uğradın mı, ne tür zorluk yaşadın diye sorduğum da yine bir iç çekerek “tabi yaşadım, yaşamamak mümkün değil” diyerek yaşadıklarını şöyle anlattı:",
+            "“Sokak müzisyenliği yaparken eve döndüğüm sırada defalarca takip edildim. Şarkı söylerken beni susturmaya çalışanlar oldu. Bu işi yapma sana başka iş teklifinde bulunalım daha çok para kazanırsın diye ahlaksızca iş tekliflerinde bulunanlar oluyordu. Özellikle İstiklal caddesine çalışmak çok zordu. En çok kalbimi kıran anımsa bir gün şarkı söylerken bir adamın kolumdan çekmesi ve kalabalıkta kimsenin bana yardımcı olmamasıydi. Zabıta bazen elle tutulur olmayan bahaneler sunarak sokak müzisyenlerine şarkı söyleyemeyeceklerini belirtiyor fakat güvenliğimiz söz konusu olduğunda hiçbiri ortada görünmüyor”",
+            "MÜZİSYENLERE ÖZEL KİMLİK KARTI VERİLMELİ",
+            "“Müzisyenler arasında yer kavgaları da yaşanıyor. İstiklal caddesinde Galatasaray Lisesi’nin önünde çok kavgaya şahit oldum. Sokak müzisyenleri seçilmeli ve onlara müzisyen olduklarını belirten bir kimlik verilmeli. Kimin nerede çalıştığı belirlenmeli. Kimliklerimiz olmadığı için sokak müzisyenleri yer bulmakta zorlanıyor. Ben İstanbul’a ilk geldiğimde sokak müzisyenliği yapabilmek için bir sınavdan geçmiştik. Bu sınavın ardından sokak müzisyenlerine bir kart veriliyordu. Şimdi bu uygulama kaldırıldı. Geri gelmesini istiyoruz.”",
+            "BAZI SOKAK MÜZİSYENLERİ ÇOK İYİ PARA KAZANIYOR",
+            "“Sokak müzisyenliği yaparak geçimini sağlayıp sağlayamamak veya bu işten çok iyi paralar kazanmak tamamen sanatçıya bağlı bir durum. Bazı sokak müzisyenleri bir günde bir doktorun kazandığı parayı kazanıyor. Bu sizin yeteneğinizle, çevrenize saçtığınız enerjiyle ilgili. Başka önemli bir nokta da işini severek yapmak. Bazı sokak müzisyenleri hoparlörden son ses karaoke açarak insanları rahatsız eden bir gürültü kirliliğiyle şarkı söylüyor.”",
+            "“YİLLARCA ÇALIŞSAM BU ORTAMI BULAMAZDIM”",
+            "Bizimle beş yıllık sokak müzisyenliği sürecinde hafızana kazınan sevdiğin bir anını paylaşır mısın diye sorumu yöneltiyorum. Gülümseyerek ve duygulanarak “Yıllarca çalışsam sokakta bulduğum ortamı asla bulamazdım. Sokakta şarkı söylemek için doğmuşum.” Diyerek sözlerine şöyle devam etti:",
+            "“En güzel anılarımdan beri sokak müziğine ilk başladığım yılda İzmir’de bir koronun rastgele yanıma gelerek benim müziğime eşlik etmesi oldu. Bana eşlik eden koronun müzik alanında adı Akapella olarak adlandırılıyor. Yani enstrümansız bir koro bu ve enstrüman seslerini kendi ağızlarıyla yapıyorlar. Yani korodaki müzisyenlerin enstrümanları şan. Korodaki her sanatçının ses tonuysa farklı çıkıyor. O gün onları dinlerken büyülenerek eşlik etmiştim.”"
+        ],
+        "paragraphs_en": [
+            "Street musicians feed the human soul with art and cheer up people who are lost in daily routines and perhaps devoid of most emotions. Although it is thought that people who can barely feed themselves in a country with a low level of welfare like Turkey do not need art, the human soul also has a structure that needs to be fed. For this reason, a great duty falls on art and artists. When talented artists cheer up the streets, very beautiful frames emerge. People step away from their daily troubles for a while and perform a pleasant activity like therapy.",
+            "Unfortunately, like many artists, street musicians face many problems while practicing their profession. These problems range from finding no place to sing, being unlawfully banned from singing by municipal police, to harassment and murder. We held an interview with conservatory student Yare Kazar, who has been a street musician for five years, to get to know both these problems and street musicianship more closely.",
+            "Yare Kazar continues her education in the conservatory department at Nişantaşı University and has been a street musician since 2017. Kazar, who wants to make her talent heard by wider audiences, also has an Instagram account with a large number of followers. Kazar, who says she feels extremely free while making street music, also states that she feels like she is where she belongs, as if she were at home, when singing on the street. Her idol is Melek Mosso, who started her career as a street musician and was a former student of Yare's teacher.",
+            "“WHEN I WAS A CHILD, MY FATHER PLAYED PIANO AND I SANG”",
+            "I directed my first question to the artist who has a very sincere smile. I asked when her passion for music started. She took a deep breath, got emotional, and answered my question as follows:",
+            "“My father was a musician. Since my infancy, I grew up listening to my father play the piano. While he played the piano, I accompanied him by singing. My mother loved to stop and listen to us. I loved music. For this reason, I opened a channel on YouTube to sing. Over time, my views increased. Recognizing my talent, I decided that I should receive education in this field.”",
+            "BOUGHT A GUITAR WITH HER LAST SALARY AND WENT TO THE STREET",
+            "When I asked how this street musicianship started, she began to speak, mentioning the name of a friend. She said that she started street music thanks to her friend named Amir, with the guitar she bought with her last salary, and continued her words as follows:",
+            "“I had just moved to Izmir. I wanted to continue making music and I also needed to earn money. While passing by the street, I took great pleasure in listening to my friend Amir, who played the piano every day. He told me that I could do street music, that I was very talented, and therefore I would be a successful and well-earning street musician. With the first salary I received from my old job, I bought myself a guitar and an amp. The next day, I started street music. I opened my Instagram account. My views and follower count increased day by day.”",
+            "STREET MUSICIANS HAVE NO LIFE SAFETY",
+            "Unfortunately, the life safety of even street musicians cannot be ensured in our country anymore. Most recently, a heartbreaking event engraved in everyone's memory took place in Kadıköy. A street musician who did not fulfill a song request, stating that he did not know the song, was murdered. Yare is an artist who has been a street musician in Izmir, Ankara, and mostly in Istanbul for five years. When I asked her if she was harassed while doing street music and what kind of difficulties she experienced, she sighed and said 'of course I did, it's impossible not to experience it' and explained her experiences as follows:",
+            "“While returning home after street musicianship, I was followed many times. There were those who tried to silence me while I was singing. There were those who made indecent job offers, saying 'don't do this job, let us offer you another job and you will earn more money.' Especially working on Istiklal Street was very difficult. My most heartbreaking memory was when a man pulled my arm while I was singing one day and no one in the crowd helped me. The municipal police sometimes state that street musicians cannot sing, presenting groundless excuses, but none of them appear when our security is at stake.”",
+            "SPECIAL ID CARDS SHOULD BE GIVEN TO MUSICIANS",
+            "“Space fights also occur among musicians. I witnessed many fights in front of Galatasaray High School on Istiklal Street. Street musicians should be selected and given an ID card indicating that they are musicians. It should be determined who works where. Because we don't have IDs, street musicians have difficulty finding a place. When I first came to Istanbul, we went through an exam to be a street musician. After this exam, street musicians were given a card. Now this application has been removed. We want it back.”",
+            "SOME STREET MUSICIANS MAKE VERY GOOD MONEY",
+            "“Whether you can make a living by street musicianship or earn very good money from this job depends entirely on the artist. Some street musicians earn in one day the money a doctor earns. This is about your talent, the energy you radiate to your surroundings. Another important point is doing your job with love. Some street musicians sing with a noise pollution that disturbs people by opening karaoke at full volume from speakers.”",
+            "“I COULD NEVER FIND THIS ENVIRONMENT IF I WORKED FOR YEARS”",
+            "I ask her to share a favorite memory engraved in her memory during her five-year street musicianship process. Smiling and getting emotional, she said: 'If I worked for years, I could never find the environment I found on the street. I was born to sing on the street.' and continued as follows:",
+            "“One of my most beautiful memories was in my first year of starting street music, when a choir randomly came to me in Izmir and accompanied my music. The choir that accompanied me is called Acappella in the field of music. In other words, it is an instrument-free choir and they make instrument sounds with their own mouths. So the instruments of the musicians in the choir are singing. The voice tone of each artist in the choir is different. That day, I accompanied them, being fascinated as I listened to them.”"
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/3fc0b67d-05e8-4be9-8ec9-2975c9a22e8c.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/0a72015f-aaf2-46d4-b106-57920552cfe3.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/3fc0b67d-05e8-4be9-8ec9-2975c9a22e8c.jpg"
     },
     {
-        "id":  7,
-        "title":  "BU LOKANTA EVSİZLERE SICAK YUVA OLUYOR",
-        "slug":  "bu-lokanta-evsizlere-sicak-yuva-oluyor",
-        "date":  "2024-01-15T05:35:50+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/bu-lokanta-evsizlere-sicak-yuva-oluyor",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Aylarca sokaklarda bir evsiz olarak yaşam mücadelesi vermiş olan Ayşe Tükrükçü, şimdilerde Hayata Sarıl Derneği’nin projesi kapsamında toplumdan dışlanmış insanlara bir lokantada yemek dağıtıp onlara iş imkanı sağlıyor. Sokaklarda bir evsiz olarak aylar geçiren Ayşe Tükrükçü, verdiği mücadelenin sonunda evsizlikten kurtuluyor. Tanıştığı arkadaşlarıyla evsiz ve belli nedenlerle toplumdan dışlanmış insanları topluma yeniden kazandırmak için projeler ortaya koyuyor.",
-                           "“Evsizlere Yardıma Çorba Dağıtımı ile Başladık”",
-                           "Sokaklarda yaşamanın ne olduğunu çok iyi bilen Ayşe Tükrükçü, kendi deneyimlerinden yola çıkarak evsizlerin çektiği en büyük sorunun açlık sorunu olduğuna karar verdiğini, onlara yardım etme fikrinin her zaman kafasında olduğunu belirterek sözlerine şöyle devam ediyor:",
-                           "“Arkadaşlarımla oturup evsizler için ne yapabiliriz diye düşündük. Ben ortaya evsizlere çorba dağıtalım fikrini attım. Evsizlerin tek probleminin açlık olmadığını biliyordum. Bu etkinliği gerçekleştirmeye başladıktan iki üç ay sonra Can ve Cemil Bey ile tanıştım. Yavaş yavaş gruplaşmaya başladık. Her gün birçok meslekten gönüllü insanlar gelip bize yardım ediyordu. Örneğin perşembe günü gönüllü hemşireler günüydü. İki seneye yakın çorba dağıtımını sürdürdük. Sabahın dördüne kadar çorba dağıtıp ertesi gün işe gidiyorduk. Çorba dağıtımını yaptığımız zamanlarda ben dahil ekibimizde bulunan herkes okuyor ve çalışıyordu. Evsizlere çorba dağıtmanın yanı sıra onlara temiz çamaşır ve kıyafetler de dağıtıyorduk. Kirli bedene temiz çamaşır veriyorduk.”",
-                           "Sadece Çorbanın Yetersiz Olduğunu Fark Ettim”",
-                           "Çorba dağıtımının yetersiz olduğunu fark ettiği gün yeni bir proje bulmak için çalışmalara başlayan Tükrükçü, Hayata Sarıl Lokantası projesini arkadaşlarıyla beraber ortaya koyuyor. Bu projenin ortaya çıkma sürecini ise şöyle anlatıyor:",
-                           "“Hayata Sarıl Lokantası’nın ismini madde bağımlısı bir çocuk koydu. Küçük bir lokanta açıp evsiz ve toplumdan dışlanmış, yok sayılmış insanları topluma kazandıralım diye düşündük. Onlara altı aylık bir süreç verme kararı aldık. Bu süreç içerisinde onlara mutfak eğitimi, bütçe eğitimi, hijyen eğitiminin yanı sıra psikolojik destekte sağlamamız gerektiğini düşündük.”",
-                           "Sadece Yemek Temini Değil Topluma Birey De Kazandırıyoruz",
-                           "Tükrükçü, Hayata Sarıl Lokantası’nı açma sebeplerinin toplumdan dışlanan insanlara iş, aş ve yeni bir yaşam vererek onları yeniden hayata kazandırmak olduğunun altını çizerek konuşmasına şöyle devam ediyor:",
-                           "“Bir trans bireyi hayata sarıl lokantasında topluma kazandırdık. İlk geldiğinde henüz ameliyatını olmamıştı. Burada çalışmaya başladı ardından kendi hayatını kurdu ve ailesiyle de arasını düzelterek ameliyatını oldu. Defne, bir süre sonra okumaya da başladı. Trans birey, ameliyat sonrası yeni kimliğini aldı fakat ben hala geçmiş kimliğimden kurtulamıyorum. Cinayetten cezaevine giren bir çalışanımız vardı. Hayata Sarıl’da onu da tekrardan topluma kazandırdık.”",
-                           "“Hedefimiz Evsizlere Çamaşırhane, Banyo ve Rehabilitasyon”",
-                           "Hayata Sarıl Lokantası’nın işletmecisi Cemil Güler, Hedeflerinin sürdürülebilir bir sivil toplum kuruluşu olmak olduğunu belirterek gelecek için ilk hedeflerinin lokantanın bağışlar olmadan kendi kendine çalışarak Hayata Sarıl Derneği’nin diğer hedeflerine finansman sağlamasını istediklerini vurguluyor.",
-                           "Güler, derneğin diğer hedeflerini ise şöyle açıklıyor: “Çalışmalarımız için finansman sağladıktan sonraki hedeflerimiz; evsiz insanlar için çamaşırhane ve banyo. Biz zaten şu anda evsizlere kıyafet dağıtımını derneğimizin desteğiyle sağlıyoruz fakat kirli bedene temiz kıyafet veriyoruz. Kirli beden temizi de kirletir. Bu böyle olmaz. Bu yüzden çamaşırhane hedefimizi gerçekleştirmek istiyoruz. Çamaşırhanenin, sabahları normal insanlar için kullanılıp akşamları da evsizlerin ihtiyaçlarını giderdiği bir yer olsun istiyoruz. Askıda sabun şampuan vs. bırakılabilir. Buraya gelen evsizler de bu çamaşırhanede çalışmaya başlatılarak hayata kazandırılabilir. Bir diğer proje fikrimiz, rehabilitasyon merkezi projesinin şehir dışında yapılmasını istiyoruz. Çünkü evsiz insanların birçoğunun yaşadıkları semtte madde ve içki bağımlılıkları var. Eğer aynı şehirde kalırlarsa tekrardan bağımlılıklarına geri dönebilirler. Bulundukları rehabilitasyon Merkezinde de yapabilecekleri bir meslek öğrenmelerini istiyoruz ki tedavilerinin bitmesinin ardından bu bireyleri yine topluma kazandırabilelim.”"
-                       ],
-        "images":  [
-                       "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_181819-1.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_181908-1.jpg"
-                   ],
-        "videos":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/8150458503304717644-1.mp4"
-                   ],
-        "featured_image":  "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg"
+        "id": 7,
+        "title": "BU LOKANTA EVSİZLERE SICAK YUVA OLUYOR",
+        "title_en": "THIS RESTAURANT BECOMES A WARM SHELTER FOR THE HOMELESS",
+        "slug": "bu-lokanta-evsizlere-sicak-yuva-oluyor",
+        "date": "2024-01-15T05:35:50+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/bu-lokanta-evsizlere-sicak-yuva-oluyor",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Aylarca sokaklarda bir evsiz olarak yaşam mücadelesi vermiş olan Ayşe Tükrükçü, şimdilerde Hayata Sarıl Derneği’nin projesi kapsamında toplumdan dışlanmış insanlara bir lokantada yemek dağıtıp onlara iş imkanı sağlıyor. Sokaklarda bir evsiz olarak aylar geçiren Ayşe Tükrükçü, verdiği mücadelenin sonunda evsizlikten kurtuluyor. Tanıştığı arkadaşlarıyla evsiz ve belli nedenlerle toplumdan dışlanmış insanları topluma yeniden kazandırmak için projeler ortaya koyuyor.",
+            "“Evsizlere Yardıma Çorba Dağıtımı ile Başladık”",
+            "Sokaklarda yaşamanın ne olduğunu çok iyi bilen Ayşe Tükrükçü, kendi deneyimlerinden yola çıkarak evsizlerin çektiği en büyük sorunun açlık sorunu olduğuna karar verdiğini, onlara yardım etme fikrinin her zaman kafasında olduğunu belirterek sözlerine şöyle devam ediyor:",
+            "“Arkadaşlarımla oturup evsizler için ne yapabiliriz diye düşündük. Ben ortaya evsizlere çorba dağıtalım fikrini attım. Evsizlerin tek probleminin açlık olmadığını biliyordum. Bu etkinliği gerçekleştirmeye başladıktan iki üç ay sonra Can ve Cemil Bey ile tanıştım. Yavaş yavaş gruplaşmaya başladık. Her gün birçok meslekten gönüllü insanlar gelip bize yardım ediyordu. Örneğin perşembe günü gönüllü hemşireler günüydü. İki seneye yakın çorba dağıtımını sürdürdük. Sabahın dördüne kadar çorba dağıtıp ertesi gün işe gidiyorduk. Çorba dağıtımını yaptığımız zamanlarda ben dahil ekibimizde bulunan herkes okuyor ve çalışıyordu. Evsizlere çorba dağıtmanın yanı sıra onlara temiz çamaşır ve kıyafetler de dağıtıyorduk. Kirli bedene temiz çamaşır veriyorduk.”",
+            "“Sadece Çorbanın Yetersiz Olduğunu Fark Ettim”",
+            "Çorba dağıtımının yetersiz olduğunu fark ettiği gün yeni bir proje bulmak için çalışmalara başlayan Tükrükçü, Hayata Sarıl Lokantası projesini arkadaşlarıyla beraber ortaya koyuyor. Bu projenin ortaya çıkma sürecini ise şöyle anlatıyor:",
+            "“Hayata Sarıl Lokantası’nın ismini madde bağımlısı bir çocuk koydu. Küçük bir lokanta açıp evsiz ve toplumdan dışlanmış, yok sayılmış insanları topluma kazandıralım diye düşündük. Onlara altı aylık bir süreç verme kararı aldık. Bu süreç içerisinde onlara mutfak eğitimi, bütçe eğitimi, hijyen eğitiminin yanı sıra psikolojik destekte sağlamamız gerektiğini düşündük.”",
+            "Sadece Yemek Temini Değil Topluma Birey De Kazandırıyoruz",
+            "Tükrükçü, Hayata Sarıl Lokantası’nı açma sebeplerinin toplumdan dışlanan insanlara iş, aş ve yeni bir yaşam vererek onları yeniden hayata kazandırmak olduğunun altını çizerek konuşmasına şöyle devam ediyor:",
+            "“Bir trans bireyi hayata sarıl lokantasında topluma kazandırdık. İlk geldiğinde henüz ameliyatını olmamıştı. Burada çalışmaya başladı ardından kendi hayatını kurdu ve ailesiyle de arasını düzelterek ameliyatını oldu. Defne, bir süre sonra okumaya da başladı. Trans birey, ameliyat sonrası yeni kimliğini aldı fakat ben hala geçmiş kimliğimden kurtulamıyorum. Cinayetten cezaevine giren bir çalışanımız vardı. Hayata Sarıl’da onu da tekrardan topluma kazandırdık.”",
+            "“Hedefimiz Evsizlere Çamaşırhane, Banyo ve Rehabilitasyon”",
+            "Hayata Sarıl Lokantası’nın işletmecisi Cemil Güler, Hedeflerinin sürdürülebilir bir sivil toplum kuruluşu olmak olduğunu belirterek gelecek için ilk hedeflerinin lokantanın bağışlar olmadan kendi kendine çalışarak Hayata Sarıl Derneği’nin diğer hedeflerine finansman sağlamasını istediklerini vurguluyor.",
+            "Güler, derneğin diğer hedeflerini ise şöyle açıklıyor: “Çalışmalarımız için finansman sağladıktan sonraki hedeflerimiz; evsiz insanlar için çamaşırhane ve banyo. Biz zaten şu anda evsizlere kıyafet dağıtımını derneğimizin desteğiyle sağlıyoruz fakat kirli bedene temiz kıyafet veriyoruz. Kirli beden temizi de kirletir. Bu böyle olmaz. Bu yüzden çamaşırhane hedefimizi gerçekleştirmek istiyoruz. Çamaşırhanenin, sabahları normal insanlar için kullanılıp akşamları da evsizlerin ihtiyaçlarını giderdiği bir yer olsun istiyoruz. Askıda sabun şampuan vs. bırakılabilir. Buraya gelen evsizler de bu çamaşırhanede çalışmaya başlatılarak hayata kazandırılabilir. Bir diğer proje fikrimiz, rehabilitasyon merkezi projesinin şehir dışında yapılmasını istiyoruz. Çünkü evsiz insanların birçoğunun yaşadıkları semtte madde ve içki bağımlılıkları var. Eğer aynı şehirde kalırlarsa tekrardan bağımlılıklarına geri dönebilirler. Bulundukları rehabilitasyon Merkezinde de yapabilecekleri bir meslek öğrenmelerini istiyoruz ki tedavilerinin bitmesinin ardından bu bireyleri yine topluma kazandırabilelim.”"
+        ],
+        "paragraphs_en": [
+            "Ayşe Tükrükçü, who struggled to survive as a homeless person on the streets for months, now distributes food to marginalized people in a restaurant and provides them with job opportunities as part of the Hayata Sarıl Association's project. Ayşe Tükrükçü, who spent months as a homeless person on the streets, got rid of homelessness at the end of her struggle. With the friends she met, she implements projects to reintegrate homeless and marginalized people back into society.",
+            "“We Started Helping the Homeless by Distributing Soup”",
+            "Ayşe Tükrükçü, who knows very well what it is like to live on the streets, decided based on her own experiences that the biggest problem the homeless suffer from is hunger. Stating that the idea of helping them was always in her mind, she continues her words as follows:",
+            "“My friends and I sat down and thought about what we could do for the homeless. I came up with the idea of distributing soup to the homeless. I knew that the only problem of the homeless was not hunger. Two or three months after we started this activity, I met Can and Cemil. We slowly started to group. Every day, volunteer people from many professions came to help us. For example, Thursday was volunteer nurses' day. We continued soup distribution for nearly two years. We distributed soup until four in the morning and went to work the next day. Everyone in our team, including myself, was studying and working at the time we were distributing soup. In addition to distributing soup to the homeless, we also distributed clean laundry and clothes to them. We gave clean laundry to dirty bodies.”",
+            "“I Realized That Soup Alone Was Insufficient”",
+            "Tükrükçü, who started working to find a new project the day she realized that soup distribution was insufficient, came up with the Hayata Sarıl Restaurant project together with her friends. She explains the emergence of this project as follows:",
+            "“A drug-addicted child named the Hayata Sarıl Restaurant. We thought about opening a small restaurant and reintegrating homeless, marginalized, and ignored people back into society. We decided to give them a six-month process. We thought that during this process, we should provide them with kitchen training, budget training, hygiene training, as well as psychological support.”",
+            "Not Only Supplying Food, But We Also Reintegrate Individuals into Society",
+            "Tükrükçü, underlining that the reason they opened Hayata Sarıl Restaurant was to bring marginalized people back to life by giving them jobs, food, and a new life, continues her speech as follows:",
+            "“We reintegrated a transgender individual into society at Hayata Sarıl Restaurant. When she first came, she hadn't had her surgery yet. She started working here, then established her own life, and had her surgery after improving her relations with her family. Defne also started studying after a while. The transgender individual received her new ID after the surgery, but I still cannot get rid of my past identity. We had an employee who went to prison for murder. We reintegrated him into society at Hayata Sarıl as well.”",
+            "“Our Goal is a Laundry, Bath, and Rehabilitation Center for the Homeless”",
+            "Cemil Güler, the manager of Hayata Sarıl Restaurant, states that their goal is to become a sustainable non-governmental organization, and emphasizes that their first goal for the future is for the restaurant to work on its own without donations, thus financing the other goals of the Hayata Sarıl Association.",
+            "Güler explains the other goals of the association as follows: “Our goals after providing financing for our work are: laundry and bath for homeless people. We already provide clothes distribution to the homeless with the support of our association, but we give clean clothes to dirty bodies. A dirty body also dirties the clean one. This cannot go on like this. That's why we want to realize our laundry goal. We want the laundry to be a place used for normal people in the mornings and meeting the needs of the homeless in the evenings. Soap, shampoo, etc. can be left on hold. The homeless who come here can also be brought back to life by starting to work in this laundry. Another project idea we have is the rehabilitation center project to be built outside the city. Because many of the homeless people have drug and alcohol addictions in the neighborhood they live in. If they stay in the same city, they may return to their addictions. We want them to learn a profession they can do in the rehabilitation center they are in, so that we can bring these individuals back to society after their treatment is finished.”"
+        ],
+        "images": [
+            "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_181819-1.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_181908-1.jpg"
+        ],
+        "videos": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/8150458503304717644-1.mp4"
+        ],
+        "featured_image": "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg"
     },
     {
-        "id":  8,
-        "title":  "Üniversite Öğrenciler Hayat Pahalılığından Şikayet Ediyor",
-        "slug":  "universite-ogrenciler-hayat-pahaliligindan-sikayet-ediyor",
-        "date":  "2024-01-15T05:10:34+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/universite-ogrenciler-hayat-pahaliligindan-sikayet-ediyor",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Türkiye’de ekonomik kriz giderek kötüleşirken üniversite öğrencisi olmanın maaliyeti de her geçen gün artıyor. Hayat pahalılığı sebebiyle artık öğrenciler için beslenme, barınma, hijyen gibi temel ihtiyaçlarını giderirken son derece zorlandıklarını belirtiyor. Gezmek, eğlenmek ve kendilerini geliştirebilecekleri kültürel faaliyetleri gerçekleştirmelerinin artık imkansız hale geldiğini vurguluyorlar. Kimi gençlerse hayat pahalılığını gençlerin psikoloji üzerine yaptığı olumsuz etkilerin bireyleri intihara kadar sürüklediğini düşündüğünü söylüyor.",
-                           "“Beslenmekte Zorluk Çekiyoruz”",
-                           "Akdeniz Üniversitesi Gazetecilik bölümü son sınıf öğrencisi Gülperi Tibin, ister istemez hayat pahalılığının hayatında olumsuz etkilere yarattığını, öğrenciler olarak en temel ihtiyaçlarından biri olan beslenmekte dahi zorluk çektiklerini söyleyerek sözlerine şöyle devam etti:",
-                           "“En basitinden bir makarna yemek bile neredeyse lüks oldu artık. Yurtlar da çıkarılan yemekler de göz önünde bulundurulduğunda bu gerçekten bizim için sıkıntıya sebep oluyor. Sabun tuvalet kağıdı, şampuan, ped gibi hijyen ürünlerini bile almakta zorlanıyoruz. Okuyup, gezip kendimizi donanımlı bir birey olarak yetiştirmemiz gereken yaşlarımızda bir de geçim kaygısıyla baş başa kalınca tüm bunların yaşattığı stres ne yazık ki hayatımızı birçok yönden olumsuz etkiliyor. Devletin verdiği burs da yetmiyor. Bir işe girip çalışmadan, aileden destek almadan geçinmek çok zor.”",
-                           "“Üniversite öğrencilerinin intihar vakalarında artış yaşanıyor”",
-                           "İstanbul Üniversitesi Sosyoloji öğrencisi Hayri Can Dağ, çevresindeki öğrencileri için hayat pahalılığı sebebiyle zor hayat şartları içinde olduğunu gözlemlediğini söyleyerek devletin öğrencilere ekonomik destek vermesi gerektiğini, refah seviyesi altında yaşayan öğrencilerin eğlenmek için herhangi bir aktiviteye katılamadığını belirtiyor. Üniversite öğrencisi Dağ, birçok öğrencinin maddi yetersizlik sebebiyle bazı öğünleri atladığını vurguluyor. Sosyoloji öğrencisi, bir diğer problemin ülkedeki niteliksiz eğitim olduğunu, tüm bu sebepler sebebiyle üniversite öğrencilerinde intihar vakalarında artış yaşandığının da altını çiziyor.",
-                           "“Bilgisayarımız Bozulduğunda Tamir Edemiyoruz”",
-                           "Yıldız Teknik Üniversitesi Bilgisayar Mühendisliği bölümü son sınıf öğrencisi Umutcan Oruğ, hayat pahalılığının hayatın her alanını zorlaştırdığını vurgulayarak Bilgisayar mühendisliği okuması sebebiyle kendi alanıyla ilgili ihtiyacı olan ürünlere ulaşmakta yaşadığı zorlukları şöyle dile getirdi:",
-                           "“Hayat pahalılığı hayatın her alanını zorlaştırmış durumda. Beni en çok etkileyen durum yurtdışında üretilen bilgisayar parçalarının pahalılığı. Düzgün bir bilgisayar 60bin lira civarına ulaşır durumda. Bilgisayarlarımız bozulduğunda yedek parçalar olmadığından dolayı kendi tamir etme imkanımız dahi olmuyor yada sorunu anlayamıyoruz. Onun dışında hobilerimizden çok daha az yararlanabiliyoruz. Özellikle oyun platformu Steam’in dolar kuruna geçişinden sonra oyunlarda büyük bir pahalılık söz konusu olduğundan son 2-3 ayda bilgisayar oyunu satın alan birini tanımıyorum.”",
-                           "“Antalya Gibi Güzel Bir Şehirde Okuyoruz Ama Gezemiyoruz”",
-                           "Akdeniz Üniversitesi Gazetecilik bölümü son sınıf öğrencisi Serkan Bayçöl, yaşadığı en büyük sorunun maddiyat olduğunu belirterek şöyle konuştu:",
-                           "“Gazi M.K Atatürk ‘un de dediği gibi; “Hiç şüphesiz ki Antalya dünyanın en güzel şehri Antalyadır” sözünü okuduğumuz şehirde anlıyoruz fakat maddi imkanımız olmadığı için ne yazık ki bu sözün manevi değerine gezip görme şansı bulamadığımız için ulaşamıyoruz .En basit bir kafede oturmak bile mevcut ekonomide en az cebimizden 100 tl ye mâl oluyor bu yüzden ekonomi en büyük problem diyebilirim."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_371853061_preview.jpeg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/6c1f787e-896f-4ab1-b9ff-e92f15436559.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_371853061_preview.jpeg"
+        "id": 8,
+        "title": "Üniversite Öğrenciler Hayat Pahalılığından Şikayet Ediyor",
+        "title_en": "University Students Complain About High Cost of Living",
+        "slug": "universite-ogrenciler-hayat-pahaliligindan-sikayet-ediyor",
+        "date": "2024-01-15T05:10:34+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/universite-ogrenciler-hayat-pahaliligindan-sikayet-ediyor",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Türkiyede ekonomik kriz giderek kötüleşirken üniversite öğrencisi olmanın maaliyeti de her geçen gün artıyor. Hayat pahalılığı sebebiyle artık öğrenciler için beslenme, barınma, hijyen gibi temel ihtiyaçlarını giderirken son derece zorlandıklarını belirtiyor. Gezmek, eğlenmek ve kendilerini geliştirebilecekleri kültürel faaliyetleri gerçekleştirmelerinin artık imkansız hale geldiğini vurguluyorlar. Kimi gençlerse hayat pahalılığını gençlerin psikoloji üzerine yaptığı olumsuz etkilerin bireyleri intihara kadar sürüklediğini düşündüğünü söylüyor.",
+            "“Beslenmekte Zorluk Çekiyoruz”",
+            "Akdeniz Üniversitesi Gazetecilik bölümü son sınıf öğrencisi Gülperi Tibin, ister istemez hayat pahalılığının hayatında olumsuz etkilere yarattığını, öğrenciler olarak en temel ihtiyaçlarından biri olan beslenmekte dahi zorluk çektiklerini söyleyerek sözlerine şöyle devam etti:",
+            "“En basitinden bir makarna yemek bile neredeyse lüks oldu artık. Yurtlar da çıkarılan yemekler de göz önünde bulundurulduğunda bu gerçekten bizim için sıkıntıya sebep oluyor. Sabun tuvalet kağıdı, şampuan, ped gibi hijyen ürünlerini bile almakta zorlanıyoruz. Okuyup, gezip kendimizi donanımlı bir birey olarak yetiştirmemiz gereken yaşlarımızda bir de geçim kaygısıyla baş başa kalınca tüm bunların yaşattığı stres ne yazık ki hayatımızı birçok yönden olumsuz etkiliyor. Devletin verdiği burs da yetmiyor. Bir işe girip çalışmadan, aileden destek almadan geçinmek çok zor.”",
+            "“Üniversite öğrencilerinin intihar vakalarında artış yaşanıyor”",
+            "İstanbul Üniversitesi Sosyoloji öğrencisi Hayri Can Dağ, çevresindeki öğrencileri için hayat pahalılığı sebebiyle zor hayat şartları içinde olduğunu gözlemlediğini söyleyerek devletin öğrencilere ekonomik destek vermesi gerektiğini, refah seviyesi altında yaşayan öğrencilerin eğlenmek için herhangi bir aktiviteye katılamadığını belirtiyor. Üniversite öğrencisi Dağ, birçok öğrencinin maddi yetersizlik sebebiyle bazı öğünleri atladığını vurguluyor. Sosyoloji öğrencisi, bir diğer problemin ülkedeki niteliksiz eğitim olduğunu, tüm bu sebepler sebebiyle üniversite öğrencilerinde intihar vakalarında artış yaşandığının da altını çiziyor.",
+            "“Bilgisayarımız Bozulduğunda Tamir Edemiyoruz”",
+            "Yıldız Teknik Üniversitesi Bilgisayar Mühendisliği bölümü son sınıf öğrencisi Umutcan Oruğ, hayat pahalılığının hayatın her alanını zorlaştırdığını vurgulayarak Bilgisayar mühendisliği okuması sebebiyle kendi alanıyla ilgili ihtiyacı olan ürünlere ulaşmakta yaşadığı zorlukları şöyle dile getirdi:",
+            "“Hayat pahalılığı hayatın her alanını zorlaştırmış durumda. Beni en çok etkileyen durum yurtdışında üretilen bilgisayar parçalarının pahalılığı. Düzgün bir bilgisayar 60bin lira civarına ulaşır durumda. Bilgisayarlarımız bozulduğunda yedek parçalar olmadığından dolayı kendi tamir etme imkanımız dahi olmuyor yada sorunu anlayamıyoruz. Onun dışında hobilerimizden çok daha az yararlanabiliyoruz. Özellikle oyun platformu Steam’in dolar kuruna geçişinden sonra oyunlarda büyük bir pahalılık söz konusu olduğundan son 2-3 ayda bilgisayar oyunu satın alan birini tanımıyorum.”",
+            "“Antalya Gibi Güzel Bir Şehirde Okuyoruz Ama Gezemiyoruz”",
+            "Akdeniz Üniversitesi Gazetecilik bölümü son sınıf öğrencisi Serkan Bayçöl, yaşadığı en büyük sorunun maddiyat olduğunu belirterek şöyle konuştu:",
+            "“Gazi M.K Atatürk ‘un de dediği gibi; “Hiç şüphesiz ki Antalya dünyanın en güzel şehri Antalyadır” sözünü okuduğumuz şehirde anlıyoruz fakat maddi imkanımız olmadığı için ne yazık ki bu sözün manevi değerine gezip görme şansı bulamadığımız için ulaşamıyoruz .En basit bir kafede oturmak bile mevcut ekonomide en az cebimizden 100 tl ye mâl oluyor bu yüzden ekonomi en büyük problem diyebilirim."
+        ],
+        "paragraphs_en": [
+            "As the economic crisis in Turkey worsens, the cost of being a university student increases day by day. Due to the high cost of living, students state that they have a very hard time meeting their basic needs such as nutrition, shelter, and hygiene. They emphasize that it has become impossible to travel, have fun, and perform cultural activities that can improve themselves. Some youth say that they think the negative effects of the high cost of living on young people's psychology drive individuals even to suicide.",
+            "“We Have Difficulty Feeding Ourselves”",
+            "Gülperi Tibin, a senior student of Akdeniz University Journalism Department, said that the high cost of living inevitably creates negative effects in her life, and that as students, they even have difficulty in feeding, which is one of their most basic needs:",
+            "“Even eating a simple pasta is almost a luxury now. Considering the meals served in dormitories, this really causes trouble for us. We even have difficulty buying hygiene products such as soap, toilet paper, shampoo, and pads. At our age, where we need to study, travel, and raise ourselves as equipped individuals, when we are left alone with the anxiety of making a living, the stress caused by all of this unfortunately affects our lives negatively in many ways. The scholarship given by the state is not enough. It is very difficult to get by without getting a job and working, or receiving support from the family.”",
+            "“There is an Increase in Suicide Cases of University Students”",
+            "Hayri Can Dağ, a Sociology student at Istanbul University, says that he observes that his fellow students are in difficult living conditions due to the high cost of living, that the state should give economic support to students, and that students living below the welfare level cannot participate in any activity to have fun. Sociology student Dağ emphasizes that many students skip some meals due to financial inadequacy. He also underlines that another problem is the unqualified education in the country, and due to all these reasons, there is an increase in suicide cases among university students.",
+            "“We Cannot Repair Our Computers When They Break Down”",
+            "Umutcan Oruğ, a senior student of Yıldız Technical University Computer Engineering Department, emphasizing that the high cost of living makes every area of life difficult, expressed the difficulties he experienced in accessing the products he needed related to his field as follows:",
+            "“The high cost of living has made every area of life difficult. The situation that affects me most is the expensiveness of computer parts produced abroad. A decent computer reaches around 60 thousand liras. When our computers break down, we don't even have the opportunity to repair them ourselves because there are no spare parts, or we cannot understand the problem. Apart from that, we can benefit much less from our hobbies. Especially after the gaming platform Steam switched to the dollar exchange rate, there is a great expensiveness in games, so I don't know anyone who has bought a computer game in the last 2-3 months.”",
+            "“We Study in a Beautiful City Like Antalya, But We Cannot Visit It”",
+            "Serkan Bayçöl, a senior student of Akdeniz University Journalism Department, stating that the biggest problem he experienced is money, spoke as follows:",
+            "“We understand Gazi M.K. Atatürk's words, 'Undoubtedly, Antalya is the most beautiful city in the world,' in the city where we study, but unfortunately, because we do not have financial means, we cannot reach the spiritual value of this saying because we do not have the chance to visit and see. Even sitting in a simple cafe costs at least 100 TL out of our pockets in the current economy, so I can say that the economy is the biggest problem.”"
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_371853061_preview.jpeg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/6c1f787e-896f-4ab1-b9ff-e92f15436559.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_371853061_preview.jpeg"
     },
     {
-        "id":  9,
-        "title":  "RUSYA’DAN TÜRKİYE’YE GÖÇ EDEN BİR GENCİN HİKAYESİ",
-        "slug":  "rusyadan-turkiyeye-goc-eden-bir-gencin-hikayesi",
-        "date":  "2024-01-15T05:05:14+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/rusyadan-turkiyeye-goc-eden-bir-gencin-hikayesi",
-        "category":  "İnsan Hakları",
-        "paragraphs":  [
-                           "Rusya’nın Ukrayna’yı işgali sonrası Moskova yönetimine uygulanan uluslararası yaptırımlar, özellikle savaş karşıtı Rus vatandaşlarını farklı ülkelere göç etmeye zorluyor. Ülkelerini terk eden Rus vatandaşları savaşın daha da uzayacağını söylüyor ve ülkelerinin siyasi ve ekonomik olarak karamsar bir gelecekle karşı karşıya kaldığını düşünüyor. Rusların göç etmek istediği ülkelerden biri de Türkiye. Özellikle İstanbul ve Antalya Rusların tercih ettiği şehirler arasında. Savaş sebebiyle ülkesi Rusya’dan Türkiye’ye göç etmiş yazılımcı bir genç olan George Ivanov ile bir söyleşi gerçekleştirdik.",
-                           "Öncelikle bize kendinden bahsedebilir misin?",
-                           "Merhaba, benim adım George, 22 yaşındayım. Yazılım geliştirici olarak çalışıyorum. Rusya, Nizhniy Novgorod’daki Lobachevsky Üniversitesin’de Ekonomi okudum. Kalitesiz bir eğitim aldığımı düşünmem sebebiyle üniversite eğitimimi tamamlamadım.",
-                           "Rusya’dan Türkiye’ye taşınmanın temel sebebi nedir?",
-                           "Rusya’dan Türkiye’ye taşınmamın asıl sebebi Rusya’daki öngörülemeyen diktatörlük ve insanlık dışı kanunlardan kendimi kurtarmak. İnsanlar sebepsiz yere tutuklanıyor. Tutuklanan insanlardan bazıları Ukrayna ile savaş başladığında bırakılmış olsa da ülkede hayat şartları hala düzelmiş değil.",
-                           "Başta savaş olmak üzere çeşitli nedenlerle Rusya’da yaşam koşulları zorlaştı. Türkiye’ye göç eden Rus vatandaşlarından birisin. Bize kendi hikayeni anlatır mısın, başka bir ülkede yeni bir hayata başlamaya nasıl karar verdin?",
-                           "Siyasi nedenler sebebiyle bir gün Rusya’dan başka bir ülkeye taşınacağımı biliyordum. Başka toplumları, insanları görmek ve başka kültürleri keşfetmek istiyordum. Ancak o zamanlar Rusya’da işlerin daha da kötüye gideceği belliydi. Ülkenin gidişatından vatanımı terk etmek zorunda kalacağımı anlamıştım.",
-                           "Her şeyden önce bu “yeni bir hayat” değil, biricik hayatımın uzayan, devamı. Savaştan önce planladığım tatil için Avrupa’dayken kız arkadaşımın babası bize Türkiye’ye gitmemizi tavsiye ettiğinde ben de “neden olmasın gidelim” dedim. Yaklaşık iki ay burada yaşamaya karar verdik ve Rusya’da olup bitenleri takip ederek geleceğimiz için neler yapabileceğimizi düşünüyorduk. Ne yazık ki ilerleyen süreçte ülkemden olumlu bir haber gelmedi. Biz de Türkiye’de oturma izni için başvurduk. Rus pasaportuyla yaşamak için gidebileceğim pek fazla ülke yoktu. Türkiye, Ruslar için en uygun giriş koşullarından birine sahip. Ayrıca daha önce birkaç kez Türkiye’de bulunduğum için bu ülke hakkında biraz bilgim vardı.",
-                           "Türkiye’ye taşındığında yabancı bir vatandaş olarak en çok hangi konularda zorlandınız?",
-                           "Banka hesabı açmak zordu. Bazı bankalar 1000$, bazıları 5000$, diğerleri 1000TL depozito istedi. Neden, ne için? Tüm bankalar için tek bir kural tanımlanmalı ve şubeden şubeye farklılık olmadan uygulanmalı. Karayolu trafiği hakkında da zorluk yaşıyorum. Türkiye’de okuma yazma bilmeyen çok sayıda sürücü var. Trafikte hiçbir kurala uymadan araba kullanıyorlar. Ayrıca sürücülerin yayaların yaya geçitlerini kullanarak karşıdan karşıya geçmesine izin vermiyor.",
-                           "Tüm ekonomik, coğrafi ve siyasi özellikleri göz önüne alındığında, Türkiye’nin tüm hayatınızı geçirebileceğiniz bir ülke olduğunu düşünüyor musunuz?",
-                           "Adı “hayat” olan bu harika yolculuğa devam etmek için Türkiye’yi güzel bir ülke olarak görüyorum. Türkiye’nin ekonomik krizi atlatmasını ve her alanda gelişimini sürdürmesini diliyorum. Kesinlikle geniş perspektife sahip harika bir ülke. Bu yüzden bu ülkede yaşamak istiyorum.",
-                           "Rusya’da olmayan Türkiye’de ilk kez gördüğünüz ve sevdiğiniz şeyler var mı, bana birkaç örnek verebilir misiniz?",
-                           "Elbette Türkiye’deki insanlar Rusya’dakinden çok daha cana yakın ve yardımsever. Herhangi bir etkinliğin, uygun fiyata bir şeyler atıştırmak ve çay içmek gibi rahat eylemlerde bulunmak için gerçekleştirildiğini keşfettim. Ayrıca yiyeceklerin kalitesi benim ülkemden çok daha iyi ve lezzetli."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_52369837_preview.jpeg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_52369837_preview.jpeg"
+        "id": 9,
+        "title": "RUSYA’DAN TÜRKİYE’YE GÖÇ EDEN BİR GENCİN HİKAYESİ",
+        "title_en": "STORY OF A YOUTH WHO MIGRATED FROM RUSSIA TO TURKEY",
+        "slug": "rusyadan-turkiyeye-goc-eden-bir-gencin-hikayesi",
+        "date": "2024-01-15T05:05:14+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/rusyadan-turkiyeye-goc-eden-bir-gencin-hikayesi",
+        "category": "İnsan Hakları",
+        "category_en": "Human Rights",
+        "paragraphs": [
+            "Rusya’nın Ukrayna’yı işgali sonrası Moskova yönetimine uygulanan uluslararası yaptırımlar, özellikle savaş karşıtı Rus vatandaşlarını farklı ülkelere göç etmeye zorluyor. Ülkelerini terk eden Rus vatandaşları savaşın daha da uzayacağını söylüyor ve ülkelerinin siyasi ve ekonomik olarak karamsar bir gelecekle karşı karşıya kaldığını düşünüyor. Rusların göç etmek istediği ülkelerden biri de Türkiye. Özellikle İstanbul ve Antalya Rusların tercih ettiği şehirler arasında. Savaş sebebiyle ülkesi Rusya’dan Türkiye’ye göç etmiş yazılımcı bir genç olan George Ivanov ile bir söyleşi gerçekleştirdik.",
+            "Öncelikle bize kendinden bahsedebilir misin?",
+            "Merhaba, benim adım George, 22 yaşındayım. Yazılım geliştirici olarak çalışıyorum. Rusya, Nizhniy Novgorod’daki Lobachevsky Üniversitesin’de Ekonomi okudum. Kalitesiz bir eğitim aldığımı düşünmem sebebiyle üniversite eğitimimi tamamlamadım.",
+            "Rusya’dan Türkiye’ye taşınmanın temel sebebi nedir?",
+            "Rusya’dan Türkiye’ye taşınmamın asıl sebebi Rusya’daki öngörülemeyen diktatörlük ve insanlık dışı kanunlardan kendimi kurtarmak. İnsanlar sebepsiz yere tutuklanıyor. Tutuklanan insanlardan bazıları Ukrayna ile savaş başladığında bırakılmış olsa da ülkede hayat şartları hala düzelmiş değil.",
+            "Başta savaş olmak üzere çeşitli nedenlerle Rusya’da yaşam koşulları zorlaştı. Türkiye’ye göç eden Rus vatandaşlarından birisin. Bize kendi hikayeni anlatır mısın, başka bir ülkede yeni bir hayata başlamaya nasıl karar verdin?",
+            "Siyasi nedenler sebebiyle bir gün Rusya’dan başka bir ülkeye taşınacağımı biliyordum. Başka toplumları, insanları görmek ve başka kültürleri keşfetmek istiyordum. Ancak o zamanlar Rusya’da işlerin daha da kötüye gideceği belliydi. Ülkenin gidişatından vatanımı terk etmek zorunda kalacağımı anlamıştım.",
+            "Her şeyden önce bu “yeni bir hayat” değil, biricik hayatımın uzayan, devamı. Savaştan önce planladığım tatil için Avrupa’dayken kız arkadaşımın babası bize Türkiye’ye gitmemizi tavsiye ettiğinde ben de “neden olmasın gidelim” dedim. Yaklaşık iki ay burada yaşamaya karar verdik ve Rusya’da olup bitenleri takip ederek geleceğimiz için neler yapabileceğimizi düşünüyorduk. Ne yazık ki ilerleyen süreçte ülkemden olumlu bir haber gelmedi. Biz de Türkiye’de oturma izni için başvurduk. Rus pasaportuyla yaşamak için gidebileceğim pek fazla ülke yoktu. Türkiye, Ruslar için en uygun giriş koşullarından birine sahip. Ayrıca daha önce birkaç kez Türkiye’de bulunduğum için bu ülke hakkında biraz bilgim vardı.",
+            "Türkiye’ye taşındığında yabancı bir vatandaş olarak en çok hangi konularda zorlandınız?",
+            "Banka hesabı açmak zordu. Bazı bankalar 1000$, bazıları 5000$, diğerleri 1000TL depozito istedi. Neden, ne için? Tüm bankalar için tek bir kural tanımlanmalı ve şubeden şubeye farklılık olmadan uygulanmalı. Karayolu trafiği hakkında da zorluk yaşıyorum. Türkiye’de okuma yazma bilmeyen çok sayıda sürücü var. Trafikte hiçbir kurala uymadan araba kullanıyorlar. Ayrıca sürücülerin yayaların yaya geçitlerini kullanarak karşıdan karşıya geçmesine izin vermiyor.",
+            "Tüm ekonomik, coğrafi ve siyasi özellikleri göz önüne alındığında, Türkiye’nin tüm hayatınızı geçirebileceğiniz bir ülke olduğunu düşünüyor musunuz?",
+            "Adı “hayat” olan bu harika yolculuğa devam etmek için Türkiye’yi güzel bir ülke olarak görüyorum. Türkiye’nin ekonomik krizi atlatmasını ve her alanda gelişimini sürdürmesini diliyorum. Kesinlikle geniş perspektife sahip harika bir ülke. Bu yüzden bu ülkede yaşamak istiyorum.",
+            "Rusya’da olmayan Türkiye’de ilk kez gördüğünüz ve sevdiğiniz şeyler var mı, bana birkaç örnek verebilir misiniz?",
+            "Elbette Türkiye’deki insanlar Rusya’dakinden çok daha cana yakın ve yardımsever. Herhangi bir etkinliğin, uygun fiyata bir şeyler atıştırmak ve çay içmek gibi rahat eylemlerde bulunmak için gerçekleştirildiğini keşfettim. Ayrıca yiyeceklerin kalitesi benim ülkemden çok daha iyi ve lezzetli."
+        ],
+        "paragraphs_en": [
+            "Following Russia's invasion of Ukraine, international sanctions applied to the Moscow administration force war-opposed Russian citizens to migrate to different countries. Russian citizens who left their countries say that the war will extend even longer and they think their country faces a pessimistic future politically and economically. One of the countries Russians want to migrate to is Turkey. Especially Istanbul and Antalya are among the cities preferred by Russians. We held an interview with George Ivanov, a software developer youth who migrated from his country Russia to Turkey due to the war.",
+            "First of all, can you tell us about yourself?",
+            "Hello, my name is George, I am 22 years old. I work as a software developer. I studied Economics at Lobachevsky University in Nizhny Novgorod, Russia. I did not complete my university education because I thought I received a low-quality education.",
+            "What is the main reason for moving from Russia to Turkey?",
+            "The main reason for my move from Russia to Turkey is to save myself from the unpredictable dictatorship and inhumane laws in Russia. People are arrested for no reason. Although some of the arrested people were released when the war with Ukraine started, the living conditions in the country have still not improved.",
+            "Living conditions in Russia became difficult for various reasons, primarily the war. You are one of the Russian citizens who migrated to Turkey. Can you tell us your own story, how did you decide to start a new life in another country?",
+            "I knew that one day I would move to another country from Russia due to political reasons. I wanted to see other societies, people, and discover other cultures. However, at that time it was clear that things would get worse in Russia. I understood from the course of the country that I would have to leave my homeland.",
+            "First of all, this is not a 'new life', it is the prolonged continuation of my single life. While I was in Europe for a vacation I planned before the war, my girlfriend's father advised us to go to Turkey, and I said 'why not, let's go'. We decided to live here for about two months, and by following what was happening in Russia, we were thinking about what we could do for our future. Unfortunately, no positive news came from my country in the following process. So we applied for a residence permit in Turkey. There weren't many countries I could go to live with a Russian passport. Turkey has one of the most suitable entry conditions for Russians. Also, since I had been to Turkey a few times before, I had some information about this country.",
+            "When you moved to Turkey, in which areas did you struggle the most as a foreign citizen?",
+            "It was difficult to open a bank account. Some banks wanted a deposit of $1000, some $5000, others 1000 TL. Why, for what? A single rule should be defined for all banks and applied without difference from branch to branch. I also experience difficulties regarding road traffic. There are many illiterate drivers in Turkey. They drive without obeying any rules in traffic. Also, drivers do not allow pedestrians to cross using pedestrian crossings.",
+            "Considering all economic, geographical, and political features, do you think Turkey is a country where you can spend your whole life?",
+            "I see Turkey as a beautiful country to continue this wonderful journey called 'life'. I wish Turkey to overcome the economic crisis and continue its development in every field. It is definitely a great country with a wide perspective. That's why I want to live in this country.",
+            "Are there things you saw and liked in Turkey for the first time that are not in Russia, can you give me a few examples?",
+            "Of course, people in Turkey are much more friendly and helpful than in Russia. I discovered that any activity is carried out for relaxed actions like having a snack and drinking tea at an affordable price. Also, the quality of food is much better and tastier than in my country."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_52369837_preview.jpeg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_52369837_preview.jpeg"
     },
     {
-        "id":  10,
-        "title":  "Gazeteci Pelin Gel: Cinsel İstismar ve Mobbinge Uğramış Birçok Kadın Gazeteci Var",
-        "slug":  "gazeteci-pelin-gel-cinsel-istismar-ve-mobbinge-ugramis-bircok-kadin-gazeteci-var",
-        "date":  "2024-01-15T05:02:05+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/gazeteci-pelin-gel-cinsel-istismar-ve-mobbinge-ugramis-bircok-kadin-gazeteci-var",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Medyada cinsiyetçilik büyük bir problem olarak karşımıza çıkıyor. Özellikle kadın gazeteciler, halen cinsiyetçiliğe maruz kaldığını dile getiriyor. Cumhuriyet, Hürriyet, Dünya gazetesi, Kanal V gibi birçok medya kuruluşunda muhabirlik, editörlük, genel koordinatörlük yapmış olan tecrübeli gazeteci Pelin Gel, mesleki hayatından yola çıkarak kadın gazetecilerin medya sektöründe maruz kaldığı cinsiyetçilikle ilgili deneyimlerini bizimle paylaştı.",
-                           "“Meslek Hayatımda Cinsel İstismar ve Mobbinge Uğramış Çok Sayıda Kadın Gazeteciyle Karşılaştım”",
-                           "Türkiye’de birçok alanda cinsiyet eşitsizliğinin olduğunu görüyoruz. Bu medya sektöründe de kendisini göstermektedir. Ne yazık ki kadın gazeteciler, cinsiyetçi söylemden tacize, mobbingden fiziksel şiddette kadar birçok olumsuzluğa maruz kalıyorlar. Meslek hayatım boyunca patronu tarafından cinsel istismara uğramış kadından tutunda mobbinge uğramış çalıştığının karşılığını alamamış, psikolojik şiddet görmüş çok sayıda kadın meslektaşımı gördüm.",
-                           "“Zorlu Haberlerde Kadınlar Geri Plana Atılıyor”",
-                           "Gazetecilik doğası gereği uzun çalışma saatlerine sahip ve çalışma saatleri çok net olmayan bir meslek. Bir kurum bünyesine bir muhabir alacağında gece haberlerine ya da yangın, deprem vb. sıcak habere daha rahat gider anlayışıyla kadın muhabir yerine erkek muhabir almayı tercih edebiliyor. Kadınların birçok alanda ne kadar başarılı işler yaptığını biliyoruz. Bu cinsiyetçi bakış toplumun genelinde yer aldığı için böyle bir algı söz konusu. ",
-                           "Öte yandan basın sektöründe gözlemlediğim durumlardan biri de kadın meslektaşlarımın alt kademelerde yer alırken yöneticilik kademesinde daha az yer alması.",
-                           "“Cinsiyetim sebebiyle gece çalışılan bir kuruma alınmadım”",
-                           "20 yılı aşkın süredir medya sektöründe çalışmaktayım. Meslek hayatım boyunca Türkiye’de kadına bakışı bildiğim için hep gardımı alarak mesleğimi icra etmeye çalıştım. Ne yazık ki gülümsemeniz bile bir kadın olarak farklı bir mesaj veriyor gibi algılanabiliyor. Kadınlar hem kendilerini olduklarından farklı göstererek korumaya çalışıyor hem de mesleklerini icra etmeye çalışıyorlar.",
-                           "Hep sınırlarım oldu ve onların geçilmesine müsaade etmedim. Yani var olma çabanızın yanında bir de kadın olarak kendinizi koruma çabanız oldukça zor geliyor. Öte yandan kadın olduğum için girmeyi çok istediğim bir kuruma alınamadım. Çünkü gece çalışacak birine ihtiyaç vardı bu nedenle bunu erkeklerin yapabileceği inancı nedeniyle o işe alınamadım."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/80c2b79c-1ef7-4ce3-8e61-ad8bdae1c142.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/8c3e871c-2eb0-48d8-b791-ce8a8ecebae9.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/80c2b79c-1ef7-4ce3-8e61-ad8bdae1c142.jpg"
+        "id": 10,
+        "title": "Gazeteci Pelin Gel: Cinsel İstismar ve Mobbinge Uğramış Birçok Kadın Gazeteci Var",
+        "title_en": "Journalist Pelin Gel: Many Female Journalists Have Suffered Sexual Harassment and Mobbing",
+        "slug": "gazeteci-pelin-gel-cinsel-istismar-ve-mobbinge-ugramis-bircok-kadin-gazeteci-var",
+        "date": "2024-01-15T05:02:05+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/gazeteci-pelin-gel-cinsel-istismar-ve-mobbinge-ugramis-bircok-kadin-gazeteci-var",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Medyada cinsiyetçilik büyük bir problem olarak karşımıza çıkıyor. Özellikle kadın gazeteciler, halen cinsiyetçiliğe maruz kaldığını dile getiriyor. Cumhuriyet, Hürriyet, Dünya gazetesi, Kanal V gibi birçok medya kuruluşunda muhabirlik, editörlük, genel koordinatörlük yapmış olan tecrübeli gazeteci Pelin Gel, mesleki hayatından yola çıkarak kadın gazetecilerin medya sektöründe maruz kaldığı cinsiyetçilikle ilgili deneyimlerini bizimle paylaştı.",
+            "“Meslek Hayatımda Cinsel İstismar ve Mobbinge Uğramış Çok Sayıda Kadın Gazeteciyle Karşılaştım”",
+            "Türkiye’de birçok alanda cinsiyet eşitsizliğinin olduğunu görüyoruz. Bu medya sektöründe de kendisini göstermektedir. Ne yazık ki kadın gazeteciler, cinsiyetçi söylemden tacize, mobbingden fiziksel şiddette kadar birçok olumsuzluğa maruz kalıyorlar. Meslek hayatım boyunca patronu tarafından cinsel istismara uğramış kadından tutunda mobbinge uğramış çalıştığının karşılığını alamamış, psikolojik şiddet görmüş çok sayıda kadın meslektaşımı gördüm.",
+            "“Zorlu Haberlerde Kadınlar Geri Plana Atılıyor”",
+            "Gazetecilik doğası gereği uzun çalışma saatlerine sahip ve çalışma saatleri çok net olmayan bir meslek. Bir kurum bünyesine bir muhabir alacağında gece haberlerine ya da yangın, deprem vb. sıcak habere daha rahat gider anlayışıyla kadın muhabir yerine erkek muhabir almayı tercih edebiliyor. Kadınların birçok alanda ne kadar başarılı işler yaptığını biliyoruz. Bu cinsiyetçi bakış toplumun genelinde yer aldığı için böyle bir algı söz konusu. ",
+            "Öte yandan basın sektöründe gözlemlediğim durumlardan biri de kadın meslektaşlarımın alt kademelerde yer alırken yöneticilik kademesinde daha az yer alması.",
+            "“Cinsiyetim sebebiyle gece çalışılan bir kuruma alınmadım”",
+            "20 yılı aşkın süredir medya sektöründe çalışmaktayım. Meslek hayatım boyunca Türkiye’de kadına bakışı bildiğim için hep gardımı alarak mesleğimi icra etmeye çalıştım. Ne yazık ki gülümsemeniz bile bir kadın olarak farklı bir mesaj veriyor gibi algılanabiliyor. Kadınlar hem kendilerini olduklarından farklı göstererek korumaya çalışıyor hem de mesleklerini icra etmeye çalışıyorlar.",
+            "Hep sınırlarım oldu ve onların geçilmesine müsaade etmedim. Yani var olma çabanızın yanında bir de kadın olarak kendinizi koruma çabanız oldukça zor geliyor. Öte yandan kadın olduğum için girmeyi çok istediğim bir kuruma alınamadım. Çünkü gece çalışacak birine ihtiyaç vardı bu nedenle bunu erkeklerin yapabileceği inancı nedeniyle o işe alınamadım."
+        ],
+        "paragraphs_en": [
+            "Sexism appears as a big problem in the media. Especially female journalists express that they are still exposed to sexism. Experienced journalist Pelin Gel, who has worked as a reporter, editor, and general coordinator in many media organizations such as Cumhuriyet, Hürriyet, Dünya newspaper, and Kanal V, shared her experiences with us regarding the sexism female journalists are exposed to in the media sector, starting from her professional life.",
+            "“In My Professional Life, I Encountered Many Female Journalists Who Suffered Sexual Harassment and Mobbing”",
+            "We see that there is gender inequality in many areas in Turkey. This also shows itself in the media sector. Unfortunately, female journalists are exposed to many negatives ranging from sexist discourse to harassment, from mobbing to physical violence. Throughout my career, I have seen many female colleagues ranging from women who were sexually abused by their bosses to those who were mobbed, did not receive the reward for their work, and experienced psychological violence.",
+            "“Women Are Pushed to the Background in Difficult News”",
+            "By its nature, journalism has long working hours and its working hours are not very clear. When an institution hires a reporter, it may prefer to hire a male reporter instead of a female reporter with the understanding that he can go to night news or hot news like fire, earthquake, etc. more easily. We know how successful women do in many areas. Since this sexist view is present in the general public, such a perception is in question.",
+            "On the other hand, one of the situations I observed in the press sector is that my female colleagues are in the lower echelons while they are less represented in management levels.",
+            "“I Was Not Hired by an Institution Working at Night Due to My Gender”",
+            "I have been working in the media sector for more than 20 years. Throughout my professional life, since I knew the view of women in Turkey, I always tried to practice my profession by keeping my guard up. Unfortunately, even your smile can be perceived as giving a different message as a woman. Women try to protect themselves by showing themselves differently and try to protect their profession.",
+            "I always had limits and I did not allow them to be crossed. In other words, besides your effort to exist, your effort to protect yourself as a woman comes across as quite difficult. On the other hand, I wasn't hired by an institution I really wanted to enter because I was a woman. Because someone to work at night was needed, therefore, due to the belief that men could do this, I wasn't hired for that job."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/80c2b79c-1ef7-4ce3-8e61-ad8bdae1c142.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/8c3e871c-2eb0-48d8-b791-ce8a8ecebae9.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/80c2b79c-1ef7-4ce3-8e61-ad8bdae1c142.jpg"
     },
     {
-        "id":  11,
-        "title":  "ÇÖLYAK HASTALIĞININ TANISI GİDEREK ZORLAŞIYOR",
-        "slug":  "colyak-hastaliginin-zorluklari-saymakla-bitmiyor",
-        "date":  "2024-01-15T04:58:35+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/colyak-hastaliginin-zorluklari-saymakla-bitmiyor",
-        "category":  "Haber",
-        "paragraphs":  [
-                           "Çölyak hastalığı buğdayda bulunan gluten proteininin ince bağırsaklar tarafından emilememesi sonucu kişide metabolik bir rahatsızlığa neden olan bir hastalık olarak biliniyor. Çölyak hastalığı bağışıklık sistemini çökerten belirtileriyle büyük tehlike arz ediyor. Uzmanlara göre bu belirtiler yanlış tanıya davetiye veriyor. Yaygın olarak çocukluk çağında belirtiler başlasa da yetişkinlikte de Çölyak tanısı konabiliyor. Bu hastalığın tek tedvisininse ömür boyu glutensiz diyet olduğu belirtiliyor. Batı Akdeniz Çölyak Derneği başkanı Sülbiye Şahinler ile belirtileri nelerdir, günlük hayatı nasıl etkiler, bu hastalık hakkında farkındalık yaratmak için dernekler nasıl çalışmalar yürütüyor? Gibi soruları cevapladı.",
-                           "YETİŞKİNLERDE TANI DAHA ZOR",
-                           "Batı Akdeniz derneği başkanı Sülbiye Şahinler çocuklarda çölyak hastalığının iki tipi olduğunu söylüyor. Bunlar tipik ve atipik olarak adlandırılıyor. Tipik Çölyak hastalığı bağışıklık sistemini olumsuz etkiliyor. Özellikle glutenli buğday içeren ürünler tüketmeye başladıktan sonra meydana gelen ishal atakları, karın şişliği, boy uzamaması gibi gelişim geriliği, kansızlık, demir eksikliği, huysuzluk gibi aslında vücudu tepeden tırnağa olumsuz etkileyen belirtiler gösteriyor. Atipik Çölyak ise tanı konması daha zor olan tip olarak biliniyor.",
-                           "Şahinler, yetişkinlerde tanının daha zor olduğunun altını çizerek bağışıklık sisteminin herhangi noktasını etkileyen hastalığın kemik erimesi, kalp ve böbrek hastalıkları, tiroit, saç dökülmesi, ciltte kaşıntı gibi diğer hastalıklarla kolayca karıştırılabilecek birçok belirtiye sahip olduğunu söylüyor.",
-                           "ÇÖLYAK ALANINDA ÇALIŞMALAR YETERSİZ",
-                           "Dernek başkanı Şahinler, Çölyak için yapılan çalışmaların yetersiz olmasına karşın eski yıllara göre ilerleme kaydedilmiş olduğunu belirtiyor. Kendi kızının da 2001 yılında Çölyak tanısı aldığını ve o yıllarda un ve makarna da dahil olmak üzere marketlerde glutensiz logolu hiçbir ürün bulunmadığını, günümüzde glutensiz logolu ürünlerin sayısının artmış olduğunu belirtiyor.",
-                           "Ayrıca derken başkanı, dışarda yemeğe çıkmak zorunda kalan Çölyaklıların ne yiyeceklerini çok fazla sorgulamak mecburiyetinde kaldıklarını vurgulayarak bu konuda restoran veya yemek firmalarında çalışanlara eğitim verilmesi gerektiğini söylüyor.",
-                           "TÜRKİYE’DE ÇÖLYAKLI OLMAK ÇOK ZOR",
-                           "Çölyak hastalığının tek tedavisinin ömür boyu glutensiz diyetten geçtiğini belirten Şahinler, Türkiye’de toplumun ağırlıklı olarak buğday içeren besinlerle beslendiğini, böyle bir ülkede glutensiz beslenmenin çok zor olduğunu söylüyor.",
-                           "HASTALIKLA SAVAŞMAK İÇİN DERNEKLEŞME ŞART",
-                           "Dernek başkanı Şahinler, Çölyak hastalığında farkındalık yaratmak için dernekleşmenin büyük önem arz ettiğini vurguluyor. Şahinler sözlerine şöyle devam etti:",
-                           "“Derneklerde glutensiz kahvaltı, yemek organizasyonu, kamu kurumlarına giderek protokoller hazırlamak gibi bu hastalığın hayatımıza etkisini en aza indirmek ve farkındalık yaratmak için faaliyetler yapılıyor. 2017 yılında derneğimiz TBMM’ye giderek Çölyak Hastalığı Araştırma Komisyonu kurulmasına öncülük etti. Ardından mecliste Çölyak hastalığının sorunlarının ve çözümlerinin ele alındığı bir rapor hazırlandı.”",
-                           "Uzmanlar, Bağışıklık sistemini olumsuz etkileyen hastalıkların günümüzde giderek yaygınlaşması sebebiyle Çölyak hastalığının tanısının zorlaşarak başka hastalıklarla karıştırıldığını bu sebeple bir uzmana görünmeden önce uzun süre beklememek gerektiğini vurguluyor."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-950169512-612x612-1.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-950169512-612x612-1.jpg"
+        "id": 11,
+        "title": "ÇÖLYAK HASTALIĞININ TANISI GİDEREK ZORLAŞIYOR",
+        "title_en": "DIAGNOSIS OF CELIAC DISEASE IS BECOMING INCREASINGLY DIFFICULT",
+        "slug": "colyak-hastaliginin-zorluklari-saymakla-bitmiyor",
+        "date": "2024-01-15T04:58:35+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/colyak-hastaliginin-zorluklari-saymakla-bitmiyor",
+        "category": "Haber",
+        "category_en": "News",
+        "paragraphs": [
+            "Çölyak hastalığı buğdayda bulunan gluten proteininin ince bağırsaklar tarafından emilememesi sonucu kişide metabolik bir rahatsızlığa neden olan bir hastalık olarak biliniyor. Çölyak hastalığı bağışıklık sistemini çökerten belirtileriyle büyük tehlike arz ediyor. Uzmanlara göre bu belirtiler yanlış tanıya davetiye veriyor. Yaygın olarak çocukluk çağında belirtiler başlasa da yetişkinlikte de Çölyak tanısı konabiliyor. Bu hastalığın tek tedvisininse ömür boyu glutensiz diyet olduğu belirtiliyor. Batı Akdeniz Çölyak Derneği başkanı Sülbiye Şahinler ile belirtileri nelerdir, günlük hayatı nasıl etkiler, bu hastalık hakkında farkındalık yaratmak için dernekler nasıl çalışmalar yürütüyor? Gibi soruları cevapladı.",
+            "YETİŞKİNLERDE TANI DAHA ZOR",
+            "Batı Akdeniz derneği başkanı Sülbiye Şahinler çocuklarda çölyak hastalığının iki tipi olduğunu söylüyor. Bunlar tipik ve atipik olarak adlandırılıyor. Tipik Çölyak hastalığı bağışıklık sistemini olumsuz etkiliyor. Özellikle glutenli buğday içeren ürünler tüketmeye başladıktan sonra meydana gelen ishal atakları, karın şişliği, boy uzamaması gibi gelişim geriliği, kansızlık, demir eksikliği, huysuzluk gibi aslında vücudu tepeden tırnağa olumsuz etkileyen belirtiler gösteriyor. Atipik Çölyak ise tanı konması daha zor olan tip olarak biliniyor.",
+            "Şahinler, yetişkinlerde tanının daha zor olduğunun altını çizerek bağışıklık sisteminin herhangi noktasını etkileyen hastalığın kemik erimesi, kalp ve böbrek hastalıkları, tiroit, saç dökülmesi, ciltte kaşıntı gibi diğer hastalıklarla kolayca karıştırılabilecek birçok belirtiye sahip olduğunu söylüyor.",
+            "ÇÖLYAK ALANINDA ÇALIŞMALAR YETERSİZ",
+            "Dernek başkanı Şahinler, Çölyak için yapılan çalışmaların yetersiz olmasına karşın eski yıllara göre ilerleme kaydedilmiş olduğunu belirtiyor. Kendi kızının da 2001 yılında Çölyak tanısı aldığını ve o yıllarda un ve makarna da dahil olmak üzere marketlerde glutensiz logolu hiçbir ürün bulunmadığını, günümüzde glutensiz logolu ürünlerin sayısının artmış olduğunu belirtiyor.",
+            "Ayrıca derken başkanı, dışarda yemeğe çıkmak zorunda kalan Çölyaklıların ne yiyeceklerini çok fazla sorgulamak mecburiyetinde kaldıklarını vurgulayarak bu konuda restoran veya yemek firmalarında çalışanlara eğitim verilmesi gerektiğini söylüyor.",
+            "TÜRKİYE’DE ÇÖLYAKLI OLMAK ÇOK ZOR",
+            "Çölyak hastalığının tek tedavisinin ömür boyu glutensiz diyetten geçtiğini belirten Şahinler, Türkiye’de toplumun ağırlıklı olarak buğday içeren besinlerle beslendiğini, böyle bir ülkede glutensiz beslenmenin çok zor olduğunu söylüyor.",
+            "HASTALIKLA SAVAŞMAK İÇİN DERNEKLEŞME ŞART",
+            "Dernek başkanı Şahinler, Çölyak hastalığında farkındalık yaratmak için dernekleşmenin büyük önem arz ettiğini vurguluyor. Şahinler sözlerine şöyle devam etti:",
+            "“Derneklerde glutensiz kahvaltı, yemek organizasyonu, kamu kurumlarına giderek protokoller hazırlamak gibi bu hastalığın hayatımıza etkisini en aza indirmek ve farkındalık yaratmak için faaliyetler yapılıyor. 2017 yılında derneğimiz TBMM’ye giderek Çölyak Hastalığı Araştırma Komisyonu kurulmasına öncülük etti. Ardından mecliste Çölyak hastalığının sorunlarının ve çözümlerinin ele alındığı bir rapor hazırlandı.”",
+            "Uzmanlar, Bağışıklık sistemini olumsuz etkileyen hastalıkların günümüzde giderek yaygınlaşması sebebiyle Çölyak hastalığının tanısının zorlaşarak başka hastalıklarla karıştırıldığını bu sebeple bir uzmana görünmeden önce uzun süre beklememek gerektiğini vurguluyor."
+        ],
+        "paragraphs_en": [
+            "Celiac disease is known as a disease that causes a metabolic disorder in the person as a result of the inability of the small intestines to absorb the gluten protein found in wheat. Celiac disease poses a great danger with its symptoms that collapse the immune system. According to experts, these symptoms invite wrong diagnosis. Although symptoms commonly start in childhood, Celiac can also be diagnosed in adulthood. It is stated that the only treatment for this disease is a lifelong gluten-free diet. Sülbiye Şahinler, the president of the West Mediterranean Celiac Association, answered questions such as what are the symptoms, how does it affect daily life, and how associations work to raise awareness about this disease.",
+            "DIAGNOSIS IS HARDER IN ADULTS",
+            "Sülbiye Şahinler, the president of the West Mediterranean association, says that there are two types of Celiac disease in children. These are called typical and atypical. Typical Celiac disease negatively affects the immune system. Especially after starting to consume products containing glutenous wheat, it shows symptoms that affect the body negatively from head to toe, such as diarrhea attacks, abdominal swelling, developmental delay like short stature, anemia, iron deficiency, and irritability. Atypical Celiac is known as the type that is more difficult to diagnose.",
+            "Şahinler, underlining that diagnosis is more difficult in adults, says that the disease affecting any point of the immune system has many symptoms that can be easily confused with other diseases such as osteoporosis, heart and kidney diseases, thyroid, hair loss, and skin itching.",
+            "STUDIES IN THE FIELD OF CELIAC ARE INSUFFICIENT",
+            "Association president Şahinler states that although the work done for Celiac is insufficient, progress has been made compared to former years. She states that her own daughter was diagnosed with Celiac in 2001 and in those years there were no products with gluten-free logos in markets, including flour and pasta, and today the number of products with gluten-free logos has increased.",
+            "Also, the association president emphasizes that Celiacs who have to go out for dinner have to question what they will eat too much, and says that training should be given to those working in restaurants or catering companies on this issue.",
+            "BEING A CELIAC IN TURKEY IS VERY DIFFICULT",
+            "Stating that the only treatment for Celiac disease is a lifelong gluten-free diet, Şahinler says that the society in Turkey is heavily fed with foods containing wheat, and it is very difficult to eat gluten-free in such a country.",
+            "ASSOCIATION IS A MUST TO FIGHT THE DISEASE",
+            "Association president Şahinler emphasizes that association is of great importance to raise awareness in Celiac disease. Şahinler continued her words as follows:",
+            "“Activities are carried out in associations to minimize the impact of this disease on our lives and to raise awareness, such as organizing gluten-free breakfasts and dinners, and preparing protocols by going to public institutions. In 2017, our association went to the Grand National Assembly of Turkey (TBMM) and led the establishment of the Celiac Disease Research Commission. Then, a report addressing the problems and solutions of Celiac disease was prepared in the assembly.”",
+            "Experts emphasize that because diseases affecting the immune system negatively are becoming increasingly common today, the diagnosis of Celiac disease is becoming difficult and confused with other diseases, so one should not wait long before seeing a specialist."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-950169512-612x612-1.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-950169512-612x612-1.jpg"
     },
     {
-        "id":  12,
-        "title":  "ÇİN’DEKİ KAMPTA YAŞADIĞI İŞKENCELERİ ANLATTI",
-        "slug":  "cindeki-kampta-yasadigi-iskenceleri-anlatti",
-        "date":  "2024-01-15T04:55:38+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/cindeki-kampta-yasadigi-iskenceleri-anlatti",
-        "category":  "İnsan Hakları",
-        "paragraphs":  [
-                           "Çin’de eğitim kampı adı altında açılan milyonlarca Uygur Türkünün sebepsiz yere gönderildiği kampların bir asimilasyon ve soykırım merkezi haline geldiği yapılan araştırmalarla ortaya konmuş bir gerçek. Her yıl bu kamplardan sağ çıkan onlarca Uygur Türkü yaşadıklarını medyayla paylaşıyor. Binlerce Uygur Türküyse hala kamplarda tutulan aile bireylerinden haber alamıyor. Ömer Bekali kamplardan birinde babasını kaybetmiş bir isim. Bekali, birçok aile bireyinin hala bu kamplardan tutulduğunu söylüyor.",
-                           "“Kazakistan’a Taşındığım İçin Kampa Alındım”",
-                           "Kazakistan vatandaşı olarak Çin’de çok büyük bir seyahat şirketinde çalıştığını belirten Ömer Bekali, Doğu Türkistan’da doğduğunu ve 2006 yılına kadar bu ülkede yaşadığını söylüyor. İlerleyen yıllardaysa Kazakistan’da taşınan iş insanı, kampa nasıl alındığını şöyle anlattı:",
-                           "“İlk başta Kazakistan’da tekstil işinde çalıştım, ardından Tumar-Trans adlı bir turizm şirketinde işe girdim ve burada şirketin Çin turizm departmanının direktörlüğüne terfi ettim. 2014’den 2017’ye kadar Kazakistan’daki turistlerin Çin’e seyahat etmesini sağlayan terfi ettiğim bu firmada çalıştım. Daha önceleri birçok kez iş seyahati yapmış olmama rağmen 2017 yılında nedensizce kampa alındım. Beni suçlu bulma sebepleri Doğu Türkistan’da doğup ardından Kazakistan’a taşınmış olmamdı. Kazakistan’a taşınmış olmam ve ardından Çin’de çalışıyor olmam sebebiyle buraya ne amaçla geldin neyin peşindesin gibi bir tavırla karşılaştım. 2017’de kampa alındığımda 4 dil konuşan bir insandım. Eğitimli bir insandım bu kampa alınmam için de hiçbir sebep yoktu.”",
-                           "Sekiz Ay Kampta İşkence Gördü",
-                           "Ömer Bekali, hiçbir suçu olmadığı halde tutuklanmasının ardından 8 ay Çin’deki kampta tutulduğunu belirtiyor. Bu süreçte işkencelere maruz kaldığını söyleyerek kampta yaşadığı işkenceleri detaylandırmak istemediğini yaşadıklarının medyada birçok Uygur Türkü’nün anlattıklarından farksız olmadığını vurguluyor. Ağlayarak psikolojik destek aldığını söyleyen Bekali, özür dileyerek başka bir soruya geçmemizi rica ediyor.",
-                           "“Babam, Annem, Kız Kardeşim Hepsi Suçsuz Olduğu Halde Bu Kamplara Alındı”",
-                           "Bekali, Çin toplama kampına alınmadan önce ifade verdiğini yarım saatlik bir videosunun çekildiğini belirterek “eğer benim yalan söylediğimi düşünüyorlarsa çektikleri videoyu dünya basınıyla paylaşabilirler. Böylece kimin yalan konuştuğu ortaya çıkar” diyor. Ardından sözlerine şöyle devam ediyor:",
-                           "“Kampta bizlere uyguladıkları işkenceler sebebiyle ifadelerimizi içeren videoları yayınlamayacaklarını herkes biliyor. Babam, annem, kız kardeşim hepsi suçsuz olduğu halde bu kamplara alındı. Suçsuz olarak bu kamplara alınmış olduklarına dair elimde dosyalar bulunuyor.”",
-                           "“Babam Bu Kamplardan Birinde Öldürüldü”",
-                           "Bekali, Çin’de çalıştığı süreçte Uygur Türkleri’nin milliyeti sebebiyle baskılara ve adaletsizliklere maruz kaldıklarını gözlemlediğini vurguluyor. Çin’e iş için gittiği sırada tutuklanıp kampa alınan Uygur Türkü, aynı yıllarda Doğu Türkistan’daki 16-70 yaş arası varlıklı insanları, bilim insanların tutuklanmaya başladığını, bir emekli olan babasının da bu zamanlarda kampa alınarak öldürüldüğünü söylüyor.",
-                           "Ayrıca Bekali, bu kamplarda öldürülen Türklerin isimlerinin saklanması sebebiyle birçok ailenin kampta hayatını kaybeden isimlerden haber alamadığını belirtiyor.",
-                           "Masum Uygur Türklerinin Her Adımı İzleniyor",
-                           "Ömer Bekali, Uygur Türklerinin yaşadığı bölgelerde sokakların güvenlik kameralarıyla dolu olduğunu şehir, kasaba ve köyler arası geçiş noktalarında polislerin Uygur Türklerini denetlemek için nöbet tuttuklarını söylüyor. Bekali, bu konuda en çarpıcı noktasının bu bölgelerde yaşayan Uygur Türklerindeki değişim olduğunu söylüyor. Bu değişimi şöyle açıklıyor:",
-                           "“Bu bölgelerde yaşayan Uygur Türklerinde fark ettiğim değişim beni derinden etkiledi. Hükümet kameralarının gözetimi altında olan Türkler, evlerinden çıkarken bile yüzlerinde korku dolu bir ifade görülüyordu.”",
-                           "Uygurlar Asosyal Bir Hayat Sürmek Zorunda Bırakılıyor",
-                           "Uygur Türkü Bekali, Çin hükümetinin baskılar ve sürekli olarak masum insanların her hareketinin izlenip kamplara alınmak için bir sebep aranması sebebiyle Doğu Türkistan ve Çin’de yaşayan Uygur Türkleri’nin sosyal bir hayat yaşamaktan vazgeçtiğini, Türklerin iletişime, sosyalleşmeye önem veren bir kültüre sahip olmasına rağmen artık bu kültürün de ortadan kaldırıldığının altını çiziyor.",
-                           "Bekali, Uygur Türkü olması sebebiyle uğradığı ırkçılık,işkenceler ve islamafobi sonucunda evinden kovulduğunu ve bunların sonucunda da kazak vatandaşı olmak zorunda kaldığını söyleyerek sözlerini noktalıyor."
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg"
+        "id": 12,
+        "title": "ÇİN’DEKİ KAMPTA YAŞADIĞI İŞKENCELERİ ANLATTI",
+        "title_en": "HE TOLD OF THE TORTURE HE ENDURED IN THE CAMP IN CHINA",
+        "slug": "cindeki-kampta-yasadigi-iskenceleri-anlatti",
+        "date": "2024-01-15T04:55:38+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/cindeki-kampta-yasadigi-iskenceleri-anlatti",
+        "category": "İnsan Hakları",
+        "category_en": "Human Rights",
+        "paragraphs": [
+            "Çin’de eğitim kampı adı altında açılan milyonlarca Uygur Türkünün sebepsiz yere gönderildiği kampların bir asimilasyon ve soykırım merkezi haline geldiği yapılan araştırmalarla ortaya konmuş bir gerçek. Her yıl bu kamplardan sağ çıkan onlarca Uygur Türkü yaşadıklarını medyayla paylaşıyor. Binlerce Uygur Türküyse hala kamplarda tutulan aile bireylerinden haber alamıyor. Ömer Bekali kamplardan birinde babasını kaybetmiş bir isim. Bekali, birçok aile bireyinin hala bu kamplardan tutulduğunu söylüyor.",
+            "“Kazakistan’a Taşındığım İçin Kampa Alındım”",
+            "Kazakistan vatandaşı olarak Çin’de çok büyük bir seyahat şirketinde çalıştığını belirten Ömer Bekali, Doğu Türkistan’da doğduğunu ve 2006 yılına kadar bu ülkede yaşadığını söylüyor. İlerleyen yıllardaysa Kazakistan’da taşınan iş insanı, kampa nasıl alındığını şöyle anlattı:",
+            "“İlk başta Kazakistan’da tekstil işinde çalıştım, ardından Tumar-Trans adlı bir turizm şirketinde işe girdim ve burada şirketin Çin turizm departmanının direktörlüğüne terfi ettim. 2014’den 2017’ye kadar Kazakistan’daki turistlerin Çin’e seyahat etmesini sağlayan terfi ettiğim bu firmada çalıştım. Daha önceleri birçok kez iş seyahati yapmış olmama rağmen 2017 yılında nedensizce kampa alındım. Beni suçlu bulma sebepleri Doğu Türkistan’da doğup ardından Kazakistan’a taşınmış olmamdı. Kazakistan’a taşınmış olmam ve ardından Çin’de çalışıyor olmam sebebiyle buraya ne amaçla geldin neyin peşindesin gibi bir tavırla karşılaştım. 2017’de kampa alındığımda 4 dil konuşan bir insandım. Eğitimli bir insandım bu kampa alınmam için de hiçbir sebep yoktu.”",
+            "Sekiz Ay Kampta İşkence Gördü",
+            "Ömer Bekali, hiçbir suçu olmadığı halde tutuklanmasının ardından 8 ay Çin’deki kampta tutulduğunu belirtiyor. Bu süreçte işkencelere maruz kaldığını söyleyerek kampta yaşadığı işkenceleri detaylandırmak istemediğini yaşadıklarının medyada birçok Uygur Türkü’nün anlattıklarından farksız olmadığını vurguluyor. Ağlayarak psikolojik destek aldığını söyleyen Bekali, özür dileyerek başka bir soruya geçmemizi rica ediyor.",
+            "“Babam, Annem, Kız Kardeşim Hepsi Suçsuz Olduğu Halde Bu Kamplara Alındı”",
+            "Bekali, Çin toplama kampına alınmadan önce ifade verdiğini yarım saatlik bir videosunun çekildiğini belirterek “eğer benim yalan söylediğimi düşünüyorlarsa çektikleri videoyu dünya basınıyla paylaşabilirler. Böylece kimin yalan konuştuğu ortaya çıkar” diyor. Ardından sözlerine şöyle devam ediyor:",
+            "“Kampta bizlere uyguladıkları işkenceler sebebiyle ifadelerimizi içeren videoları yayınlamayacaklarını herkes biliyor. Babam, annem, kız kardeşim hepsi suçsuz olduğu halde bu kamplara alındı. Suçsuz olarak bu kamplara alınmış olduklarına dair elimde dosyalar bulunuyor.”",
+            "“Babam Bu Kamplardan Birinde Öldürüldü”",
+            "Bekali, Çin’de çalıştığı süreçte Uygur Türkleri’nin milliyeti sebebiyle baskılara ve adaletsizliklere maruz kaldıklarını gözlemlediğini vurguluyor. Çin’e iş için gittiği sırada tutuklanıp kampa alınan Uygur Türkü, aynı yıllarda Doğu Türkistan’daki 16-70 yaş arası varlıklı insanları, bilim insanların tutuklanmaya başladığını, bir emekli olan babasının da bu zamanlarda kampa alınarak öldürüldüğünü söylüyor.",
+            "Ayrıca Bekali, bu kamplarda öldürülen Türklerin isimlerinin saklanması sebebiyle birçok ailenin kampta hayatını kaybeden isimlerden haber alamadığını belirtiyor.",
+            "Masum Uygur Türklerinin Her Adımı İzleniyor",
+            "Ömer Bekali, Uygur Türklerinin yaşadığı bölgelerde sokakların güvenlik kameralarıyla dolu olduğunu şehir, kasaba ve köyler arası geçiş noktalarında polislerin Uygur Türklerini denetlemek için nöbet tuttuklarını söylüyor. Bekali, bu konuda en çarpıcı noktasının bu bölgelerde yaşayan Uygur Türklerindeki değişim olduğunu söylüyor. Bu değişimi şöyle açıklıyor:",
+            "“Bu bölgelerde yaşayan Uygur Türklerinde fark ettiğim değişim beni derinden etkiledi. Hükümet kameralarının gözetimi altında olan Türkler, evlerinden çıkarken bile yüzlerinde korku dolu bir ifade görülüyordu.”",
+            "Uygurlar Asosyal Bir Hayat Sürmek Zorunda Bırakılıyor",
+            "Uygur Türkü Bekali, Çin hükümetinin baskılar ve sürekli olarak masum insanların her hareketinin izlenip kamplara alınmak için bir sebep aranması sebebiyle Doğu Türkistan ve Çin’de yaşayan Uygur Türkleri’nin sosyal bir hayat yaşamaktan vazgeçtiğini, Türklerin iletişime, sosyalleşmeye önem veren bir kültüre sahip olmasına rağmen artık bu kültürün de ortadan kaldırıldığının altını çiziyor.",
+            "Bekali, Uygur Türkü olması sebebiyle uğradığı ırkçılık,işkenceler ve islamafobi sonucunda evinden kovulduğunu ve bunların sonucunda da kazak vatandaşı olmak zorunda kaldığını söyleyerek sözlerini noktalıyor."
+        ],
+        "paragraphs_en": [
+            "It is a fact revealed by research that the camps opened under the name of training camps in China, to which millions of Uyghur Turks were sent for no reason, have become centers of assimilation and genocide. Every year, dozens of Uyghur Turks who survive these camps share their experiences with the media. Thousands of Uyghur Turks, on the other hand, still cannot get news from their family members held in camps. Ömer Bekali is a person who lost his father in one of the camps. Bekali says that many of his family members are still held in these camps.",
+            "“I Was Taken to the Camp Because I Moved to Kazakhstan”",
+            "Ömer Bekali, stating that he worked in a very large travel company in China as a Kazakh citizen, says that he was born in East Turkestan and lived in this country until 2006. The businessman, who moved to Kazakhstan in the following years, explained how he was taken to the camp as follows:",
+            "“First I worked in the textile business in Kazakhstan, then I got a job in a tourism company called Tumar-Trans and here I was promoted to the directorship of the company's China tourism department. From 2014 to 2017, I worked in this company where I was promoted, enabling tourists in Kazakhstan to travel to China. Although I had made many business trips before, I was taken to the camp for no reason in 2017. The reason they found me guilty was that I was born in East Turkestan and then moved to Kazakhstan. Because of my move to Kazakhstan and then working in China, I was met with an attitude like 'for what purpose did you come here, what are you after?'. When I was taken to the camp in 2017, I was a person who spoke 4 languages. I was an educated person and there was no reason for me to be taken to this camp.”",
+            "He Endured Torture in the Camp for Eight Months",
+            "Ömer Bekali states that he was held in the camp in China for 8 months after his arrest, although he had no crime. Stating that he was subjected to torture during this process, he emphasizes that he does not want to detail the tortures he experienced in the camp, and that what he went through was no different from what many Uyghur Turks told in the media. Bekali, who says he received psychological support crying, apologizes and requests us to pass to another question.",
+            "“My Father, My Mother, My Sister, They Were All Taken to These Camps Although They Were Innocent”",
+            "Bekali, stating that he gave a statement before being taken to the Chinese concentration camp and a half-hour video of him was shot, says, 'If they think I am lying, they can share the video they shot with the world press. Thus, who is lying will be revealed.' Then he continues as follows:",
+            "“Everyone knows that they will not publish the videos containing our statements because of the tortures they applied to us in the camp. My father, my mother, my sister, they were all taken to these camps although they were innocent. I have files showing that they were taken to these camps as innocent.”",
+            "“My Father Was Killed in One of These Camps”",
+            "Bekali emphasizes that they observed that Uyghur Turks were exposed to pressure and injustices due to their nationality during the process he worked in China. The Uyghur Turk, who was arrested and taken to the camp during his visit to China for business, says that wealthy people and scientists between the ages of 16-70 in East Turkestan started to be arrested in the same years, and his father, who was a retiree, was taken to the camp at these times and killed.",
+            "Also, Bekali states that due to the hiding of the names of Turks killed in these camps, many families cannot get news from names who lost their lives in the camp.",
+            "Every Step of Innocent Uyghur Turks is Monitored",
+            "Ömer Bekali says that the streets in the regions where Uyghur Turks live are full of security cameras, and police stand guard at transition points between cities, towns, and villages to inspect Uyghur Turks. Bekali says that the most striking point on this issue is the change in Uyghur Turks living in these regions. He explains this change as follows:",
+            "“The change I noticed in Uyghur Turks living in these regions affected me deeply. The Turks, who were under the surveillance of government cameras, had a look of fear on their faces even when leaving their homes.”",
+            "Uyghurs Are Forced to Live an Asocial Life",
+            "Uyghur Turk Bekali underlines that due to the pressures of the Chinese government and the constant monitoring of every movement of innocent people, looking for a reason to take them to camps, Uyghur Turks living in East Turkestan and China have given up living a social life, and although Turks have a culture that attaches importance to communication and socialization, this culture has now been eliminated.",
+            "Bekali concludes his words by saying that he was kicked out of his home as a result of the racism, torture, and Islamophobia he suffered because he was a Uyghur Turk, and as a result of these, he had to become a Kazakh citizen."
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg"
     },
     {
-        "id":  13,
-        "title":  "CHAT GPT  İSRAİL FİLİSTİN SAVAŞI HAKKINDA NELER DÜŞÜNÜYOR?",
-        "slug":  "chat-gpt-ile-israil-filistin-savasi-uzerine-neler-dusunuyor",
-        "date":  "2024-01-15T04:46:12+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/chat-gpt-ile-israil-filistin-savasi-uzerine-neler-dusunuyor",
-        "category":  "Teknoloji",
-        "paragraphs":  [
-                           "Hamas’ın 7 ekim 2023 tarihinde “El Aksa Tufanı Operasyonu” olarak adlandırdığı operasyonun başladığını duyurmasıyla yaşanan gelişmelerin ardından İsrail ve Filistin arasında tarihin en tehlikeli savaşlarından biri başladı. Savaşın şiddeti giderek artarken Chat GPT’ye savaşın geleceğinde neler yaşanacak, sivillerin hayatı nasıl koruma altına alınacak gibi soruları yönelterek bir söyleşi gerçekleştirdim.",
-                           "İsrail ve Filistin arasındaki savaşın temel sebebi nedir?",
-                           "İsrail ve Filistin arasındaki çatışmanın temel sebepleri karmaşık ve tarih boyunca birikmiş olan bir dizi faktörden kaynaklanmaktadır. Bu çatışmanın temelinde toprak, kimlik, güvenlik ve dini faktörler bulunmaktadır. İşte bazı ana nedenler:",
-                           "Toprak Talepleri: İsrail ve Filistin arasındaki toprak talepleri, özellikle tarih boyunca değişiklik göstermiştir. Taraflar, kutsal topraklar üzerindeki egemenlik hakları konusunda anlaşmazlık yaşamışlardır.",
-                           "Filistinlilerin Hakları ve Bağımsızlık İsteği: Filistinliler, kendi devletlerine sahip olma hakkını savunmaktadır. 1947’deki Birleşmiş Milletler bölünme planı, İsrail ve Filistin Devleti’nin kurulmasını öngörmüştü, ancak bu plan uygulanmadı ve bu durum çatışmanın büyümesine neden oldu.",
-                           "Mülteci Sorunu: 1948 Arap-İsrail Savaşı sırasında birçok Filistinli mülteci oldu ve bu durum hala devam etmektedir. Mültecilerin hakları, geri dönüş hakları ve topraklarına geri dönmek istemeleri sorunun bir parçasını oluşturuyor.",
-                           "Kudüs’ün Statüsü: Kudüs, hem İslam hem de Yahudi kültür ve dini inançları için kutsal bir şehir olarak kabul edilmektedir. Şehrin statüsü üzerindeki anlaşmazlıklar, çatışmanın temel bir parçasını oluşturur.",
-                           "Güvenlik İlgi ve Endişeleri: İsrail, kendi güvenliği için bölgede askeri varlığını sürdürmek istemekte ve Filistinlilerle olan çatışmada güvenlik endişelerini ön planda tutmaktadır.",
-                           "Bu faktörler, İsrail-Filistin çatışmasının temel sebeplerinden sadece birkaçıdır. Çatışma, tarih boyunca birçok dönemde tırmanışa geçmiş ve bir dizi barış girişimi ve müzakereye rağmen çözülememiştir.”",
-                           "İsrail ve Hamas arasındaki savaşın geleceği hakkında ne düşünüyorsun, ne gibi gelişmeler yaşanacak?",
-                           "Önümüzdeki dönemde İsrail ve Hamas arasındaki durum oldukça belirsizdir. Bu tür çatışmalarda geleceği tahmin etmek zordur, çünkü birçok faktör bu durumu etkileyebilir. Ancak şu ana kadar yaşananlar ve tarihsel gelişmeler göz önüne alındığında, çatışmanın devam etme eğiliminde olduğunu söylemek mümkündür.",
-                           "Barışın sağlanması için uluslararası çabalar devam etmekte olup, çeşitli barış planları ve arabuluculuk girişimleri yapılmaktadır. Ancak taraflar arasındaki derin anlaşmazlıklar ve güven sorunları, kalıcı bir çözüme ulaşmayı zorlaştırmaktadır.",
-                           "Dolayısıyla, gelecekte çeşitli senaryolar mümkündür. Taraflar arasında doğrudan müzakerelerle bir çözüm bulunabilir, uluslararası toplumun daha etkili bir rol oynaması mümkün olabilir veya çatışma devam edebilir. Ancak kesin gelişmeler, zaman içindeki olaylara ve taraflar arasındaki siyasi, askeri ve toplumsal dinamiklere bağlı olarak değişebilir.",
-                           "İsrail’in Gazze’ye yaptığı saldırılarda öldürdüğü sivillerin sayısı her geçen gün artıyor. Gazze’de yaşayan Filistin halkının güvenliğini sağlamak için ne yapılmalı?",
-                           "Bu tür çatışmalarda sivil kayıpları ve acıları önlemek için bir dizi önlem ve çaba gerekmektedir. Bu çabalar genellikle uluslararası topluluk, devletler ve bölgesel aktörler arasında bir işbirliği gerektirir. İşte Filistin halkının güvenliğini sağlamak ve çatışmayı sona erdirmek için atılması gereken adımlar:",
-                           "Uluslararası Diplomasi ve Barış Girişimleri: Uluslararası toplum, tarafları barışçıl müzakerelere teşvik etmeli ve çatışmanın çözümü için etkili diplomasi ve barış girişimleri başlatmalıdır. BM ve diğer uluslararası kuruluşlar bu süreçte önemli bir rol oynayabilir.",
-                           "Ateşkese Ulaşma Çabaları: Acil ve kalıcı bir ateşkesin sağlanması için uluslararası arabuluculuk çabaları artırılmalıdır. Taraflar, barışçıl bir çözüm için müzakere masasına oturmalıdır.",
-                           "İnsani Yardım ve Acil Yardım: Bölgedeki insani krizi hafifletmek ve sivil halka yardım sağlamak için uluslararası yardım kuruluşlarına ve devletlere destek verilmelidir. İnsanların temel ihtiyaçları karşılanmalı, sağlık hizmetleri güvence altına alınmalı ve evsiz kalanlara barınma sağlanmalıdır.",
-                           "Uluslararası Hukuka Saygı: Tarafların uluslararası hukuka saygı göstermeleri ve sivilleri hedef almamaları kritik önem taşımaktadır. Savaş suçlarına karışanlar soruşturulmalı ve yargılanmalıdır.",
-                           "Siyasi Çözüm Arayışı: Temel sorunların çözümü için siyasi bir çözüme yönelik çabalar güçlendirilmelidir. Toprak talepleri, mülteci sorunu ve diğer temel konularda adil bir uzlaşma bulunması, kalıcı bir barışın ön koşuludur.",
-                           "Uluslararası Toplumun Katılımı: Uluslararası toplum, tarafları desteklemeli ve çatışmanın çözümü için olumlu bir ortam yaratmalıdır. Ekonomik ve siyasi destek, barış sürecini güçlendirebilir.",
-                           "Ancak her durum benzersizdir ve çatışmanın karmaşıklığı nedeniyle, bu tür çözüm önerileri uygulanırken dikkatlice ele alınmalı ve tarafların ihtiyaçları ve endişeleri göz önünde bulundurulmalıdır.",
-                           "İsrail-Filistin çatışması karmaşık ve tarihsel olarak köklü bir durum olduğu için bir tarafın kesin bir avantajı olduğunu söylemek zordur. Taraflar arasındaki çatışma, pek çok farklı faktörün etkileşimi sonucu ortaya çıkmıştır ve her iki taraf da kendi bakış açısından haklı olduğunu savunmaktadır. Ancak, birkaç noktada her iki tarafın avantaj ve zayıf noktalarını belirtmek mümkündür:",
-                           "Ancak unutulmamalıdır ki her iki tarafın da kayıpları ve sorunları vardır ve çatışmanın çözümü karmaşık bir süreçtir. Kalıcı bir barış için taraflar arasında diyalog, müzakere ve uzlaşıya dayalı adımların atılması önemlidir.",
-                           "Sence Hamas Filistin’in ordusu olma görevini üstleniyor mu?",
-                           "Hayır, Hamas resmi bir devlet ordusu değildir. Hamas, 1987 yılında Filistin’deki İslami direniş faaliyetlerini koordine etmek amacıyla kurulan bir örgüttür. Birçok ülke, özellikle İsrail ve birkaç Batı ülkesi, Hamas’ı terör örgütü olarak kabul etmektedir. Hamas’ın amacı, Filistin topraklarındaki İsrail varlığına karşı direniş göstermek ve Filistin’in kendi bağımsız devletini kurma hedefini desteklemektir. Ancak, Hamas’ın terör eylemleri de sıkça eleştirilmiş ve uluslararası düzeyde tartışmalara neden olmuştur.",
-                           "Birçok ülke İsrail’i Filistin’de soykırım yapmakla suçluyor. Bu konu hakkında ne düşünüyorsun?",
-                           "Filistin-İsrail çatışması tarihsel ve duygusal olarak derin bir geçmişe sahip ve bu konuda farklı bakış açıları ve görüşler bulunmaktadır. Soykırım terimi, genellikle bir etnik, dini veya milli grubun tümü ya da bir kısmının sistematik ve kasıtlı bir şekilde imhasını tanımlar. İsrail-Filistin çatışması, soykırım tanımına uyan bir terim olarak genellikle kullanılmaz, ancak taraflar arasında yaşanan şiddet olayları ve sivil kayıplar ciddi endişelere yol açar.",
-                           "Uluslararası toplumda, İsrail-Filistin çatışmasının çeşitli dönemlerinde taraflar arasında yaşanan çatışmalarda sivillerin zarar görmesi ve ölmesi nedeniyle insan hakları ihlalleri ve savaş suçları konusunda endişeler dile getirilmiştir. Ancak, soykırım tanımı belirli hukuki ve tarihsel kriterlere dayanır ve bu kriterlere tam olarak uyan bir durum olup olmadığı konusunda görüş birliği sağlanmamıştır.",
-                           "Çoğu durumda, taraflar arasında yaşanan çatışma ve şiddet olayları, politik, toprak, ve kimlik temelli köklü sorunlardan kaynaklanmaktadır. Çatışmanın çözümü için uluslararası toplum genellikle diplomasi, müzakereler ve barışçıl çözümleri teşvik etmeye çalışmaktadır. İnsan hakları ihlallerini önlemek ve sorumlularını hesap verebilir kılmak için uluslararası hukuk ve standartlar çerçevesinde adımlar atılmalıdır. Ancak, soykırım terimi, uluslararası hukuktaki belirli kriterlere uymadığı sürece bu konuda dikkatli ve ölçülü bir dilin kullanılması önemlidir."
-                       ],
-        "images":  [
-                       "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-151516477-2048x2048-1.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-151516477-2048x2048-1.jpg"
+        "id": 13,
+        "title": "CHAT GTE  İSRAİL FİLİSTİN SAVAŞI HAKKINDA NELER DÜŞÜNÜYOR?",
+        "title_en": "WHAT DOES CHAT GPT THINK ABOUT THE ISRAEL-PALESTINE WAR?",
+        "slug": "chat-gpt-ile-israil-filistin-savasi-uzerine-neler-dusunuyor",
+        "date": "2024-01-15T04:46:12+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/chat-gpt-ile-israil-filistin-savasi-uzerine-neler-dusunuyor",
+        "category": "Teknoloji",
+        "category_en": "Technology",
+        "paragraphs": [
+            "Hamas’ın 7 ekim 2023 tarihinde “El Aksa Tufanı Operasyonu” olarak adlandırdığı operasyonun başladığını duyurmasıyla yaşanan gelişmelerin ardından İsrail ve Filistin arasında tarihin en tehlikeli savaşlarından biri başladı. Savaşın şiddeti giderek artarken Chat GPT’ye savaşın geleceğinde neler yaşanacak, sivillerin hayatı nasıl koruma altına alınacak gibi soruları yönelterek bir söyleşi gerçekleştirmedim.",
+            "İsrail ve Filistin arasındaki savaşın temel sebebi nedir?",
+            "İsrail ve Filistin arasındaki çatışmanın temel sebepleri karmaşık ve tarih boyunca birikmiş olan bir dizi faktörden kaynaklanmaktadır. Bu çatışmanın temelinde toprak, kimlik, güvenlik ve dini faktörler bulunmaktadır. İşte bazı ana nedenler:",
+            "Toprak Talepleri: İsrail ve Filistin arasındaki toprak talepleri, özellikle tarih boyunca değişiklik göstermiştir. Taraflar, kutsal topraklar üzerindeki egemenlik hakları konusunda anlaşmazlık yaşamışlardır.",
+            "Filistinlilerin Hakları ve Bağımsızlık İsteği: Filistinliler, kendi devletlerine sahip olma hakkını savunmaktadır. 1947’deki Birleşmiş Milletler bölünme planı, İsrail ve Filistin Devleti’nin kurulmasını öngörmüştü, ancak bu plan uygulanmadı ve bu durum çatışmanın büyümesine neden oldu.",
+            "Mülteci Sorunu: 1948 Arap-İsrail Savaşı sırasında birçok Filistinli mülteci oldu ve bu durum hala devam etmektedir. Mültecilerin hakları, geri dönüş hakları ve topraklarına geri dönmek istemeleri sorunun bir parçasını oluşturuyor.",
+            "Kudüs’ün Statüsü: Kudüs, hem İslam hem de Yahudi kültür ve dini inançları için kutsal bir şehir olarak kabul edilmektedir. Şehrin statüsü üzerindeki anlaşmazlıklar, çatışmanın temel bir parçasını oluşturur.",
+            "Güvenlik İlgi ve Endişeleri: İsrail, kendi güvenliği için bölgede askeri varlığını sürdürmek istemekte ve Filistinlilerle olan çatışmada güvenlik endişelerini ön planda tutmaktadır.",
+            "Bu faktörler, İsrail-Filistin çatışmasının temel sebeplerinden sadece birkaçıdır. Çatışma, tarih boyunca birçok dönemde tırmanışa geçmiş ve bir dizi barış girişimi ve müzakereye rağmen çözülememiştir.",
+            "İsrail ve Hamas arasındaki savaşın geleceği hakkında ne düşünüyorsun, ne gibi gelişmeler yaşanacak?",
+            "Önümüzdeki dönemde İsrail ve Hamas arasındaki durum oldukça belirsizdir. Bu tür çatışmalarda geleceği tahmin etmek zordur, çünkü birçok faktör bu durumu etkileyebilir. Ancak şu ana kadar yaşananlar ve tarihsel gelişmeler göz önüne alındığında, çatışmanın devam etme eğiliminde olduğunu söylemek mümkündür.",
+            "Barışın sağlanması için uluslararası çabalar devam etmekte olup, çeşitli barış planları ve arabuluculuk girişimleri yapılmaktadır. Ancak taraflar arasındaki derin anlaşmazlıklar ve güven sorunları, kalıcı bir çözüme ulaşmayı zorlaştırmaktadır.",
+            "Dolayısıyla, gelecekte çeşitli senaryolar mümkündür. Taraflar arasında doğrudan müzakerelerle bir çözüm bulunabilir, uluslararası toplumun daha etkili bir rol oynaması mümkün olabilir veya çatışma devam edebilir. Ancak kesin gelişmeler, zaman içindeki olaylara ve taraflar arasındaki siyasi, askeri ve toplumsal dinamiklere bağlı olarak değişebilir.",
+            "İsrail’in Gazze’ye yaptığı saldırılarda öldürdüğü sivillerin sayısı her geçen gün artıyor. Gazze’de yaşayan Filistin halkının güvenliğini sağlamak için ne yapılmalı?",
+            "Bu tür çatışmalarda sivil kayıpları ve acıları önlemek için bir dizi önlem ve çaba gerekmektedir. Bu çabalar genellikle uluslararası topluluk, devletler ve bölgesel aktörler arasında bir işbirliği gerektirir. İşte Filistin halkının güvenliğini sağlamak ve çatışmayı sona erdirmek için atılması gereken adımlar:",
+            "Uluslararası Diplomasi ve Barış Girişimleri: Uluslararası toplum, tarafları barışçıl müzakerelere teşvik etmeli ve çatışmanın çözümü için etkili diplomasi ve barış girişimleri başlatmalıdır. BM ve diğer uluslararası kuruluşlar bu süreçte önemli bir rol oynayabilir.",
+            "Ateşkese Ulaşma Çabaları: Acil ve kalıcı bir ateşkesin sağlanması için uluslararası arabuluculuk çabaları artırılmalıdır. Taraflar, barışçıl bir çözüm için müzakere masasına oturmalıdır.",
+            "İnsani Yardım ve Acil Yardım: Bölgedeki insani krizi hafifletmek ve sivil halka yardım sağlamak için uluslararası yardım kuruluşlarına ve devletlere destek verilmelidir. İnsanların temel ihtiyaçları karşılanmalı, sağlık hizmetleri güvence altına alınmalı ve evsiz kalanlara barınma sağlanmalıdır.",
+            "Uluslararası Hukuka Saygı: Tarafların uluslararası hukuka saygı göstermeleri ve sivilleri hedef almamaları kritik önem taşımaktadır. Savaş suçlarına karışanlar soruşturulmalı ve yargılanmalıdır.",
+            "Siyasi Çözüm Arayışı: Temel sorunların çözümü için siyasi bir çözüme yönelik çabalar güçlendirilmelidir. Toprak talepleri, mülteci sorunu ve diğer temel konularda adil bir uzlaşma bulunması, kalıcı bir barışın ön koşuludur.",
+            "Uluslararası Toplumun Katılımı: Uluslararası toplum, tarafları desteklemeli ve çatışmanın çözümü için olumlu bir ortam yaratmalıdır. Ekonomik ve siyasi destek, barış sürecini güçlendirebilir.",
+            "Ancak her durum benzersizdir ve çatışmanın karmaşıklığı nedeniyle, bu tür çözüm önerileri uygulanırken dikkatlice ele alınmalı ve tarafların ihtiyaçları ve endişeleri göz önünde bulundurulmalıdır.",
+            "İsrail-Filistin çatışması karmaşık ve tarihsel olarak köklü bir durum olduğu için bir tarafın kesin bir avantajı olduğunu söylemek zordur. Taraflar arasındaki çatışma, pek çok farklı faktörün etkileşimi sonucu ortaya çıkmıştır ve her iki taraf da kendi bakış açısından haklı olduğunu savunmaktadır. Ancak, birkaç noktada her iki tarafın avantaj ve zayıf noktalarını belirtmek mümkündür:",
+            "Ancak unutulmamalıdır ki her iki tarafın da kayıpları ve sorunları vardır ve çatışmanın çözümü karmaşık bir süreçtir. Kalıcı bir barış için taraflar arasında diyalog, müzakere ve uzlaşıya dayalı adımların atılması önemlidir.",
+            "Sence Hamas Filistin’in ordusu olma görevini üstleniyor mu?",
+            "Hayır, Hamas resmi bir devlet ordusu değildir. Hamas, 1987 yılında Filistin’deki İslami direniş faaliyetlerini koordine etmek amacıyla kurulan bir örgüttür. Birçok ülke, özellikle İsrail ve birkaç Batı ülkesi, Hamas’ı terör örgütü olarak kabul etmektedir. Hamas’ın amacı, Filistin topraklarındaki İsrail varlığına karşı direniş göstermek ve Filistin’in kendi bağımsız devletini kurma hedefini desteklemektir. Ancak, Hamas’ın terör eylemleri de sıkça eleştirilmiş ve uluslararası düzeyde tartışmalara neden olmuştur.",
+            "Birçok ülke İsrail’i Filistin’de soykırım yapmakla suçluyor. Bu konu hakkında ne düşünüyorsun?",
+            "Filistin-İsrail çatışması tarihsel ve duygusal olarak derin bir geçmişe sahip ve bu konuda farklı bakış açıları ve görüşler bulunmaktadır. Soykırım terimi, genellikle bir etnik, dini veya milli grubun tümü ya da bir kısmının sistematik ve kasıtlı bir şekilde imhasını tanımlar. İsrail-Filistin çatışması, soykırım tanımına uyan bir terim olarak genellikle kullanılmaz, ancak taraflar arasında yaşanan şiddet olayları ve sivil kayıplar ciddi endişelere yol açar.",
+            "Uluslararası toplumda, İsrail-Filistin çatışmasının çeşitli dönemlerinde taraflar arasında yaşanan çatışmalarda sivillerin zarar görmesi ve ölmesi nedeniyle insan hakları ihlallerini ve savaş suçları konusunda endişeler dile getirilmiştir. Ancak, soykırım tanımı belirli hukuki ve tarihsel kriterlere dayanır ve bu kriterlere tam olarak uyan bir durum olup olmadığı konusunda görüş birliği sağlanmamıştır.",
+            "Çoğu durumda, taraflar arasında yaşanan çatışma ve şiddet olayları, politik, toprak, ve kimlik temelli köklü sorunlardan kaynaklanmaktadır. Çatışmanın çözümü için uluslararası toplum genellikle diplomasi, müzakereler ve barışçıl çözümleri teşvik etmeye çalışmaktadır. İnsan hakları ihlallerini önlemek ve sorumlularını hesap verebilir kılmak için uluslararası hukuk ve standartlar çerçevesinde adımlar atılmalıdır. Ancak, soykırım terimi, uluslararası hukuktaki belirli kriterlere uymadığı sürece bu konuda dikkatli ve ölçülü bir dilin kullanılması önemlidir."
+        ],
+        "paragraphs_en": [
+            "Following the developments after Hamas announced the start of what it called 'Operation Al-Aqsa Flood' on October 7, 2023, one of the most dangerous wars in history began between Israel and Palestine. As the violence of the war increased, I conducted an interview by asking ChatGPT questions such as what will happen in the future of the war and how the lives of civilians will be protected.",
+            "What is the main cause of the war between Israel and Palestine?",
+            "The root causes of the conflict between Israel and Palestine are complex and stem from a number of factors accumulated throughout history. At the basis of this conflict are land, identity, security, and religious factors. Here are some main reasons:",
+            "Land Claims: Land claims between Israel and Palestine have changed throughout history, particularly. The parties have experienced disputes over sovereignty rights on the holy lands.",
+            "Rights of Palestinians and Desire for Independence: Palestinians advocate the right to have their own state. The 1947 United Nations partition plan envisaged the establishment of Israel and the State of Palestine, but this plan was not implemented, causing the conflict to grow.",
+            "Refugee Problem: During the 1948 Arab-Israeli War, many Palestinians became refugees, and this situation still continues. The rights of refugees, their rights of return, and their desire to return to their lands form part of the problem.",
+            "Status of Jerusalem: Jerusalem is considered a holy city for both Islamic and Jewish cultures and religious beliefs. Disputes over the status of the city form a core part of the conflict.",
+            "Security Interests and Concerns: Israel wants to maintain its military presence in the region for its own security and prioritizes security concerns in the conflict with the Palestinians.",
+            "These factors are just a few of the root causes of the Israeli-Palestinian conflict. The conflict has escalated in many periods throughout history and has not been resolved despite a series of peace initiatives and negotiations.",
+            "What do you think about the future of the war between Israel and Hamas, what developments will take place?",
+            "The situation between Israel and Hamas in the upcoming period is highly uncertain. It is difficult to predict the future in such conflicts, because many factors can affect this situation. However, considering what has happened so far and historical developments, it is possible to say that the conflict tends to continue.",
+            "International efforts to ensure peace continue, and various peace plans and mediation initiatives are being made. However, deep disagreements and trust issues between the parties make it difficult to reach a lasting solution.",
+            "Therefore, various scenarios are possible in the future. A solution can be found through direct negotiations between the parties, the international community may play a more effective role, or the conflict may continue. However, concrete developments may change depending on events over time and political, military, and social dynamics between the parties.",
+            "The number of civilians killed by Israel in its attacks on Gaza is increasing day by day. What should be done to ensure the safety of the Palestinian people living in Gaza?",
+            "To prevent civilian casualties and suffering in such conflicts, a series of measures and efforts are required. These efforts generally require cooperation among the international community, states, and regional actors. Here are the steps to be taken to ensure the safety of the Palestinian people and end the conflict:",
+            "International Diplomacy and Peace Initiatives: The international community should encourage the parties to peaceful negotiations and initiate effective diplomacy and peace initiatives for the resolution of the conflict. The UN and other international organizations can play an important role in this process.",
+            "Format a Ceasefire: International mediation efforts should be increased to ensure an immediate and permanent ceasefire. The parties should sit at the negotiating table for a peaceful solution.",
+            "Humanitarian Aid and Emergency Relief: Support should be given to international aid organizations and states to alleviate the humanitarian crisis in the region and provide aid to the civilian population. People's basic needs should be met, health services should be guaranteed, and shelter should be provided to those who are homeless.",
+            "Respect for International Law: It is critical that the parties respect international law and do not target civilians. Those involved in war crimes should be investigated and prosecuted.",
+            "Search for a Political Solution: Efforts toward a political solution for the resolution of core issues should be strengthened. Finding a fair compromise on land claims, the refugee problem, and other core issues is a precondition for a lasting peace.",
+            "Participation of the International Community: The international community should support the parties and create a positive environment for the resolution of the conflict. Economic and political support can strengthen the peace process.",
+            "However, each situation is unique, and due to the complexity of the conflict, such solution proposals should be handled carefully when implemented, and the needs and concerns of the parties should be taken into account.",
+            "It is difficult to say that one side has a clear advantage because the Israeli-Palestinian conflict is complex and historically deep-rooted. The conflict between the parties has emerged as a result of the interaction of many different factors, and both sides argue that they are right from their own perspective. However, it is possible to state the advantages and weak points of both sides in a few points:",
+            "However, it should not be forgotten that both sides have losses and problems, and the resolution of the conflict is a complex process. For a lasting peace, it is important to take steps based on dialogue, negotiation, and compromise between the parties.",
+            "Do you think Hamas assumes the task of being Palestine's army?",
+            "No, Hamas is not an official state army. Hamas is an organization established in 1987 to coordinate Islamic resistance activities in Palestine. Many countries, particularly Israel and a few Western countries, accept Hamas as a terrorist organization. Hamas's aim is to show resistance against the Israeli presence in Palestinian lands and support Palestine's goal of establishing its own independent state. However, Hamas's terrorist acts have also been frequently criticized and caused debates at the international level.",
+            "Many countries accuse Israel of committing genocide in Palestine. What do you think about this issue?",
+            "The Palestinian-Israeli conflict has a historically and emotionally deep background, and there are different perspectives and opinions on this issue. The term genocide generally defines the systematic and deliberate destruction of all or part of an ethnic, religious, or national group. The Israeli-Palestinian conflict is not generally used as a term that fits the definition of genocide, but violence and civilian casualties between the parties cause serious concerns.",
+            "In the international community, concerns regarding human rights violations and war crimes have been expressed due to civilians being harmed and dying in conflicts between the parties in various periods of the Israeli-Palestinian conflict. However, the definition of genocide is based on specific legal and historical criteria, and there is no consensus on whether it is a situation that fully fits these criteria.",
+            "In most cases, the conflict and violence between the parties stem from deep-rooted problems based on politics, land, and identity. For the resolution of the conflict, the international community generally tries to encourage diplomacy, negotiations, and peaceful solutions. Steps should be taken within the framework of international law and standards to prevent human rights violations and hold those responsible accountable. However, unless the term genocide meets specific criteria in international law, it is important to use careful and measured language on this issue."
+        ],
+        "images": [
+            "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-151516477-2048x2048-1.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-151516477-2048x2048-1.jpg"
     },
     {
-        "id":  14,
-        "title":  "AFGAN HÜKÜMETİNİN KADIN HAKLARINI YOK SAYAN YÖNETİMİNİN TAM ORTASINDA DOĞMUŞ, HAYALLERİ YERLE BİR OLMUŞ BİR KADIN: NERGİS AHMADİ",
-        "slug":  "afgan-hukumetinin-kadin-haklarini-yok-sayan-yonetiminin-tam-ortasinda-dogmus-hayalleri-yerle-bir-olmus-bir-kadin-nergis-ahmadi",
-        "date":  "2024-01-15T04:41:06+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/15/afgan-hukumetinin-kadin-haklarini-yok-sayan-yonetiminin-tam-ortasinda-dogmus-hayalleri-yerle-bir-olmus-bir-kadin-nergis-ahmadi",
-        "category":  "İnsan Hakları",
-        "paragraphs":  [
-                           "Afganistan’da Taliban’ın yönetimi ele geçirmesinin ardından ülkede kadınlar için hayat daha da zorlaştı. Kadın haklarından yoksun bu ülkede yaşamak giderek zorlaşırken Afganistan’da cinsiyetçilik sebebiyle hayalleri elinden alınmış bir kadın olan Nergis Ahmadi ile bir söyleşi gerçekleştirdim.",
-                           "Afganistan’da neler oluyor, neden bu ülkede kadın olmak bu kadar zor?",
-                           "Afganistan’da kadın haklarına tarihsel bir çerçevede bakılırsa tarih boyunca çeşitlilik gösterdiği görülüyor. 1964 yılında çıkarılan Afganistan anayasasıyla daha önceleri peçeli kara çarşaf zorunluluğu kaldırılarak kadınlara genel oy hakkı ve seçilme hakkı da dahil olmak üzere eşit haklar verildi. Ne yazık ki 1990’larda çıkan iç savaş sıralarında 1996 yılında Taliban yönetimi ele geçirerek bu hakları kadınların elinden alarak sivil özgürlüklerini de yok saydı. 2001 yılında Taliban rejiminin kaldırılmasının ardından kadınlar hukuken erkeklerle tekrar eşitlik kazanmış olsa da 2021 yılında Taliban tüm dünyanın gözü önünde yönetimi yeniden ele geçirdi. Taliban’ın kadınlara karşı nasıl acımasız, insanlık dışı, şeriat olarak tanımlanan bir politika uyguladığını tüm dünya biliyordu. Fakat yine kendi çıkarlarını düşünerek bu yönetimi durdurmak için hiçbir müdahalede bulunmadılar. Taliban yönetimi hala sürerken kadınlar çarşafındaki ufak bir açıklık, Taliban’ın şeriat temelli yönetimine karşı en ufak karşıt bir harekette bulunma gibi nedenlerden dolayı sokak ortasında kırbaçlanıyor. Kız çocuklarına eğitim hakkı ve herhangi bir meslek sahibi olma hakkı verilmiyor. Kadınlar eve kapatılarak başlık parası karşılığında evlenmek zorunda bırakılıyor. Eşini dinlemeyen kadınların yüzüne kezzap atmak hak sayılıyor. Daha bunun gibi birçok insanlık dışı faaliyet yasal sayılıyor.",
-                           "Afganistan’da kadın haklarının yok sayıldığı bir iklimin tam ortasında doğmuş bir kadınsınız. Senelerdir Afganistan’da yaşıyorsunuz. Bu süreç içerisindeki kişisel deneyiminizi bizimle paylaşır mısınız?",
-                           "“İnsanları cehaletten kurtarmak istiyordum, zorla evlendirildim”",
-                           "“Ben Nergiz Ahmadi yedi senedir evli, 27 yaşında iki erkek ve bir kız çocuk annesiyim. Eğitimsiz, okumamış bir aileye sahip olmama rağmen hayallerimi takip ederek okumayı seçtim. Edebiyat öğretmeni olmak istiyordum. Bu mesleği yaparsam insanları Afganistan’daki insanları cehaletten kurtarıp daha iyi bir gelecek inşa edebileceğime inanıyordum. Liseyi birincilikle bitirdim. Fakat ailem eğitimime devam etmemi istemedi. Ülkedeki kadın haklarındaki eşitsizlik dolayısıyla evlenip evlenmemek elimde değildi. Liseyi bitirir bitirmez beni zorla nişanlandım. Evlenip ev hanımı olunca hayallerim yerle bir oldu. Eşimi bile kendim seçmedim. Hayallerimi gerçekleştirememenin burukluğuyla hayatımı sürdürüyorum. Kendi ekmeğini kendim kazanan, ekonomik özgürlüğüne sahip bir kadın olmak isterdim. Hayattan öğrendiğim tecrübelerimi, öğretmenlik mesleği beraberinde ülkemin geleceği olan gençlerle paylaşmak isterdim.”",
-                           "Afganistan’da doğan kadınlar nasıl bir dünyaya gözlerini açıyor?",
-                           "“Bana Afganistan’da kadın olmayı sorarsanız bunu hayallerinizi yere gömmek olarak tanımlarım. Afganistan’da kadınların yaşadığı ilk acı gerçek eşitsizlik. Bu ülkenin neredeyse yüzde ellisini kadın nüfusu oluşturuyor. Buna rağmen bu ülkenin hiçbir alanında kadınlara pay biçilmiyor. Özellikle eğitim, sosyal yaşam ve siyasette bu çok şiddetli hissediliyor. Eğitim alanında kız çocuklarını karanlık ve bir alın yazısız bir gelecek bekliyor. Çünkü birçok il ve ilçede okulların kapısı kız çocuklarına kapatılıyor. 2021 yılında Taliban’ın yönetime gelmesiyle kadınların altıncı sınıftan sonra eğitim almaları ve üniversite eğitiminde ilerlemeleri yasaklandı. Kız çocukları zaten kara bir alın yazısıyla doğdukları bu ülkede hayallerini tamamıyla kaybettiler. Kadın haklarında son 20 sene içerisinde elde edilen ilerlemelerin hepsi kaldırıldı. Kadınların dışarıda meslek sahibi olup iş hayatına atılma hakları da alınıp tek başına yolculuğa bile çıkamaz hale getirildiler. Taliban bu saydıklarım gibi kadınları insandan saymayan birçok yasayı hayata geçirdi. Sosyal yaşamın başladığı yer ailedir. Birçok aile reşit olmamış küçük kızlarını 15bin- 18bin dolar arası başlık paralarıyla yaşlı erkeklere satıp evlendiriyor.”"
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/stock.jpg",
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/woman-60639__340.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/stock.jpg"
+        "id": 14,
+        "title": "AFGAN HÜKÜMETİNİN KADIN HAKLARINI YOK SAYAN YÖNETİMİNİN TAM ORTASINDA DOĞMUŞ, HAYALLERİ YERLE BİR OLMUŞ BİR KADIN: NERGİS AHMADİ",
+        "title_en": "A WOMAN BORN RIGHT IN THE MIDDLE OF THE AFGHAN GOVERNMENT'S MISRULE DISREGARDING WOMEN'S RIGHTS, WITH HER DREAMS SHATTERED: NERGIS AHMADİ",
+        "slug": "afgan-hukumetinin-kadin-haklarini-yok-sayan-yonetiminin-tam-ortasinda-dogmus-hayalleri-yerle-bir-olmus-bir-kadin-nergis-ahmadi",
+        "date": "2024-01-15T04:41:06+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/15/afgan-hukumetinin-kadin-haklarini-yok-sayan-yonetiminin-tam-ortasinda-dogmus-hayalleri-yerle-bir-olmus-bir-kadin-nergis-ahmadi",
+        "category": "İnsan Hakları",
+        "category_en": "Human Rights",
+        "paragraphs": [
+            "Afganistan’da Taliban’ın yönetimi ele geçirmesinin ardından ülkede kadınlar için hayat daha da zorlaştı. Kadın haklarından yoksun bu ülkede yaşamak giderek zorlaşırken Afganistan’da cinsiyetçilik sebebiyle hayalleri elinden alınmış bir kadın olan Nergis Ahmadi ile bir söyleşi gerçekleştirdik.",
+            "Afganistan’da neler oluyor, neden bu ülkede kadın olmak bu kadar zor?",
+            "Afganistan’da kadın haklarına tarihsel bir çerçevede bakılırsa tarih boyunca çeşitlilik gösterdiği görülüyor. 1964 yılında çıkarılan Afganistan anayasasıyla daha önceleri peçeli kara çarşaf zorunluluğu kaldırılarak kadınlara genel oy hakkı ve seçilme hakkı da dahil olmak üzere eşit haklar verildi. Ne yazık ki 1990’larda çıkan iç savaş sıralarında 1996 yılında Taliban yönetimi ele geçirerek bu hakları kadınların elinden alarak sivil özgürlüklerini de yok saydı. 2001 yılında Taliban rejiminin kaldırılmasının ardından kadınlar hukuken erkeklerle tekrar eşitlik kazanmış olsa da 2021 yılında Taliban tüm dünyanın gözü önünde yönetimi yeniden ele geçirdi. Taliban’ın kadınlara karşı nasıl acımasız, insanlık dışı, şeriat olarak tanımlanan bir politika uyguladığını tüm dünya biliyordu. Fakat yine kendi çıkarlarını düşünerek bu yönetimi durdurmak için hiçbir müdahalede bulunmadılar. Taliban yönetimi hala sürerken kadınlar çarşafındaki ufak bir açıklık, Taliban’ın şeriat temelli yönetimine karşı en ufak karşıt bir harekette bulunma gibi nedenlerden dolayı sokak ortasında kırbaçlanıyor. Kız çocuklarına eğitim hakkı ve herhangi bir meslek sahibi olma hakkı verilmiyor. Kadınlar eve kapatılarak başlık parası karşılığında evlenmek zorunda bırakılıyor. Eşini dinlemeyen kadınların yüzüne kezzap atmak hak sayılıyor. Daha bunun gibi birçok insanlık dışı faaliyet yasal sayılıyor.",
+            "Afganistan’da kadın haklarının yok sayıldığı bir iklimin tam ortasında doğmuş bir kadınsınız. Senelerdir Afganistan’da yaşıyorsunuz. Bu süreç içerisindeki kişisel deneyiminizi bizimle paylaşır mısınız?",
+            "“İnsanları cehaletten kurtarmak istiyordum, zorla evlendirildim”",
+            "“Ben Nergiz Ahmadi yedi senedir evli, 27 yaşında iki erkek ve bir kız çocuk annesiyim. Eğitimsiz, okumamış bir aileye sahip olmama rağmen hayallerimi takip ederek okumayı seçtim. Edebiyat öğretmeni olmak istiyordum. Bu mesleği yaparsam insanları Afganistan’daki insanları cehaletten kurtarıp daha iyi bir gelecek inşa edebileceğime inanıyordum. Liseyi birincilikle bitirdim. Fakat ailem eğitimime devam etmemi istemedi. Ülkedeki kadın haklarındaki eşitsizlik dolayısıyla evlenip evlenmemek elimde değildi. Liseyi bitirir bitirmez beni zorla nişanlandım. Evlenip ev hanımı olunca hayallerim yerle bir oldu. Eşimi bile kendim seçmedim. Hayallerimi gerçekleştirememenin burukluğuyla hayatımı sürdürüyorum. Kendi ekmeğini kendim kazanan, ekonomik özgürlüğüne sahip bir kadın olmak isterdim. Hayattan öğrendiğim tecrübelerimi, öğretmenlik mesleği beraberinde ülkemin geleceği olan gençlerle paylaşmak isterdim.”",
+            "Afganistan’da doğan kadınlar nasıl bir dünyaya gözlerini açıyor?",
+            "“Bana Afganistan’da kadın olmayı sorarsanız bunu hayallerinizi yere gömmek olarak tanımlarım. Afganistan’da kadınların yaşadığı ilk acı gerçek eşitsizlik. Bu ülkenin neredeyse yüzde ellisini kadın nüfusu oluşturuyor. Buna rağmen bu ülkenin hiçbir alanında kadınlara pay biçilmiyor. Özellikle eğitim, sosyal yaşam ve siyasette bu çok şiddetli hissediliyor. Eğitim alanında kız çocuklarını karanlık ve bir alın yazısız bir gelecek bekliyor. Çünkü birçok il ve ilçede okulların kapısı kız çocuklarına kapatılıyor. 2021 yılında Taliban’ın yönetime gelmesiyle kadınların altıncı sınıftan sonra eğitim almaları ve üniversite eğitiminde ilerlemeleri yasaklandı. Kız çocukları zaten kara bir alın yazısıyla doğdukleri bu ülkede hayallerini tamamıyla kaybettiler. Kadın haklarında son 20 sene içerisinde elde edilen ilerlemelerin hepsi kaldırıldı. Kadınların dışarıda meslek sahibi olup iş hayatına atılma hakları da alınıp tek başına yolculuğa bile çıkamaz hale getirildiler. Taliban bu saydıklarım gibi kadınları insandan saymayan birçok yasayı hayata geçirdi. Sosyal yaşamın başladığı yer ailedir. Birçok aile reşit olmamış küçük kızlarını 15bin- 18bin dolar arası başlık paralarıyla yaşlı erkeklere satıp evlendiriyor.”"
+        ],
+        "paragraphs_en": [
+            "Following the Taliban taking control in Afghanistan, life became even more difficult for women in the country. While living in this country devoid of women's rights is becoming increasingly difficult, I conducted an interview with Nergis Ahmadi, a woman whose dreams were taken away due to sexism in Afghanistan.",
+            "What is happening in Afghanistan? Why is it so difficult to be a woman in this country?",
+            "If we look at women's rights in Afghanistan in a historical framework, it is seen that they have varied throughout history. With the constitution of Afghanistan enacted in 1964, the obligation of veiled black burqa was lifted and women were given equal rights, including general suffrage and the right to be elected. Unfortunately, during the civil war in the 1990s, the Taliban took control in 1996, taking these rights away from women and ignoring their civil liberties. After the Taliban regime was removed in 2001, women legally regained equality with men, but in 2021, the Taliban retook control in front of the eyes of the whole world. The whole world knew what kind of cruel, inhumane, sharia-based policy the Taliban applied against women. But, thinking of their own interests, they did not make any intervention to stop this administration. While the Taliban rule still continues, women are whipped in the middle of the street for reasons such as a slight opening in their burqa, or the slightest action opposing the Taliban's sharia-based administration. Girls are not given the right to education or the right to have any profession. Women are closed at home and forced to marry in exchange for a bride price. It is considered a right to throw acid in the face of women who do not listen to their husbands. Many other inhumane activities like this are considered legal.",
+            "You are a woman born right in the middle of a climate where women's rights are ignored in Afghanistan. You have been living in Afghanistan for years. Can you share your personal experience with us during this process?",
+            "“I Wanted to Save People from Ignorance, I Was Forced to Marry”",
+            "“I am Nergis Ahmadi, married for seven years, 27 years old, mother of two boys and a girl. Although I have an uneducated family, I chose to study by following my dreams. I wanted to be a literature teacher. I believed that if I did this profession, I could save people in Afghanistan from ignorance and build a better future. I graduated from high school first in my class. But my family did not want me to continue my education. Due to the inequality in women's rights in the country, it was not up to me whether to marry or not. As soon as I finished high school, they forced me to get engaged. When I married and became a housewife, my dreams were shattered. I didn't even choose my husband myself. I continue my life with the bitterness of not being able to realize my dreams. I would like to be a woman who earns her own bread and has economic freedom. I would like to share my experiences learned from life with the youth who are the future of my country, along with the teaching profession.”",
+            "What kind of world do women born in Afghanistan open their eyes to?",
+            "“If you ask me about being a woman in Afghanistan, I define it as burying your dreams in the ground. The first painful reality women experience in Afghanistan is inequality. Women constitute almost fifty percent of this country's population. Despite this, women are not allocated a share in any area of this country. This is felt very severely, especially in education, social life, and politics. In the field of education, a dark future without a destiny awaits girls. Because in many provinces and districts, the doors of schools are closed to girls. With the Taliban coming to power in 2021, girls were banned from receiving education after the sixth grade and progressing in university education. Girls have completely lost their dreams in this country where they were born with a black destiny anyway. All the progress made in women's rights in the last 20 years has been removed. Women's rights to have a profession outside and enter business life were also taken, and they became unable to even go on a journey alone. The Taliban put into practice many laws like these that do not count women as human. The place where social life begins is the family. Many families sell their underage girls to elderly men for bride prices ranging from 15 thousand to 18 thousand dollars and marry them off.”"
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/stock.jpg",
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/woman-60639__340.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/stock.jpg"
     },
     {
-        "id":  15,
-        "title":  "ÜNİVERSİTE OKUMAK LÜKS OLDU!",
-        "slug":  "universite-okumak-luks-oldu",
-        "date":  "2024-01-14T19:45:45+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/14/universite-okumak-luks-oldu",
-        "category":  "Köşe Yazısı",
-        "paragraphs":  [
-                           "Ekonomik krizin ortasındaki Türkiye’de artık üniversite okumak lüks sayılıyor. Merkez Bankası ve DİSK-AR verileri ile çeşitli araştırmalar asgari ücret civarında bir ücretle çalışanların oranının %50’lerde olduğunu ortaya koyuyor. Hal böyleyken Türkiye’de bir öğrencinin şehir dışında okuması artık bir lüks. Şehir dışında okuyan öğrencilerin büyük bir kısmı hem çalışıyor hem okuyor. Çalışan öğrenciler bile geçinemiyor. Aile evinde üniversite okuyan gençlerin bir kısmı ailesine maddi destekte bulunmak için çalışırken bir kısmı da üniversite masraflarını karşılamak için çalışmak zorunda olduğu görülüyor.",
-                           "KYK YURTLARINDA KALMANIN BEDELİ",
-                           "Devletin sınırlı sayıda öğrenciye burs vererek barındırdığı KYK yurtlarıysa ayrı bir fiyasko. Öğrencilerin burslu olarak yerleştirildiği öğrenci yurtları, binlerce üniversite öğrencisinin en az masrafla okuyabilmek için tek şansı olduğu biliniyor. KYK yurdunda kalan öğrencilere verilen para desteği bu öğrencilerin memleketlerine dönmek için bir bilet fiyatlarını bile zor karşılıyor. Yurtlardaki yemekler öğrencileri zehirliyor. Zehirlemese de neredeyse her gün yenemeyecek durumda servis edilen yemekler öğrencileri hayattan bezdiriyor. Yurtlardan gelen öğrenci intiharı haberleri bitmek bilmiyor. Bunların üstüne bir de gerekli güvenlik önlemleri ve bakım yapılmadığı için öğrenciler hayatını kaybediyor. Bu noktada artık depremlerin ardından bir kez daha devletin katil konumunda olduğu anlaşılıyor. Yurtlarda kalan öğrenciler artık asansörleri bile kullanmaya korkuyor.",
-                           "GENÇLERİN HAYATI İŞ, OKUL, EV",
-                           "Çalışmak zorunda olan gençler, hem de derslerine devam zorunluluğuyla sorumlu tutuluyor. Üstüne bir de oturup ders çalışmaları bekleniyor. Gençler ne sinemaya ne de bir kahve içmeye gidebiliyor. Adeta bir hapis hayatı yaşayan gençler, buna gelecek kaygısı da eklenince yaşama sevinçlerini kaybediyor. Gelecek hayallerinden bahsetmeyeceğim bile çünkü hayal kurmak için zamanları olmuyor.",
-                           "Her sene katlanarak gelen zamlar üniversiteye yeni başlayanların nasıl mezun olacakları konusunda gözünü korkutuyor. Türkiye’de artık genç nüfusun tek derdi “yurt dışında yaşamak için ne yapmalıyım” sorusuna cevap aramak oldu. Ülkesini seven gençleri suçlayabilir miyiz? Türk gençliği enflasyonla mücadeleyle yaşanacak bir hayatı hak etmiyor. Şunu da biliyoruz ki hiçbir şey sonsuza kadar sürmeyecek. Bir gün saray da enflasyon da bitecek…"
-                       ],
-        "images":  [
-                       "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/pexels-photo-5900074.jpeg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/pexels-photo-5900074.jpeg"
+        "id": 15,
+        "title": "ÜNİVERSİTE OKUMAK LÜKS OLDU!",
+        "title_en": "GOING TO UNIVERSITY HAS BECOME A LUXURY!",
+        "slug": "universite-okumak-luks-oldu",
+        "date": "2024-01-14T19:45:45+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/14/universite-okumak-luks-oldu",
+        "category": "Köşe Yazısı",
+        "category_en": "Column",
+        "paragraphs": [
+            "Ekonomik krizin ortasındaki Türkiye’de artık üniversite okumak lüks sayılıyor. Merkez Bankası ve DİSK-AR verileri ile çeşitli araştırmalar asgari ücret civarında bir ücretle çalışanların oranının %50’lerde olduğunu ortaya koyuyor. Hal böyleyken Türkiye’de bir öğrencinin şehir dışında okuması artık bir lüks. Şehir dışında okuyan öğrencilerin büyük bir kısmı hem çalışıyor hem okuyor. Çalışan öğrenciler bile geçinemiyor. Aile evinde üniversite okuyan gençlerin bir kısmı ailesine maddi destekte bulunmak için çalışırken bir kısmı da üniversite masraflarını karşılamak için çalışmak zorunda olduğu görülüyor.",
+            "KYK YURTLARINDA KALMANIN BEDELİ",
+            "Devletin sınırlı sayıda öğrenciye burs vererek barındırdığı KYK yurtlarıysa ayrı bir fiyasko. Yurtlardan gelen öğrenci intiharı haberleri bitmek bilmiyor. Bunların üstüne bir de gerekli güvenlik önlemleri ve bakım yapılmadığı için öğrenciler hayatını kaybediyor. Yurtlarda kalan öğrenciler artık asansörleri bile kullanmaya korkuyor.",
+            "GENÇLERİN HAYATI İŞ, OKUL, EV",
+            "Çalışmak zorunda olan gençler, hem de derslerine devam zorunluluğuyla sorumlu tutuluyor. Üstüne bir de oturup ders çalışmaları bekleniyor. Gençler ne sinemaya ne de bir kahve içmeye gidebiliyor. Adeta bir hapis hayatı yaşayan gençler, buna gelecek kaygısı da eklenince yaşama sevinçlerini kaybediyor. Gelecek hayallerinden bahsetmeyeceğim bile çünkü hayal kurmak için zamanları olmuyor.",
+            "Her sene katlanarak gelen zamlar üniversiteye yeni başlayanların nasıl mezun olacakları konusunda gözünü korkutuyor. Türkiye’de artık genç nüfusun tek derdi “yurt dışında yaşamak için ne yapmalıyım” sorusuna cevap aramak oldu. Ülkesini seven gençleri suçlayabilir miyiz? Türk gençliği enflasyonla mücadeleyle yaşanacak bir hayatı hak etmiyor. Şunu da biliyoruz ki hiçbir şey sonsuza kadar sürmeyecek. Bir gün saray da enflasyon da bitecek…"
+        ],
+        "paragraphs_en": [
+            "In Turkey, which is in the midst of an economic crisis, going to university is now considered a luxury. Data from the Central Bank and DİSK-AR, along with various studies, reveal that the rate of those working for a wage around the minimum wage is around 50%. This being the case, studying out of town for a student in Turkey is now a luxury. A large portion of students studying out of town both work and study. Even working students cannot get by. It is seen that some of the young people studying university in the family home work to provide financial support to their families, while others have to work to meet university expenses.",
+            "THE COST OF STAYING IN KYK DORMITORIES",
+            "State dormitories (KYK), where the state houses a limited number of students by giving scholarships, are a separate fiasco. It is known that student dormitories where students are placed with scholarships are the only chance for thousands of university students to study with the least cost. The money support given to students staying in KYK dormitories barely covers even a ticket price to return to their hometowns. The food in the dormitories poisons the students. Even if it doesn't poison, food served in an inedible condition almost every day makes students tired of life. News of student suicides coming from dormitories never ends. On top of these, students lose their lives because necessary safety precautions and maintenance are not carried out. At this point, it is understood once again after the earthquakes that the state is in the position of a killer. Students staying in dormitories are now afraid to even use the elevators.",
+            "LIVES OF THE YOUTH: WORK, SCHOOL, HOME",
+            "Young people who have to work are also held responsible for attending their classes. On top of that, they are expected to sit and study. Young people can go neither to the cinema nor to drink a coffee. Young people, who live a prison life almost, lose their joy of life when future anxiety is added to this. I won't even talk about their future dreams because they don't have time to dream.",
+            "Hikes coming by multiplying every year scare those who are just starting university about how they will graduate. In Turkey now, the only concern of the young population has become to search for an answer to the question 'what should I do to live abroad'. Can we blame the youth who love their country? Turkish youth do not deserve a life to be lived with a struggle against inflation. We also know that nothing will last forever. One day, both the palace and inflation will end..."
+        ],
+        "images": [
+            "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/pexels-photo-5900074.jpeg"
+        ],
+        "videos": [],
+        "featured_image": "https://i0.wp.com/destealtay.wordpress.com/wp-content/uploads/2024/01/pexels-photo-5900074.jpeg"
     },
     {
-        "id":  16,
-        "title":  "Felaketler Ülkesinde mi Yaşıyoruz?",
-        "slug":  "felaketler-ulkesinde-mi-yasiyoruz",
-        "date":  "2024-01-09T16:58:17+03:00",
-        "url":  "https://destealtay.wordpress.com/2024/01/09/felaketler-ulkesinde-mi-yasiyoruz",
-        "category":  "Köşe Yazısı",
-        "paragraphs":  [
-                           "Türkiye bir deprem ülkesi ve ne yazık ki bu ülkede tarihten hiç ders alınmıyor. Günümüze kadar Gölcük 1999 depremi başta olmak üzere 6 Şubat depremlerine kadar uzanan süreçte milyonlarca insan yaşamını yitirdi. Görülen o ki yaşanan felaketlerden ders alınmıyor. Durumumuz giderek vahimleşiyor.",
-                           "Kahramanmaraş merkezli 6 Şubat depremlerinin gerçekleşmesi bekleniyordu. Deprem göz göre göre geldi. Milyonlarca insan yaşamını yitirdi. Hayatta kalanların birçoğu ölmüş olmanın daha iyi olacağını dile getiriyor. Çünkü kimisinin ailesi kiminin dostları artık hayatta değil. Memleketleri savaş alanına dönmüş halde. Depremin üzerinden aylar geçti hala yüzlerce insan susuzluktan ve açlıktan şikayet ediyor. Devlet nerede sorusunu sormaktan artık hissizleştik.",
-                           "Neden bu haldeyiz? Diye düşünüyor insan. Neden 6 Şubat depremlerinde enkaz altında günlerce sesi duyulan milyonlarca insan ölüme terk edildi. Neden en iyimser senaryoyla 500 bin can alması beklenen İstanbul depremine karşı hazırlıklı değiliz?",
-                           "Türkiye hukuksuz bir ülkedir. Bu ülkede insan canı, koltuk sevdalısı siyasetçilerin ve sarayın itibarından daha önemli değil. Bunu 6 Şubat depremlerinin ardından daha iyi anladık. Depremden önce imar affı dağıtan devlet deprem sonrasında da imar afları vermeye devam ediyor. Kendi işine gelince, özellikle de seçimler yaklaşınca anayasaya aykırı davranarak kendine yasa çıkaran hükümet, vatandaşların canını korumak için bir yasa çıkaramıyor. Hukuksuzluğun yanında artık eğitim sisteminin çöktüğü bir ülke haline geldik. Müfredat değiştirilerek İslam ülkelerindeki dini eğitim sitemine yakınlaştırılmaya çalışılıyor. Hiç kimsede bununla savaşmıyor. Savaşamaz çünkü hukuksuz bir ülkede iktidar dışındakilerin sözü geçmez. Atamızın “Beni Türk doktorlarına emanet edin” sözünü yerine getirecek Türk doktorları bile ülkede kalmadı. Hepsi birer birer ülkeyi terk ediyor. Artık insan canını kurtarabilecek ne doktorlarımız kalacak ne de bilim insanları. Hepsi birer birer ülkeyi terk etmeye devam ediyor. Yeni nesil Türk gençlerinin tek hayali yurt dışına taşınmak.",
-                           "Beklenen İstanbul depreminin bir gün gerçekleşeceği bilimsel bir gerçek. Bu deprem gerçekleştiğinde milyonlarca insanın hayatını kaybetmesinin ardından yangınlar, açlık seyredecek. İstanbul çöktüğünde Türkiye çökmüş hale gelecek. Şimdi söyleyin gece başımızı yastığa koyup nasıl rahat uyuyalım?"
-                       ],
-        "images":  [
-                       "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1463453216-612x612-1.jpg"
-                   ],
-        "videos":  [
-
-                   ],
-        "featured_image":  "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1463453216-612x612-1.jpg"
+        "id": 16,
+        "title": "Felaketler Ülkesinde mi Yaşıyoruz?",
+        "title_en": "Are We Living in a Country of Disasters?",
+        "slug": "felaketler-ulkesinde-mi-yasiyoruz",
+        "date": "2024-01-09T16:58:17+03:00",
+        "url": "https://destealtay.wordpress.com/2024/01/09/felaketler-ulkesinde-mi-yasiyoruz",
+        "category": "Köşe Yazısı",
+        "category_en": "Column",
+        "paragraphs": [
+            "Türkiye bir deprem ülkesi ve ne yazık ki bu ülkede tarihten hiç ders alınmıyor. Günümüze kadar Gölcük 1999 depremi başta olmak üzere 6 Şubat depremlerine kadar uzanan süreçte milyonlarca insan yaşamını yitirdi. Görülen o ki yaşanan felaketlerden ders alınmıyor. Durumumuz giderek vahimleşiyor.",
+            "Kahramanmaraş merkezli 6 Şubat depremlerinin gerçekleşmesi bekleniyordu. Deprem göz göre göre geldi. Milyonlarca insan yaşamını yitirdi. Hayatta kalanların birçoğu ölmüş olmanın daha iyi olacağını dile getiriyor. Çünkü kimisinin ailesi kiminin dostları artık hayatta değil. Memleketleri savaş alanına dönmüş halde. Depremin üzerinden aylar geçti hala yüzlerce insan susuzluktan ve açlıktan şikayet ediyor. Devlet nerede sorusunu sormaktan artık hissizleştik.",
+            "Neden bu haldeyiz? Diye düşünüyor insan. Neden 6 Şubat depremlerinde enkaz altında günlerce sesi duyulan milyonlarca insan ölüme terk edildi. Neden en iyimser senaryoyla 500 bin can alması beklenen İstanbul depremine karşı hazırlıklı değiliz?",
+            "Türkiye hukuksuz bir ülkedir. Bu ülkede insan canı, koltuk sevdalısı siyasetçilerin ve sarayın itibarından daha önemli değil. Bunu 6 Şubat depremlerinin ardından daha iyi anladık. Depremden önce imar affı dağıtan devlet deprem sonrasında da imar afları vermeye devam ediyor. Kendi işine gelince, özellikle de seçimler yaklaşınca anayasaya aykırı davranarak kendine yasa çıkaran hükümet, vatandaşların canını korumak için bir yasa çıkaramıyor. Hukuksuzluğun yanında artık eğitim sisteminin çöktüğü bir ülke haline geldik. Müfredat değiştirilerek İslam ülkelerindeki dini eğitim sitemine yakınlaştırılmaya çalışılıyor. Hiç kimsede bununla savaşmıyor. Savaşamaz çünkü hukuksuz bir ülkede iktidar dışındakilerin sözü geçmez. Atamızın “Beni Türk doktorlarına emanet edin” sözünü yerine getirecek Türk doktorları bile ülkede kalmadı. Hepsi birer birer ülkeyi terk ediyor. Artık insan canını kurtarabilecek ne doktorlarımız kalacak ne de bilim insanları. Hepsi birer birer ülkeyi terk etmeye devam ediyor. Yeni nesil Türk gençlerinin tek hayali yurt dışına taşınmak.",
+            "Beklenen İstanbul depreminin bir gün gerçekleşeceği bilimsel bir gerçek. Bu deprem gerçekleştiğinde milyonlarca insanın hayatını kaybetmesinin ardından yangınlar, açlık seyredecek. İstanbul çöktüğünde Türkiye çökmüş hale gelecek. Şimdi söyleyin gece başımızı yastığa koyup nasıl rahat uyuyalım?"
+        ],
+        "paragraphs_en": [
+            "Turkey is an earthquake country and unfortunately, no lessons are learned from history in this country. Millions of people have lost their lives in the process extending from the Gölcük 1999 earthquake primarily to the February 6 earthquakes. It seems that no lessons are learned from the disasters experienced. Our situation is getting increasingly grave.",
+            "The February 6 earthquakes centered in Kahramanmaraş were expected to happen. The earthquake came in plain sight. Millions of people lost their lives. Many of the survivors express that it would be better to have died. Because some of their families, some of their friends are no longer alive. Their hometowns have turned into a battlefield. Months have passed since the earthquake, still hundreds of people complain about thirst and hunger. We have become numb from asking 'where is the state' anymore.",
+            "One thinks, why are we in this state? Why were millions of people whose voices were heard under the rubble for days left to die in the February 6 earthquakes? Why are we not prepared for the Istanbul earthquake, which is expected to take 500 thousand lives under the most optimistic scenario?",
+            "Turkey is a lawless country. In this country, human life is not more important than the reputation of politicians in love with their seats and the palace. We understood this better after the February 6 earthquakes. The state, which distributed zoning amnesty before the earthquake, continues to give zoning amnesties after the earthquake. When it suits its own business, especially when elections approach, the government, which makes laws for itself by acting contrary to the constitution, cannot make a law to protect the lives of citizens. In addition to lawlessness, we have now become a country where the education system has collapsed. The curriculum is being changed, trying to bring it closer to the religious education system in Islamic countries. No one fights this either. They cannot fight it because in a lawless country, those outside the government do not have a say. Even the Turkish doctors to fulfill our ancestor's words 'Entrust me to Turkish doctors' are no longer in the country. They are leaving the country one by one. Soon we will have neither our doctors nor scientists who can save human lives. They all continue to leave the country one by one. The only dream of the new generation of Turkish youth is to move abroad.",
+            "It is a scientific fact that the expected Istanbul earthquake will occur one day. When this earthquake occurs, fires and hunger will follow after millions of people lose their lives. When Istanbul collapses, Turkey will have collapsed. Now tell me, how can we go to bed at night, put our heads on the pillow, and sleep comfortably?"
+        ],
+        "images": [
+            "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1463453216-612x612-1.jpg"
+        ],
+        "videos": [],
+        "featured_image": "https://destealtay.wordpress.com/wp-content/uploads/2024/01/istockphoto-1463453216-612x612-1.jpg"
     }
 ];
