@@ -450,7 +450,7 @@ const ARTICLES_DATA = [
         "slug":  "universite-okumak-luks-oldu",
         "date":  "2024-01-14T19:45:45+03:00",
         "url":  "https://destealtay.wordpress.com/2024/01/14/universite-okumak-luks-oldu",
-        "category":  "Haber",
+        "category":  "Köşe Yazısı",
         "paragraphs":  [
                            "Ekonomik krizin ortasındaki Türkiye’de artık üniversite okumak lüks sayılıyor. Merkez Bankası ve DİSK-AR verileri ile çeşitli araştırmalar asgari ücret civarında bir ücretle çalışanların oranının %50’lerde olduğunu ortaya koyuyor. Hal böyleyken Türkiye’de bir öğrencinin şehir dışında okuması artık bir lüks. Şehir dışında okuyan öğrencilerin büyük bir kısmı hem çalışıyor hem okuyor. Çalışan öğrenciler bile geçinemiyor. Aile evinde üniversite okuyan gençlerin bir kısmı ailesine maddi destekte bulunmak için çalışırken bir kısmı da üniversite masraflarını karşılamak için çalışmak zorunda olduğu görülüyor.",
                            "KYK YURTLARINDA KALMANIN BEDELİ",
