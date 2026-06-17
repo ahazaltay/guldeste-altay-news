@@ -164,15 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.className = `slide ${index === 0 ? 'active' : ''}`;
       
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-      const cleanExcerpt = art.paragraphs[0] ? art.paragraphs[0].substring(0, 180) + '...' : '';
-      
       slide.innerHTML = `
         <img src="${img}" class="slide-img" alt="${art.title}">
         <div class="slide-overlay"></div>
         <div class="slide-content container">
           <span class="slide-category">Öne Çıkan Röportaj</span>
           <h1 class="slide-title">${art.title}</h1>
-          <p class="slide-excerpt">${cleanExcerpt}</p>
           <div class="slide-meta">${formatDate(art.date)}</div>
           <button class="slide-btn" data-id="${art.id}">Haberin Tamamı</button>
         </div>
