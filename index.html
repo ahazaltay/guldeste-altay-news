@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Güldeste Altay | Bağımsız Gazetecilik Çalışmaları</title>
+  <meta name="description" content="Güldeste Altay'ın bağımsız gazetecilik çalışmaları, araştırma haberleri, röportajları, köşe yazıları ve belgesel videolarının bir arada yer aldığı kişisel portfolyo sitesi.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section with Glassmorphic Navbar -->
+  <header>
+    <div class="container header-container">
+      <a href="#anasayfa" class="logo-block" id="logoLink">
+        <span class="logo-title">GÜLDESTE ALTAY</span>
+        <span class="logo-sub">Gazetecilik Çalışmaları</span>
+      </a>
+      
+      <!-- Desktop Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#anasayfa" class="nav-item active" data-target="anasayfa">Anasayfa</a></li>
+          <li><a href="#haberler" class="nav-item" data-target="haberler">Haberler</a></li>
+          <li><a href="#kose-yazilari" class="nav-item" data-target="kose-yazilari">Köşe Yazıları</a></li>
+          <li><a href="#belgesel" class="nav-item" data-target="belgesel">Belgesel</a></li>
+          <li><a href="#hakkimda" class="nav-item" data-target="hakkimda">Hakkımda</a></li>
+          <li><a href="#iletisim" class="nav-item" data-target="iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Switcher and Mobile Menu Toggle -->
+      <div class="action-buttons">
+        <button class="theme-btn" id="themeToggleBtn" aria-label="Temayı Değiştir">
+          <!-- Sun Icon for Light Mode -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <!-- Moon Icon for Dark Mode -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10 0-4.7 3.2-8.8 7.7-9.8.5-.1 1 .2 1.2.7s.1 1.1-.3 1.4c-2.3 1.8-3.5 4.6-3.5 7.7 0 4.4 3.6 8 8 8 3 0 5.8-1.2 7.7-3.5.3-.4.9-.5 1.4-.3.5.2.8.7.7 1.2-.9 4.5-5 7.6-9.8 7.6z"/>
+          </svg>
+        </button>
+        
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Menüyü Aç">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- 1. ANASAYFA PAGE -->
+    <section class="page-section active" id="anasayfa">
+      <div class="container">
+        
+        <!-- Headline Slider (Carousel) -->
+        <div class="hero-slider" id="heroSlider">
+          <div class="slider-wrapper" id="sliderWrapper">
+            <!-- Dynamic slides injected by app.js -->
+          </div>
+          
+          <!-- Slider Navigation Arrows -->
+          <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Önceki">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+            </svg>
+          </button>
+          <button class="slider-arrow next" id="sliderNextBtn" aria-label="Sonraki">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/>
+            </svg>
+          </button>
+          
+          <div class="slider-dots" id="sliderDots">
+            <!-- Dynamic dots injected by app.js -->
+          </div>
+        </div>
+
+        <!-- Featured Documentary Card -->
+        <div class="featured-video-card" id="featuredVideoCard">
+          <div class="video-card-visual" id="videoTeaserBtn">
+            <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/img_20210629_182146.jpg" alt="Bu Lokanta Evsizlere Sıcak Yuva Oluyor">
+            <button class="play-overlay-btn" aria-label="Belgeseli İzle">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="video-card-info">
+            <span class="video-card-badge">Öne Çıkan Belgesel</span>
+            <h2 class="video-card-title">Bu Lokanta Evsizlere Sıcak Yuva Oluyor</h2>
+            <p class="video-card-desc">Evsizlerin karnını ücretsiz doyuran, onlara kış aylarında sıcak bir aile ortamı sunan hayırsever bir lokantanın ve oraya sığınan insanların dokunaklı hikayesi.</p>
+            <a href="#belgesel" class="video-card-action" id="viewDocLink">
+              <span>Belgeseli Ayrıntılı İzle & Oku</span>
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- News Feed Grid Title -->
+        <div class="feed-header">
+          <h2 class="feed-title">Son Haberler</h2>
+        </div>
+
+        <!-- News Bento Grid -->
+        <div class="news-grid" id="latestNewsGrid">
+          <!-- Dynamic cards injected by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. HABERLER (ARŞİV) PAGE -->
+    <section class="page-section" id="haberler">
+      <div class="container">
+        <!-- News Feed Grid Title & Search -->
+        <div class="feed-header">
+          <h2 class="feed-title">Haber Arşivi</h2>
+          <div class="search-wrapper">
+            <input type="text" class="search-input" id="searchInput" placeholder="Haber başlığı veya içerik ara...">
+            <span class="search-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- News Bento Grid -->
+        <div class="news-grid" id="allNewsGrid">
+          <!-- Dynamic cards injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. KÖŞE YAZILARI PAGE -->
+    <section class="page-section" id="kose-yazilari">
+      <div class="container">
+        <div class="feed-header" style="margin-bottom: 48px;">
+          <h2 class="feed-title">Köşe Yazıları</h2>
+        </div>
+        <div class="columns-container" id="columnsContainer">
+          <!-- Dynamic column cards injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BELGESEL PAGE -->
+    <section class="page-section" id="belgesel">
+      <div class="container">
+        <div class="feed-header" style="margin-bottom: 48px;">
+          <h2 class="feed-title">Belgesel Çalışması</h2>
+        </div>
+        
+        <div class="doc-page-layout">
+          <!-- Custom HTML5 Video Player -->
+          <div class="video-container" id="videoContainer">
+            <video id="docVideo" preload="metadata">
+              <source src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/8150458503304717644-1.mp4" type="video/mp4">
+              Tarayıcınız HTML5 video etiketini desteklemiyor.
+            </video>
+            
+            <!-- Large Play Overlay Button -->
+            <button class="video-large-play-btn" id="videoLargePlayBtn" aria-label="Oynat">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+            
+            <!-- Control bar -->
+            <div class="custom-video-controls">
+              <div class="progress-bar-container" id="progressBarContainer">
+                <div class="video-progress" id="videoProgress"></div>
+              </div>
+              <div class="controls-row">
+                <div class="controls-left">
+                  <button class="control-btn" id="videoPlayBtn" aria-label="Oynat">
+                    <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg class="pause-icon" style="display: none;" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                  </button>
+                  <span class="time-display" id="videoTimeDisplay">00:00 / 00:00</span>
+                </div>
+                <div class="controls-right">
+                  <div class="volume-container">
+                    <button class="control-btn" id="videoMuteBtn" aria-label="Sesi Kapat">
+                      <svg class="volume-up-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                      <svg class="volume-mute-icon" style="display: none;" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                    </button>
+                    <input type="range" class="volume-slider" id="videoVolumeSlider" min="0" max="1" step="0.1" value="1">
+                  </div>
+                  <button class="control-btn" id="videoFullscreenBtn" aria-label="Tam Ekran">
+                    <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Documentary Info Card -->
+          <div class="doc-info" id="docInfoBlock">
+            <!-- Details will be injected by app.js based on article 7 data -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. HAKKIMDA PAGE -->
+    <section class="page-section" id="hakkimda">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-text">
+            <h2 class="about-greeting">Ben <span>Güldeste Altay</span></h2>
+            <p class="about-lead">Gerçeğin, hikayelerin ve arka planda kalan hayatların peşinde koşan bağımsız bir gazeteciyim.</p>
+            <p class="about-bio">Akdeniz Üniversitesi İletişim Fakültesi Gazetecilik Bölümü mezunuyum. Gazeteciliğe adım attığım ilk günden beri, toplumun dezavantajlı gruplarının, göz ardı edilen hak ihlallerinin ve sessiz çığlıkların sesi olmayı kendime vizyon edindim.</p>
+            <p class="about-bio">Çölyak hastalarının çektikleri ekonomik ve sosyal sıkıntılardan, Doğu Türkistan'daki toplama kamplarında kaybolan aile dramlarına; sağlık çalışanlarının mobbing ve tükenmişlik krizlerinden, sokaklarda yaşam savaşı veren evsizlerin dünyasına kadar pek çok sahada araştırma ve röportaj gerçekleştirdim. Yazılı haberlerimin yanı sıra, olayları tüm çıplaklığıyla gözler önüne sermek için görsel haberciliğe ve belgesel video yapımına odaklanıyorum.</p>
+            <p class="about-bio">Bu web sitesi, bugüne kadar farklı yayın organlarında veya kişisel mecralarımda yer almış, tarihe not düşülmesi gereken tüm çalışmalarımı bir araya getirmektedir. Bağımsız, cesur ve insan odaklı gazetecilik yolculuğuma devam etmekteyim.</p>
+          </div>
+          <div class="about-visual">
+            <div class="author-frame">
+              <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg" alt="Güldeste Altay">
+            </div>
+            <div class="about-decoration"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. İLETİŞİM PAGE -->
+    <section class="page-section" id="iletisim">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h2 class="contact-title">İletişime Geçin</h2>
+            <p class="contact-desc">Haber ihbarları, röportaj teklifleri, ortak projeler veya çalışmalarım hakkındaki görüşleriniz için bana aşağıdaki kanallardan ulaşabilir ya da doğrudan formu doldurabilirsiniz.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">E-posta</span>
+                  <a href="mailto:guldesteealtay@gmail.com" class="contact-item-value">guldesteealtay@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Lokasyon</span>
+                  <span class="contact-item-value">Antalya, Türkiye</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-card">
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="formName">Adınız Soyadınız</label>
+                <input type="text" class="form-input" id="formName" placeholder="Adınızı girin" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formEmail">E-posta Adresiniz</label>
+                <input type="email" class="form-input" id="formEmail" placeholder="E-postanızı girin" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formSubject">Konu</label>
+                <input type="text" class="form-input" id="formSubject" placeholder="Mesajınızın konusu" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formMessage">Mesajınız</label>
+                <textarea class="form-input" id="formMessage" placeholder="Mesajınızı yazın..." required></textarea>
+              </div>
+              <button type="submit" class="submit-btn" id="formSubmitBtn">
+                <span>Gönder</span>
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </button>
+              <div class="form-success-msg" id="formSuccessMsg">Mesajınız başarıyla iletildi! En kısa zamanda dönüş yapılacaktır.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Article Drawer Modal Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="article-drawer" id="articleDrawer">
+      
+      <!-- Reading Progress Line -->
+      <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="readingProgressBar"></div>
+      </div>
+      
+      <div class="drawer-header">
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Kapat">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+        <div class="drawer-actions">
+          <button class="drawer-action-btn" id="drawerCopyLinkBtn">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            <span>Bağlantıyı Kopyala</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="drawer-body" id="drawerBody">
+        <!-- Dynamic content injected by app.js -->
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <span class="footer-logo">GÜLDESTE ALTAY</span>
+      <ul class="footer-links">
+        <li><a href="#anasayfa" class="footer-nav-item">Anasayfa</a></li>
+        <li><a href="#haberler" class="footer-nav-item">Haberler</a></li>
+        <li><a href="#kose-yazilari" class="footer-nav-item">Köşe Yazıları</a></li>
+        <li><a href="#belgesel" class="footer-nav-item">Belgesel</a></li>
+        <li><a href="#hakkimda" class="footer-nav-item">Hakkımda</a></li>
+        <li><a href="#iletisim" class="footer-nav-item">İletişim</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="https://guldesteealtay.wordpress.com" target="_blank" rel="noopener" class="social-link" title="WordPress Blog">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.176 2.986-.503-.022-.038-.044-.078-.06-.12l-2.768-7.582zm3.765-4.14c.484-.45.858-.858.858-1.425 0-.64-.476-1.116-1.146-1.116-.764 0-1.503.493-2.18 1.096-.282.253-.59.544-.827.808l3.295.637zm-3.83-1.636c-.463-.377-.962-.733-1.488-1.07l2.846 7.785 1.954-5.666c-.347-.367-.803-.71-1.312-1.048zm-6.208 5.61l2.454-7.135C5.45 7.16 4 9.4 4 12c0 .942.176 1.844.5 2.678h.004c.05-.125.103-.254.164-.377l1.218-2.68zm3.013 7.02l-1.92-5.467-1.745 5.097c1.02.775 2.24 1.258 3.565 1.37h.1zm11.102-7.64c0-2.483-1.484-4.887-3.926-4.887-.41 0-.82.046-1.22.13.064.1.13.208.188.328l2.254 6.13c1.077.587 1.633.916 2.115 1.57.34-.91.59-1.897.59-3.27zm-8.006 10c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Güldeste Altay. Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Include JavaScript Files -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
