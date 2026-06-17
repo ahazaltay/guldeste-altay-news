@@ -65,26 +65,15 @@
     <section class="page-section active" id="anasayfa">
       <div class="container">
         
-        <!-- Headline Slider (Carousel) -->
-        <div class="hero-slider" id="heroSlider">
-          <div class="slider-wrapper" id="sliderWrapper">
-            <!-- Dynamic slides injected by app.js -->
+        <!-- High-End Split News Slider -->
+        <div class="hero-split-slider" id="heroSlider">
+          <!-- Left: Main Display Area -->
+          <div class="slider-main-display" id="sliderMainDisplay">
+            <!-- Injected by app.js -->
           </div>
-          
-          <!-- Slider Navigation Arrows -->
-          <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Önceki">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
-            </svg>
-          </button>
-          <button class="slider-arrow next" id="sliderNextBtn" aria-label="Sonraki">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/>
-            </svg>
-          </button>
-          
-          <div class="slider-dots" id="sliderDots">
-            <!-- Dynamic dots injected by app.js -->
+          <!-- Right: Sidebar Queue -->
+          <div class="slider-sidebar-queue" id="sliderSidebarQueue">
+            <!-- Injected by app.js -->
           </div>
         </div>
 
@@ -257,16 +246,25 @@
         </a>
 
         <div class="doc-page-layout">
-          <!-- YouTube Video Player Embed -->
+          <!-- YouTube Video Player Link Card -->
           <div class="youtube-video-wrapper">
-            <iframe 
-              src="https://www.youtube-nocookie.com/embed/OJDvXTQueDo" 
-              title="Doğu Türkistan'da Ne Oluyor?" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
+            <a href="https://www.youtube.com/watch?v=OJDvXTQueDo" target="_blank" rel="noopener" class="youtube-video-link" aria-label="Doğu Türkistan'da Ne Oluyor? Belgeselini YouTube'da İzle">
+              <img src="https://destealtay.wordpress.com/wp-content/uploads/2024/01/medinenazimi-kopya.jpg" alt="Doğu Türkistan'da Ne Oluyor?" class="youtube-video-cover">
+              <div class="youtube-video-overlay">
+                <div class="youtube-play-button">
+                  <svg viewBox="0 0 68 48" width="68" height="48">
+                    <path class="play-btn-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+                    <path d="M 45,24 27,14 27,34" fill="#FFFFFF"></path>
+                  </svg>
+                </div>
+                <div class="youtube-video-hint">
+                  <svg viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path>
+                  </svg>
+                  <span>YouTube'da İzle</span>
+                </div>
+              </div>
+            </a>
           </div>
           
           <!-- Documentary Info Card -->

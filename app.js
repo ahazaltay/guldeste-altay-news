@@ -140,116 +140,117 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // 4. HERO SLIDER (CAROUSEL)
+  // 4. HERO SPLIT SLIDER (CAROUSEL)
   // ==========================================
-  const sliderWrapper = document.getElementById('sliderWrapper');
-  const sliderDots = document.getElementById('sliderDots');
-  const sliderPrevBtn = document.getElementById('sliderPrevBtn');
-  const sliderNextBtn = document.getElementById('sliderNextBtn');
   let currentSlideIndex = 0;
   let slideInterval;
 
   function renderSlider() {
-    sliderWrapper.innerHTML = '';
-    sliderDots.innerHTML = '';
+    const sliderSidebarQueue = document.getElementById('sliderSidebarQueue');
+    if (!sliderSidebarQueue) return;
+    
+    sliderSidebarQueue.innerHTML = '';
     
     sliderArticles.forEach((art, index) => {
-      // Create slide
-      const slide = document.createElement('div');
-      slide.className = `slide ${index === 0 ? 'active' : ''} slide-art-${art.id}`;
-      
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-      const dateHtml = formatDate(art.date) ? `<div class="slide-meta">${formatDate(art.date)}</div>` : '';
-      
       let displayTitle = art.title;
       if (art.id === 14) {
         displayTitle = "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
       }
-
-      slide.innerHTML = `
-        <img src="${img}" class="slide-img" alt="${displayTitle}">
-        <div class="slide-overlay"></div>
-        <div class="slide-content container">
-          <h1 class="slide-title">${displayTitle}</h1>
-          ${dateHtml}
-          <button class="slide-btn" data-id="${art.id}">Haberi Oku</button>
+      
+      const queueItem = document.createElement('div');
+      queueItem.className = `queue-item ${index === 0 ? 'active' : ''}`;
+      queueItem.innerHTML = `
+        <div class="queue-item-thumb">
+          <img src="${img}" alt="${displayTitle}">
         </div>
+        <div class="queue-item-meta">
+          <span class="queue-item-category">${art.category}</span>
+          <h4 class="queue-item-title">${displayTitle}</h4>
+        </div>
+        <div class="queue-progress-bar"></div>
       `;
-      sliderWrapper.appendChild(slide);
-
-      // Create dot
-      const dot = document.createElement('button');
-      dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
-      dot.setAttribute('data-index', index);
-      dot.setAttribute('aria-label', `Slayt ${index + 1}`);
-      sliderDots.appendChild(dot);
-    });
-
-    // Add listeners to new slide buttons
-    document.querySelectorAll('.slide-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = parseInt(btn.getAttribute('data-id'));
-        openArticle(id);
+      
+      queueItem.addEventListener('click', () => {
+        goToSlide(index);
+        startAutoSlide();
       });
+      
+      sliderSidebarQueue.appendChild(queueItem);
     });
+    
+    // Load the first slide
+    goToSlide(0);
   }
 
   function goToSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.slider-dot');
-    
-    if (index >= slides.length) index = 0;
-    if (index < 0) index = slides.length - 1;
-    
-    slides[currentSlideIndex].classList.remove('active');
-    dots[currentSlideIndex].classList.remove('active');
-    
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+    if (index >= sliderArticles.length) index = 0;
+    if (index < 0) index = sliderArticles.length - 1;
     
     currentSlideIndex = index;
+    const art = sliderArticles[index];
+    if (!art) return;
+    
+    // Update main display
+    const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
+    let displayTitle = art.title;
+    if (art.id === 14) {
+      displayTitle = "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
+    }
+    
+    const sliderMainDisplay = document.getElementById('sliderMainDisplay');
+    if (sliderMainDisplay) {
+      sliderMainDisplay.innerHTML = `
+        <div class="slide-main-item slide-art-${art.id}">
+          <img src="${img}" class="slide-main-img" alt="${displayTitle}">
+          <div class="slide-main-overlay"></div>
+          <div class="slide-main-content">
+            <span class="slide-main-category">${art.category}</span>
+            <h1 class="slide-main-title">${displayTitle}</h1>
+            <button class="slide-main-btn" data-id="${art.id}">Haberi Oku</button>
+          </div>
+        </div>
+      `;
+      
+      // Attach listener to the new button
+      const btn = sliderMainDisplay.querySelector('.slide-main-btn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          openArticle(art.id);
+        });
+      }
+    }
+    
+    // Update active state in sidebar queue
+    const queueItems = document.querySelectorAll('.queue-item');
+    queueItems.forEach((item, idx) => {
+      if (idx === index) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
   }
 
   function nextSlide() {
     goToSlide(currentSlideIndex + 1);
   }
 
-  function prevSlide() {
-    goToSlide(currentSlideIndex - 1);
-  }
-
   function startAutoSlide() {
     stopAutoSlide();
-    slideInterval = setInterval(nextSlide, 10000); // Rotate every 10 seconds (slower transition)
+    slideInterval = setInterval(nextSlide, 10000); // Rotate every 10 seconds
   }
 
   function stopAutoSlide() {
     if (slideInterval) clearInterval(slideInterval);
   }
 
-  // Slider controls listeners
-  sliderNextBtn.addEventListener('click', () => {
-    nextSlide();
-    startAutoSlide();
-  });
-
-  sliderPrevBtn.addEventListener('click', () => {
-    prevSlide();
-    startAutoSlide();
-  });
-
-  sliderDots.addEventListener('click', (e) => {
-    if (e.target.classList.contains('slider-dot')) {
-      const index = parseInt(e.target.getAttribute('data-index'));
-      goToSlide(index);
-      startAutoSlide();
-    }
-  });
-
   // Hover pauses auto slider
   const heroSlider = document.getElementById('heroSlider');
-  heroSlider.addEventListener('mouseenter', stopAutoSlide);
-  heroSlider.addEventListener('mouseleave', startAutoSlide);
+  if (heroSlider) {
+    heroSlider.addEventListener('mouseenter', stopAutoSlide);
+    heroSlider.addEventListener('mouseleave', startAutoSlide);
+  }
 
   // Initialize Slider
   renderSlider();
