@@ -127,21 +127,26 @@ header {
 
 .logo-title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: var(--text-primary);
   text-decoration: none;
   line-height: 1;
+  transition: var(--transition-fast);
+}
+
+.logo-title:hover {
+  color: var(--accent);
 }
 
 .logo-sub {
-  font-size: 0.65rem;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: var(--accent);
-  margin-top: 4px;
-  font-weight: 600;
+  margin-top: 6px;
+  font-weight: 500;
 }
 
 .nav-links {
