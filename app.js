@@ -155,6 +155,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // State
   let activeLang = localStorage.getItem('lang') || 'tr';
 
+  // Helper: Title Case Converter with Turkish Support & Acronym Protection
+  function toTitleCase(str, lang = 'tr') {
+    if (!str) return '';
+    
+    const minorWordsTR = ['ve', 'veya', 'ile', 'de', 'da', 'ki', 'ama', 'fakat', 'ise', 'adlı'];
+    const minorWordsEN = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'by', 'from', 'in', 'of', 'to', 'with', 'is', 'are'];
+    const acronyms = ['TL', 'GTE', 'GPT', 'NTV', 'YT', 'US', 'UK', 'USA', 'EU', 'AI', 'SPA', 'YTÜ', 'CHATGPT', 'YARE', 'CHAT'];
+    
+    const minorWords = lang === 'en' ? minorWordsEN : minorWordsTR;
+    const locale = lang === 'en' ? 'en-US' : 'tr-TR';
+    
+    const lowerStr = str.toLocaleLowerCase(locale);
+    const words = lowerStr.split(/\s+/);
+    
+    const capitalizedWords = words.map((word, index) => {
+      if (!word) return '';
+      
+      const cleanWord = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()“”"']/g, "");
+      const cleanUpper = cleanWord.toLocaleUpperCase(locale);
+      
+      if (acronyms.includes(cleanUpper)) {
+        return word.toLocaleUpperCase(locale);
+      }
+      
+      if (minorWords.includes(cleanWord) && index !== 0 && index !== words.length - 1) {
+        return word;
+      }
+      
+      let firstCharIndex = 0;
+      while (firstCharIndex < word.length && !/[a-zA-ZçÇğĞıİöÖşŞüÜ]/.test(word[firstCharIndex])) {
+        firstCharIndex++;
+      }
+      
+      if (firstCharIndex >= word.length) {
+        return word;
+      }
+      
+      const prefix = word.substring(0, firstCharIndex);
+      const charToCapitalize = word[firstCharIndex];
+      const suffix = word.substring(firstCharIndex + 1);
+      
+      return prefix + charToCapitalize.toLocaleUpperCase(locale) + suffix;
+    });
+    
+    return capitalizedWords.join(' ');
+  }
+
   // ==========================================
   // 1. DATA INITIALIZATION & SELECTION
   // ==========================================
@@ -408,12 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     sliderArticles.forEach((art, index) => {
       const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-      let displayTitle = activeLang === 'en' ? art.title_en : art.title;
-      if (art.id === 14) {
-        displayTitle = activeLang === 'en' 
-          ? "A Woman Born Right in the Middle of the Afghan Government's Misrule Disregarding Women's Rights, With Her Dreams Shattered: Nergis Ahmadi"
-          : "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
-      }
+      const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
       const displayCategory = activeLang === 'en' ? art.category_en : art.category;
       
       const queueItem = document.createElement('div');
@@ -451,12 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update main display
     const img = art.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/cropped-ee95c1ad-4216-4474-9ebd-9be6fbd2345d.jpg';
-    let displayTitle = activeLang === 'en' ? art.title_en : art.title;
-    if (art.id === 14) {
-      displayTitle = activeLang === 'en' 
-        ? "A Woman Born Right in the Middle of the Afghan Government's Misrule Disregarding Women's Rights, With Her Dreams Shattered: Nergis Ahmadi"
-        : "Afgan Hükümetinin Kadın Haklarını Yok Sayan Yönetiminin Tam Ortasında Doğmuş, Hayalleri Yerle Bir Olmuş Bir Kadın: Nergis Ahmadi";
-    }
+    const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
     const displayCategory = activeLang === 'en' ? art.category_en : art.category;
     
     const sliderMainDisplay = document.getElementById('sliderMainDisplay');
@@ -564,8 +601,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
       const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 120) + '...' : '';
       
-      const displayTitle = activeLang === 'en' ? art.title_en : art.title;
+      const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
       const displayCategory = activeLang === 'en' ? art.category_en : art.category;
+      
+      let titleStyle = '';
+      if (displayTitle.length > 90) {
+        titleStyle = 'style="font-size: 1.02rem; line-height: 1.3;"';
+      } else if (displayTitle.length > 60) {
+        titleStyle = 'style="font-size: 1.15rem; line-height: 1.3;"';
+      }
       
       const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
@@ -575,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="card-content">
           ${dateHtml}
-          <h3 class="card-title">${displayTitle}</h3>
+          <h3 class="card-title" ${titleStyle}>${displayTitle}</h3>
           <p class="card-excerpt">${cleanExcerpt}</p>
           <span class="card-footer-link">
             <span>${TRANSLATIONS[activeLang]["read-article"]}</span>
@@ -645,7 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const paragraphs = activeLang === 'en' ? art.paragraphs_en : art.paragraphs;
       const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 180) + '...' : '';
       
-      const displayTitle = activeLang === 'en' ? art.title_en : art.title;
+      const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
 
       const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
@@ -710,7 +754,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const paragraphs = activeLang === 'en' ? latestColumn.paragraphs_en : latestColumn.paragraphs;
     const cleanExcerpt = paragraphs[0] ? paragraphs[0].substring(0, 180) + '...' : '';
     
-    const displayTitle = activeLang === 'en' ? latestColumn.title_en : latestColumn.title;
+    const displayTitle = toTitleCase(activeLang === 'en' ? latestColumn.title_en : latestColumn.title, activeLang);
 
     const dateHtml = formatDate(latestColumn.date) ? `<div class="card-meta">${formatDate(latestColumn.date)}</div>` : '';
     card.innerHTML = `
@@ -754,7 +798,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activeArticleId = id;
     window.location.hash = `article/${id}`;
     
-    const displayTitle = activeLang === 'en' ? art.title_en : art.title;
+    const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
     const imgElement = art.featured_image ? `
       <div class="drawer-img-container">
         <img src="${art.featured_image}" alt="${displayTitle}">
