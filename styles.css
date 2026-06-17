@@ -117,6 +117,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  transition: var(--transition-smooth);
 }
 
 .logo-block {
@@ -133,7 +134,7 @@ header {
   color: var(--text-primary);
   text-decoration: none;
   line-height: 1;
-  transition: var(--transition-fast);
+  transition: var(--transition-smooth);
 }
 
 .logo-title:hover {
@@ -147,6 +148,32 @@ header {
   color: var(--accent);
   margin-top: 6px;
   font-weight: 500;
+  transition: var(--transition-smooth);
+  opacity: 1;
+  max-height: 20px;
+}
+
+/* Scrolled Header State */
+header.scrolled {
+  box-shadow: var(--shadow-sm);
+  border-bottom-color: rgba(139, 0, 0, 0.15);
+}
+
+header.scrolled .header-container {
+  height: 60px;
+}
+
+header.scrolled .logo-title {
+  font-size: 1.45rem;
+  letter-spacing: 1.5px;
+}
+
+header.scrolled .logo-sub {
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .nav-links {
