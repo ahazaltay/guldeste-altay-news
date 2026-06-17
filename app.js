@@ -14,16 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Column Articles (category: "Köşe Yazısı")
   const columnArticles = ARTICLES_DATA.filter(art => art.category === "Köşe Yazısı");
   
-  // Documentary Article (Custom for Doğu Türkistan)
-  const docArticle = {
-    title: "Doğu Türkistan'da Ne Oluyor?",
-    category: "Araştırma Belgesel",
-    paragraphs: [
-      "Çin’in Doğu Türkistan bölgesinde uzun yıllardır uyguladığı asimilasyon politikaları, toplama kamplarındaki insan hakları ihlallerini ve ailelerin parçalanma hikâyeleri... Bu araştırma belgeseli, yaşanan insanlık dramını tüm çıplaklığıyla gözler önüne seriyor.",
-      "Kayıp kız kardeşinin izini süren Medine Nazimi ve diğer ailelerin tanıklıklarıyla, bölgede uygulanan baskı politikalarının arka planı, tanık ifadeleri ve uluslararası raporlar eşliğinde ele alınıyor.",
-      "Gazeteci Güldeste Altay'ın hazırladığı bu belgesel çalışma, sesi duyulmayanların sesi olmayı ve yaşanan hak ihlalleriyle mücadele etmeyi amaçlıyor."
-    ]
-  };
+  // Yönlendirme ve Sayfa Yönetimi Bileşenleri
 
   // ==========================================
   // 2. SPA ROUTING
@@ -42,9 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll to top of page
     window.scrollTo({ top: 0, behavior: 'instant' });
 
-    // Handle Active Nav Link
+    // Handle Active Nav Link (Keep "Belgesel" active when viewing documentary details)
     navItems.forEach(item => {
-      if (item.getAttribute('data-target') === targetId) {
+      const target = item.getAttribute('data-target');
+      if (target === targetId || (targetId === 'belgesel-detay' && target === 'belgesel')) {
         item.classList.add('active');
       } else {
         item.classList.remove('active');
@@ -59,11 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.remove('active');
       }
     });
-
-    // If navigating to Belgesel page, update info block
-    if (targetId === 'belgesel') {
-      renderDocPageDetails();
-    }
   }
 
   function handleRoute() {
@@ -84,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const targetId = hash.replace('#', '');
-    const validSections = ['anasayfa', 'haberler', 'kose-yazilari', 'belgesel', 'hakkimda', 'iletisim'];
+    const validSections = ['anasayfa', 'haberler', 'kose-yazilari', 'belgesel', 'belgesel-detay', 'hakkimda', 'iletisim'];
     
     if (validSections.includes(targetId)) {
       navigateTo(targetId);
@@ -439,24 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderBentoColumnist();
 
-  // ==========================================
-  // 8. DOCUMENTARY (BELGESEL) PAGE DETAILS
-  // ==========================================
-  const docInfoBlock = document.getElementById('docInfoBlock');
-
-  function renderDocPageDetails() {
-    if (!docInfoBlock || docInfoBlock.innerHTML.trim() !== '') return;
-    
-    const bodyText = docArticle.paragraphs.map(p => `<p>${p}</p>`).join('');
-    
-    docInfoBlock.innerHTML = `
-      <div class="doc-meta">Araştırma Belgeseli & İnsan Hakları Çalışması</div>
-      <h3 class="doc-title">${docArticle.title}</h3>
-      <div class="doc-body">
-        ${bodyText}
-      </div>
-    `;
-  }
+  // Belgesel detayları doğrudan HTML üzerinden statik ve SEO uyumlu olarak yönetilmektedir.
 
   // ==========================================
   // 9. ARTICLE MODAL / DRAWER SYSTEM
