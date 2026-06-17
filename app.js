@@ -524,12 +524,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewDocLink = document.getElementById('viewDocLink');
 
   videoTeaserBtn.addEventListener('click', () => {
-    window.location.hash = 'belgesel';
+    window.location.hash = 'belgesel-detay';
   });
 
   viewDocLink.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.hash = 'belgesel';
+    window.location.hash = 'belgesel-detay';
   });
 
   // ==========================================
