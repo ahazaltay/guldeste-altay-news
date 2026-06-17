@@ -388,6 +388,46 @@ document.addEventListener('DOMContentLoaded', () => {
   renderColumns();
 
   // ==========================================
+  // BENTO ROW COLUMNIST RENDER (ON HOMEPAGE)
+  // ==========================================
+  const bentoColumnistCard = document.getElementById('bentoColumnistCard');
+
+  function renderBentoColumnist() {
+    if (!bentoColumnistCard) return;
+    bentoColumnistCard.innerHTML = '';
+    
+    const latestColumn = columnArticles[0];
+    if (!latestColumn) return;
+
+    const card = document.createElement('div');
+    card.className = 'column-card';
+    card.setAttribute('data-id', latestColumn.id);
+
+    const img = latestColumn.featured_image || 'https://destealtay.wordpress.com/wp-content/uploads/2024/01/adobestock_311795109_preview.jpeg?w=1000';
+    const cleanExcerpt = latestColumn.paragraphs[0] ? latestColumn.paragraphs[0].substring(0, 180) + '...' : '';
+
+    card.innerHTML = `
+      <img src="${img}" class="column-card-img" alt="${latestColumn.title}" loading="lazy">
+      <div class="column-card-content">
+        <div class="card-meta">${formatDate(latestColumn.date)}</div>
+        <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${latestColumn.title}</h3>
+        <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
+        <span class="card-footer-link">
+          <span>Köşe Yazısını Oku</span>
+          <svg width="12" height="12" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+          </svg>
+        </span>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openArticle(latestColumn.id));
+    bentoColumnistCard.appendChild(card);
+  }
+
+  renderBentoColumnist();
+
+  // ==========================================
   // 8. DOCUMENTARY (BELGESEL) PAGE DETAILS
   // ==========================================
   const docInfoBlock = document.getElementById('docInfoBlock');

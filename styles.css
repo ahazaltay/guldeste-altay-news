@@ -1539,6 +1539,103 @@ footer {
   margin-top: 12px;
 }
 
+/* Editorial Bento Row (Anasayfa) */
+.editorial-bento-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.bento-columnist-section, .bento-about-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bento About Card */
+.bento-about-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.bento-about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(139, 0, 0, 0.15);
+}
+
+.bento-about-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.bento-about-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  background-color: var(--bg-secondary);
+}
+
+.bento-about-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-about-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.bento-about-title {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.bento-about-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.bento-about-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+  margin-top: auto;
+  width: fit-content;
+}
+
+.bento-about-btn:hover {
+  color: var(--accent-hover);
+  gap: 10px;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .news-grid {
@@ -1637,6 +1734,11 @@ footer {
 
   .drawer-title {
     font-size: 1.8rem;
+  }
+
+  .editorial-bento-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
