@@ -2150,6 +2150,18 @@ footer {
   object-position: center 15%;
 }
 
+/* Specific font size tweak for long title in hero slider */
+.slide-art-14 .slide-main-title {
+  font-size: 1.65rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .slide-art-14 .slide-main-title {
+    font-size: 1.25rem;
+  }
+}
+
 /* Responsive styles */
 @media (max-width: 992px) {
   .hero-split-slider {
