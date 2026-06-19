@@ -547,7 +547,7 @@ function initApp() {
 
   function startAutoSlide() {
     stopAutoSlide();
-    slideInterval = setInterval(nextSlide, 10000); // Rotate every 10 seconds
+    slideInterval = setInterval(nextSlide, 7000); // Rotate every 7 seconds
   }
 
   function stopAutoSlide() {

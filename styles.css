@@ -2139,7 +2139,7 @@ footer {
 }
 
 .queue-item.active .queue-progress-bar {
-  animation: slideProgress 10s linear forwards;
+  animation: slideProgress 7s linear forwards;
 }
 
 @keyframes slideProgress {
