@@ -129,12 +129,12 @@ header {
 
 .logo-title {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
   text-decoration: none;
-  line-height: 1;
+  line-height: 1.1;
   transition: var(--transition-smooth);
 }
 
@@ -143,11 +143,12 @@ header {
 }
 
 .logo-sub {
-  font-size: 0.7rem;
-  letter-spacing: 3.5px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-top: 6px;
+  color: var(--text-tertiary);
+  margin-top: 3px;
   font-weight: 500;
   transition: var(--transition-smooth);
   opacity: 1;
@@ -165,8 +166,8 @@ header.scrolled .header-container {
 }
 
 header.scrolled .logo-title {
-  font-size: 1.45rem;
-  letter-spacing: 1.5px;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
 }
 
 header.scrolled .logo-sub {
@@ -729,10 +730,10 @@ body:not([data-theme="dark"]) .moon-icon { display: block; }
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: 1.35;
-  color: var(--text-primary);
-  margin-bottom: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
   font-weight: 700;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1463,9 +1464,9 @@ footer {
 
 .footer-logo {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
 }
 
@@ -1743,7 +1744,8 @@ footer {
   }
 
   .logo-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -2266,5 +2268,45 @@ footer .lang-switch-group {
   .about-text {
     padding-top: 48px; /* Starts lower to match the right column's photo alignment */
   }
+}
+
+/* ==========================================
+   DRAWER NEWS SOURCE BUTTON STYLING
+   ========================================== */
+.drawer-source-container {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.source-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.source-link-btn:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.source-icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
 }
 

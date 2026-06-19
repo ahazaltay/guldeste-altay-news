@@ -1,5 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+  // Wait for Supabase data to be ready before initializing the app.
+  // supabase-client.js dispatches 'articlesDataReady' when fetch completes.
+  // If ARTICLES_DATA is already populated (e.g. via static data.js), init immediately.
+  if (typeof ARTICLES_DATA !== 'undefined' && ARTICLES_DATA.length > 0) {
+    initApp();
+  } else {
+    window.addEventListener('articlesDataReady', () => initApp(), { once: true });
+  }
+});
+
+function initApp() {
+
   // ==========================================
   // TRANSLATIONS DICTIONARY
   // ==========================================
@@ -604,13 +615,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const displayTitle = toTitleCase(activeLang === 'en' ? art.title_en : art.title, activeLang);
       const displayCategory = activeLang === 'en' ? art.category_en : art.category;
       
-      let titleStyle = '';
-      if (displayTitle.length > 90) {
-        titleStyle = 'style="font-size: 1.02rem; line-height: 1.3;"';
-      } else if (displayTitle.length > 60) {
-        titleStyle = 'style="font-size: 1.15rem; line-height: 1.3;"';
-      }
-      
       const dateHtml = formatDate(art.date) ? `<div class="card-meta">${formatDate(art.date)}</div>` : '';
       card.innerHTML = `
         <div class="card-img-container">
@@ -619,7 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="card-content">
           ${dateHtml}
-          <h3 class="card-title" ${titleStyle}>${displayTitle}</h3>
+          <h3 class="card-title">${displayTitle}</h3>
           <p class="card-excerpt">${cleanExcerpt}</p>
           <span class="card-footer-link">
             <span>${TRANSLATIONS[activeLang]["read-article"]}</span>
@@ -696,7 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${img}" class="column-card-img" alt="${displayTitle}" loading="lazy">
         <div class="column-card-content">
           ${dateHtml}
-          <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${displayTitle}</h3>
+          <h3 class="card-title">${displayTitle}</h3>
           <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
           <span class="card-footer-link">
             <span>${TRANSLATIONS[activeLang]["read-column"]}</span>
@@ -761,7 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="${img}" class="column-card-img" alt="${displayTitle}" loading="lazy">
       <div class="column-card-content">
         ${dateHtml}
-        <h3 class="card-title" style="font-size: 1.6rem; margin-bottom: 8px;">${displayTitle}</h3>
+        <h3 class="card-title">${displayTitle}</h3>
         <p class="card-excerpt" style="margin-bottom: 16px;">${cleanExcerpt}</p>
         <span class="card-footer-link">
           <span>${TRANSLATIONS[activeLang]["read-column"]}</span>
@@ -811,17 +815,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateHtml = formatDate(art.date) ? `<span>${TRANSLATIONS[activeLang]["drawer-pub-date"]}: ${formatDate(art.date)}</span><span>&bull;</span>` : '';
     const displayCategory = activeLang === 'en' ? art.category_en : art.category;
     
+    const authorLabel = activeLang === 'en' ? 'Author: ' : 'Yazar: ';
+    const authorName = activeLang === 'en' ? (art.author_en || 'Güldeste Altay') : (art.author || 'Güldeste Altay');
+
+    const sourceLinkHtml = art.url ? `
+      <div class="drawer-source-container">
+        <a href="${art.url}" target="_blank" rel="noopener" class="source-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="source-icon">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>${activeLang === 'en' ? `Read on ${art.source_name_en || 'WordPress'}` : `${art.source_name || 'WordPress'}'de Oku`}</span>
+        </a>
+      </div>
+    ` : '';
+
     drawerBody.innerHTML = `
       <div class="drawer-meta">${displayCategory}</div>
       <h1 class="drawer-title">${displayTitle}</h1>
       <div class="drawer-pub-meta">
         ${dateHtml}
-        <span>${TRANSLATIONS[activeLang]["drawer-author"]}</span>
+        <span>${authorLabel}${authorName}</span>
       </div>
       ${imgElement}
       <div class="drawer-text">
         ${bodyParagraphs}
       </div>
+      ${sourceLinkHtml}
     `;
 
     // Reset progress
@@ -933,13 +954,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (d.getFullYear() === 2024 && d.getMonth() === 0 && d.getDate() === 15) {
         return '';
       }
-      return d.toLocaleDateString(activeLang === 'en' ? 'en-US' : 'tr-TR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
+      const day = String(d.getDate()).padStart(2, '0');
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const year = d.getFullYear();
+      return `${day}/${month}/${year}`;
     } catch {
       return isoString;
     }
   }
-});
+}
